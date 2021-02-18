@@ -23,16 +23,79 @@
 					</li>
 				<li><a href="nologinmain.html">로그아웃</a></li>
 			</ul>
-		<hr />		
+		<hr />
+		</div>
+		<div>	
 	<form name="search" action="dbbook" method="post">
-		도서 검색 <input type="text">
-		<input type="submit" value="search">
-	
-	
-	
-	
+		<input type="text" placeholder="책 제목, 출판사, 작가명 검색">
 	</form>
-
+	</div>	
+	<div>
+		<p>인문</p>
+	</div>
+	<div>
+		<p>시/에세이</p>
+	</div>
+	<div>
+		<p>베르나르 베르베르</p>
+	</div>
+	<div>
+		<p>과학</p>
+	</div>
+	<div>
+		<p>경제경영</p>
+	</div>
+	<div>
+		<p>자기계발</p>
+	</div>
+	
+	<div class="#">
+		<img alt="책 이미지" src="#">
+	</div>
+	<div class="#">
+		<img alt="책 이미지" src="#">
+	</div>
+	<div class="#">
+		<img alt="책 이미지" src="#">
+	</div>
+	<div class="#">
+		<img alt="책 이미지" src="#">
+	</div>
+	<div class="#">
+		<img alt="책 이미지" src="#">
+	</div>
+	<div class="#">
+		<img alt="책 이미지" src="#">
+	</div>
+	<div class="#">
+		<img alt="책 이미지" src="#">
+	</div>
+	<div class="#">
+		<img alt="책 이미지" src="#">
+	</div>
+	<div class="#">
+		<img alt="책 이미지" src="#">
+	</div>
+	<div class="#">
+		<img alt="책 이미지" src="#">
+	</div>
+	<div class="#">
+		<img alt="책 이미지" src="#">
+	</div>
+	<div class="#">
+		<img alt="책 이미지" src="#">
+	</div>
+	
+	<div>
+			<p><a href="#">자주 묻는 질문</a></p>
+			<p><a href="#">문의하기</a></p>
+			<p><a href="#">블로그</a></p>
+			<br>
+			<br>
+			<br>
+			<p>주식회사 인텔리데이팅</p>
+			
+			</div>
 
 </body>
 </html>
