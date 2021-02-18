@@ -1,0 +1,163 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<link rel="stylesheet" href="style_bookinfo_HJ.css">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<!-- 책 정보 -->
+	<div class="book_info">
+		<img alt="책 이미지" src="images/ant.jpg">
+		<div>
+			<!-- 책제목 -->
+			<h2 class="bookName">개미</h2>
+			
+			<ul class="infoTop">
+				<!-- 저자 -->
+				<li>
+					<h4>저자</h4>
+					<em class="divi">|</em>
+					<h4>베르나르 베르베르</h4>
+				</li>
+				
+				<!-- 출판사 -->
+				<li>
+					<h4>출판사</h4>
+					<em class="divi">|</em>
+					<h4>열린책들</h4>
+				</li>
+				
+				<!-- 출판일 -->
+				<li> 흠... 슬픈소식 저는 git를 사용할줄 모릅니다만..
+				아..........................ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
+				누구 없으신가여... 선생님. ..여기에 지금 안계신데.. 우리 개발원
+				git 사용할 줄 아는사람은.. 영상을 촬영한 해도쌤 밖에..
+				헛......네............ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
+				일단 현재 프로젝트 파일을 밖으로 내보내기해서 git안쓰고 공유해서 일단진행해요
+				그게 심적으로 좋아요
+				네....ㅠㅠㅠㅠㅠㅠ 화이팅...감 ㅅ하ㅏㅎ랍니다. .ㅎ. 할 수 있습니다..ㅋㅋㅋ
+					<h4>출판일</h4>
+					<em class="divi">|</em>
+					<h4>2001년 02월 15일</h4>
+				</li>
+			</ul>
+			
+			<!-- 책분류 -->
+			<ul class="infoBottom">
+				<li>
+					<span>소설</span>
+					<span class="brkt">></span>
+					<span>프랑스소설</span>
+					<span class="brkt">></span>
+					<span>프랑스소설일반</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- 댓글 목록 -->
+	<div class="comment_list">
+		<div class="cmtInfoBox">
+				<!-- 책에 대한 코멘트 -->
+				<div class="cmt_cont">
+					<span class="txt">책 정말 재미있어요!!</span>
+				</div>
+				<!-- 날짜 및 작성자 -->
+				<div class="cmt_etc">
+					<span class="cmt_date">2021년 6월 12일</span>
+					<span class="divi">|</span>
+					<span class="cmt_wtr">현진스 생일</span>
+				</div>
+		</div>
+		<div class="cmtInfoBox">
+				<!-- 책에 대한 코멘트 -->
+				<div class="cmt_cont">
+					<span class="txt">책 정말 재미있어요!!</span>
+				</div>
+				<!-- 날짜 및 작성자 -->
+				<div class="cmt_etc">
+					<span class="cmt_date">2021년 6월 12일</span>
+					<span class="divi">|</span>
+					<span class="cmt_wtr">현진스 생일</span>
+				</div>
+		</div>
+		<div class="cmtInfoBox">
+				<!-- 책에 대한 코멘트 -->
+				<div class="cmt_cont">
+					<span class="txt">책 정말 재미있어요!!</span>
+				</div>
+				<!-- 날짜 및 작성자 -->
+				<div class="cmt_etc">
+					<span class="cmt_date">2021년 6월 12일</span>
+					<span class="divi">|</span>
+					<span class="cmt_wtr">현진스 생일</span>
+				</div>
+		</div>
+		<div class="cmtInfoBox">
+				<!-- 책에 대한 코멘트 -->
+				<div class="cmt_cont">
+					<span class="txt">책 정말 재미있어요!!</span>
+				</div>
+				<!-- 날짜 및 작성자 -->
+				<div class="cmt_etc">
+					<span class="cmt_date">2021년 6월 12일</span>
+					<span class="divi">|</span>
+					<span class="cmt_wtr">현진스 생일</span>
+				</div>
+		</div>
+		<div class="cmtInfoBox">
+				<!-- 책에 대한 코멘트 -->
+				<div class="cmt_cont">
+					<span class="txt">책 정말 재미있어요!!</span>
+				</div>
+				<!-- 날짜 및 작성자 -->
+				<div class="cmt_etc">
+					<span class="cmt_date">2021년 6월 12일</span>
+					<span class="divi">|</span>
+					<span class="cmt_wtr">현진스 생일</span>
+				</div>
+		</div>
+		<div class="cmtInfoBox">
+				<!-- 책에 대한 코멘트 -->
+				<div class="cmt_cont">
+					<span class="txt">책 정말 재미있어요!!</span>
+				</div>
+				<!-- 날짜 및 작성자 -->
+				<div class="cmt_etc">
+					<span class="cmt_date">2021년 6월 12일</span>
+					<span class="divi">|</span>
+					<span class="cmt_wtr">현진스 생일</span>
+				</div>
+		</div>
+		<div class="cmtInfoBox">
+				<!-- 책에 대한 코멘트 -->
+				<div class="cmt_cont">
+					<span class="txt">책 정말 재미있어요!!</span>
+				</div>
+				<!-- 날짜 및 작성자 -->
+				<div class="cmt_etc">
+					<span class="cmt_date">2021년 6월 12일</span>
+					<span class="divi">|</span>
+					<span class="cmt_wtr">현진스 생일</span>
+				</div>
+		</div>  
+	<!-- 책 댓글 작성 -->
+	<form action="bookInfoService" method="get">
+		<div class="cmt_input">
+			<div>
+				<input type="text" name="sendNick" id="nick" placeholder="보내는 사람 닉네임"/>
+			</div>
+			<div>
+				<textarea name="sendCmt" id="cmt" rows="10" cols="30" name="cmt"></textarea>
+			</div>
+			<div>
+				<input type="submit" value="등록"></div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
