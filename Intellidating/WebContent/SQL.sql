@@ -92,4 +92,4 @@ insert into member(mem_num, mem_email, mem_password, mem_username, mem_nickname)
 values(seq_mem_num.NEXTVAL, 'admin','1234','包府磊','包府磊');
 
 drop table comments;
-select * from comments;
+select * from member;
