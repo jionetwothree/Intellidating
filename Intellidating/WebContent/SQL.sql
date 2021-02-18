@@ -29,6 +29,14 @@ book_category2 varchar2(50), -- 분류 2
 book_category3 varchar2(50) -- 분류 3
 );
 
+create sequence seq_book_num -- 책 번호 시퀀스
+start with 1
+increment by 1
+nomaxvalue
+nominvalue
+nocycle
+nocache;
+
 CREATE TABLE member(
 mem_num number(10) CONSTRAINT mem_num_pk primary key, -- 번호 시퀀스 seq_mem_num.NEXTVAR
 mem_email varchar2(100) not null, -- 이메일 
@@ -90,6 +98,21 @@ nocache;
 
 insert into member(mem_num, mem_email, mem_password, mem_username, mem_nickname) 
 values(seq_mem_num.NEXTVAL, 'admin','1234','관리자','관리자');
+
+insert into book values (seq_book_num.NEXTVAL,'너와 함께라면 인생도 여행이다','이태혁','위즈덤하우스', 20150301, 'http://image.kyobobook.co.kr/images/book/large/041/l9788960866041.jpg
+', '자기계발', '인간관계', '인간관계일반');
+
+insert into book values (seq_book_num.NEXTVAL,'지면서 이기는 관계술','나태주','열림원', 20191212, 'http://image.kyobobook.co.kr/images/book/large/097/l9791170400097.jpg
+', '시에세이', '한국시', '현대시');
+
+insert into book values (seq_book_num.NEXTVAL,'현명한 투자자','벤저민 그레이엄','국일증권경제연구소', 20200526, 'http://image.kyobobook.co.kr/images/book/large/305/l9788957821305.jpg
+', '경제경영', '재테크금융', '재테크');
+
+insert into book values (seq_book_num.NEXTVAL,'앨리스 죽이기','고바야시 야스미','검은숲', 20151221, 'http://image.kyobobook.co.kr/images/book/large/184/l9788952775184.jpg
+', '소설', '일본소설', '일본소설일반');
+
+insert into book values (seq_book_num.NEXTVAL,'파리에 간 고양이','피터 게더스','MEDIA2.0', 20060723, 'http://image.kyobobook.co.kr/images/book/large/421/l9788990739421.jpg
+', '시에세이', '나라별 에세이', '영미에세이');
 
 drop table comments;
 select * from member;
