@@ -35,7 +35,7 @@
 	</div>
 	<!-- 댓글 작성 -->
 	<div class="comment_input">
-		<input></input>
+		<textarea rows="10" cols="25" name="talk"></textarea>
 		<input type="submit" value="등록"></div>
 	</div>
 </body>
