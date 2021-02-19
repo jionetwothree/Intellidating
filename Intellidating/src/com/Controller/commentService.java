@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.DTO.commentsDTO;
+
 
 @WebServlet("/commentService")
 public class commentService extends HttpServlet {
@@ -16,14 +18,13 @@ public class commentService extends HttpServlet {
 		request.setCharacterEncoding("EUC-KR");
 		
 		//값 받아오기
-		String sendNick = request.getParameter("sendNick");
 		String sendCmt = request.getParameter("sendCmt");
 		
-		//CmtDTO(작성자닉네임, 댓글)
-		//CmtDTO dto = new CmtDTO(sendNick, s);
+		//commentsDTO(책 번호, 작성자 번호, 댓글 내용, 작성일자)
+		//commentsDTO dto = new commentsDTO();
 				  
 		
-		//CmtDAO dao = new CmtDAO();
+		//commentsDAO dao = new commentsDAO();
 	}
 
 }

@@ -145,7 +145,7 @@
 				</div>
 		</div>  
 	<!-- 책 댓글 작성 -->
-	<div id="disqus_thread"></div>
+<!-- 	<div id="disqus_thread"></div>
 		<script type="text/javascript">
 		    /**
 		    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -164,14 +164,14 @@
 		    })();
 		</script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	
-	<form action="commentService" method="get">
+	 -->
+	<form action="commentService.jsp" method="post">
 		<div class="cmtInput">
 		        <div>
-					<textarea name="sendCmt" id="cmt" rows="60" cols="30" placeholder="댓글을 작성하려면 로그인을 하셔야 합니다."></textarea>
+					<textarea name="sendCmt" id="cmt" rows="7" cols="40" placeholder="댓글을 작성하려면 로그인을 하셔야 합니다."></textarea>
 				</div>
 				<div>
-					<input type="submit" value="등록"></div>
+					<input type="submit" id="cmt_smt" value="등록"></div>
 				</div>
 		</div>
 	</form>

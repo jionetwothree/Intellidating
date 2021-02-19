@@ -44,13 +44,13 @@
 		<%=dto.getBook_author()%>
 	</div>
 	<div>
-		<%=dto.book_category1() %>
+		<%=dto.getBook_category1() %>
 	</div>
 	<div>
-		<%=dto.book_category2() %>
+		<%=dto.getBook_category2() %>
 	</div>
 	<div>
-		<%=dto.book_category3()%>
+		<%=dto.getBook_category3()%>
 	</div>
 	
 	<div class="#">
