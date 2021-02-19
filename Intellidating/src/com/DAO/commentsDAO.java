@@ -30,7 +30,6 @@ public class commentsDAO {
 			e.printStackTrace();
 		}
 	}
-	
 
 	private void close() {
 		try {
@@ -47,26 +46,8 @@ public class commentsDAO {
 			e.printStackTrace();
 		}
 	}
-	
-	private String getDate() {
-		String sql = "SELECT SYSDATE FROM COMMENTS";
-		try {
-			ps = conn.prepareStatement(sql);
-			rs = ps.executeQuery();
-			if (rs.next()) {
-				return rs.getString(1);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			close();
-		}
-		return "";
-	}
-		
-		
 
-	public int insertComment(int book_num, int mem_num, String content) {
+	public int insertcomment(int book_num, int mem_num, String content) {
 		int cnt = 0;
 		getConnection();
 		String sql = "INSERT INTO COMMENTS(comment_num, book_num, mem_num, contents) VALUES(seq_co_num.NEXTVAL,?,?,?)";
@@ -86,7 +67,7 @@ public class commentsDAO {
 
 	}
 
-	public ArrayList<commentsDTO> selectComment(int book_num) {
+	public ArrayList<commentsDTO> selectcomment(int book_num) {
 
 		ArrayList<commentsDTO> al_comments = new ArrayList<commentsDTO>();
 		commentsDTO dto = null;

@@ -8,6 +8,8 @@ club_type2 varchar2(500) not null,
 club_type3 varchar2(500) not null,
 CONSTRAINT UQ_club_name unique (club_name)
 );
+select * from club
+INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');
 
 create sequence seq_club_num -- 모임 번호 시퀀스
 start with 1
