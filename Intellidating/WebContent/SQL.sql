@@ -114,5 +114,9 @@ insert into book values (seq_book_num.NEXTVAL,'앨리스 죽이기','고바야시 야스미',
 insert into book values (seq_book_num.NEXTVAL,'파리에 간 고양이','피터 게더스','MEDIA2.0', 20060723, 'http://image.kyobobook.co.kr/images/book/large/421/l9788990739421.jpg
 ', '시에세이', '나라별 에세이', '영미에세이');
 
+
 drop table comments;
+DROP TABLE book CASCADE CONSTRAINTS;
+drop sequence seq_mem_num;
+
 select * from book;

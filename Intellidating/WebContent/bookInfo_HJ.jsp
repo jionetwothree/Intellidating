@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="style_bookinfo_HJ.css">
+<link rel="stylesheet" href="style_bookInfo_HJ.css">
 <title>Insert title here</title>
 
 </head>
