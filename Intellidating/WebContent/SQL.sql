@@ -115,4 +115,4 @@ insert into book values (seq_book_num.NEXTVAL,'파리에 간 고양이','피터 게더스','
 ', '시에세이', '나라별 에세이', '영미에세이');
 
 drop table comments;
-select * from member;
+select * from book;
