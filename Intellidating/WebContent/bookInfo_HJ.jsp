@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="style_bookInfo_HJ.css">
 <title>Insert title here</title>
 
+
 </head>
 <body>
 	<!-- 책 정보 -->
@@ -16,6 +17,7 @@
 			<!-- 책제목 -->
 			<h2 class="bookName">개미</h2>
 			
+			<!-- 저자, 출판사, 출판일 -->
 			<ul class="infoTop">
 				<!-- 저자 -->
 				<li>
@@ -138,7 +140,7 @@
 				</div>
 		</div>  
 	<!-- 책 댓글 작성 -->
-	<form action="bookInfoService" method="get">
+	<form action="commentService" method="get">
 		<div class="cmt_input">
 			<div>
 				<input type="text" name="sendNick" id="nick" placeholder="보내는 사람 닉네임"/>
