@@ -1,3 +1,4 @@
+<%@page import="com.DTO.bookDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -8,6 +9,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 	</head>
 	<body>
+	<%
+		bookDTO dto = (bookDTO)session.getAttribute("book");
+	%>
 		<div>
 		<header>
 		<p><h2>인텔리데이팅</h2></p>
@@ -31,59 +35,59 @@
 	</form>
 	</div>	
 	<div>
-		<p>인문</p>
+		<%=dto.getBook_author()%>
 	</div>
 	<div>
-		<p>시/에세이</p>
+		<%=dto.getBook_name()%>
 	</div>
 	<div>
-		<p>베르나르 베르베르</p>
+		<%=dto.getBook_author()%>
 	</div>
 	<div>
-		<p>과학</p>
+		<%=dto.book_category1() %>
 	</div>
 	<div>
-		<p>경제경영</p>
+		<%=dto.book_category2() %>
 	</div>
 	<div>
-		<p>자기계발</p>
+		<%=dto.book_category3()%>
 	</div>
 	
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	
 	<div>
