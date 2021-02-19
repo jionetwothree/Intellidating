@@ -1,3 +1,4 @@
+<%@page import="com.DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -5,11 +6,15 @@
 <head>
 <meta charset="EUC-KR">
 <link rel="stylesheet" href="style_bookInfo_HJ.css">
-<title>Insert title here</title>
-
-
+<title>책 정보 페이지</title>
 </head>
 <body>
+
+
+<%
+	memberDTO dto = (memberDTO)session.getAttribute("member");
+%>
+
 	<!-- 책 정보 -->
 	<div class="book_info">
 		<img alt="책 이미지" src="images/ant.jpg">
@@ -41,8 +46,7 @@
 				</li>
 			</ul>
 			
-			<!-- 책분류 -->
-			<ul class="infoBtm">
+			<!-- 책분류 -->			<ul class="infoBtm">
 					<span>소설</span>
 					<span class="brkt">></span>
 					<span>프랑스소설</span>
@@ -141,10 +145,7 @@
 		</div>  
 	<!-- 책 댓글 작성 -->
 	<form action="commentService" method="get">
-		<div class="cmt_input">
-			<div>
-				<input type="text" name="sendNick" id="nick" placeholder="보내는 사람 닉네임"/>
-			</div>
+		<div class="cmtInput">
 			<div>
 				<textarea name="sendCmt" id="cmt" rows="10" cols="30" name="cmt"></textarea>
 			</div>
