@@ -10,7 +10,6 @@
 </head>
 <body>
 
-
 <%
 	memberDTO dto = (memberDTO)session.getAttribute("member");
 %>
@@ -147,7 +146,7 @@
 	<form action="commentService" method="get">
 		<div class="cmtInput">
 			<div>
-				<textarea name="sendCmt" id="cmt" rows="10" cols="30" name="cmt"></textarea>
+				<textarea name="sendCmt" id="cmt" rows="10" cols="30"></textarea>
 			</div>
 			<div>
 				<input type="submit" value="µî·Ï"></div>
