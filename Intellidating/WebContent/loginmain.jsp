@@ -18,6 +18,15 @@
 		</header>
 			<ul>
 				<li><a href="searchbook.jsp">책 검색하기</a></li>
+				<%
+			if(dto==null){
+				%>
+				<li><a href="login.html">로그인</a></li>
+				<li><a href="join.jsp">회원가입</a></li>
+				<% 
+			}else{
+		
+		%>
 				<li><a href="mypage.html">마이페이지</a>
 						<ul>
 							<li><a href="mytaste.html">마이취향</a></li>
@@ -27,6 +36,7 @@
 					</li>
 				<li><a href="logoutService">로그아웃</a></li>
 			</ul>
+		<%} %>
 		<hr />		
 		</div>
 		<div>
