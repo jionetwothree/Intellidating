@@ -61,8 +61,12 @@ public class bookDAO {
 				String get_publisher = rs.getString(4);
 				String get_date = rs.getString(5);
 				String get_image = rs.getString(6);
+				String get_category1 = rs.getString(7);
+				String get_category2 = rs.getString(8);
+				String get_category3 = rs.getString(9);
+				
 
-				dto = new bookDTO(get_num, get_name, get_author, get_publisher, get_date, get_image);
+				dto = new bookDTO(get_num, get_name, get_author, get_publisher, get_date, get_image, get_category1, get_category2, get_category3);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
