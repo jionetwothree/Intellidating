@@ -49,7 +49,7 @@ public class memberDAO {
 	public int joinMember(String email, String password, String name, String nickname) {
 		int cnt = 0;
 		getConnection();
-		String sql = "INSERT INTO MEMBER(mem_num, mem_email, mem_password, mem_name, mem_nickname) VALUES(seq_mem_num.NEXTVAL,?,?,?,?)";
+		String sql = "INSERT INTO MEMBER(mem_num, mem_email, mem_password, mem_username, mem_nickname) VALUES(seq_mem_num.NEXTVAL,?,?,?,?)";
 		try {
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, email);

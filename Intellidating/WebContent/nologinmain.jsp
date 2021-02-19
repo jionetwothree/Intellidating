@@ -16,7 +16,7 @@
 			<ul>
 				<li><a href="searchbook.jsp">책 검색하기</a></li>
 				<li><a href="login.html">로그인</a></li>
-				<li><a href="join.html">회원가입</a></li>
+				<li><a href="join.jsp">회원가입</a></li>
 			</ul>
 		</nav>
 		<hr />		

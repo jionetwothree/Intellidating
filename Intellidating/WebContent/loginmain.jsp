@@ -1,3 +1,4 @@
+<%@page import="com.DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -8,6 +9,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 	</head>
 	<body>
+	<%
+		memberDTO dto = (memberDTO)session.getAttribute("member");
+	%>
 		<div>
 		<header>
 		<p><h2>인텔리데이팅</h2></p>
@@ -21,7 +25,7 @@
 							<li><a href="account.html">계정 설정</a></li>
 						</ul>
 					</li>
-				<li><a href="nologinmain.html">로그아웃</a></li>
+				<li><a href="logoutService">로그아웃</a></li>
 			</ul>
 		<hr />		
 		</div>
@@ -31,7 +35,16 @@
 		</div>
 		</style>
 		<div>
-			<h2>닉네임님의 취향은 #소설 #로맨스 #주식투자(이)군요!</h2>
+			<h2><%
+			if(dto==null){
+				%>
+				<h1>로그인을 해주세요</h1>
+				<% 
+			}else{
+		
+		%>
+		<h1><%=dto.getNickname()%></h1>
+		<%} %>님의 취향은 #소설 #로맨스 #주식투자(이)군요!</h2>
 		</div>	
 		<section>
 				<p><h3>곧 시작하는 인텔리</h3></p>
