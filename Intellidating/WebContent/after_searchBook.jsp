@@ -12,7 +12,7 @@
 	</head>
 	<body>
 	<%
-		bookDTO dto = (bookDTO)session.getAttribute("book");
+		bookDTO dto = (bookDTO) request.getAttribute("bookDTO");
 	%>
 		<div>
 		<header>
@@ -42,7 +42,7 @@
 		bookDAO b_dao = new bookDAO();
 	%>
 	<div class="#">
-		<%=dto.getBook_image()%>
+		<img src="<%=dto.getBook_image()%>">
 	</div>
 	<div class="#">
 		<%=dto.getBook_image()%>
