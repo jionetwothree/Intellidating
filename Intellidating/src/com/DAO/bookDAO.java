@@ -47,13 +47,19 @@ public class bookDAO {
 	}
 
 	public bookDTO selectBook(String book_name) {
+		
 		bookDTO dto = null;
-		getConnection();
-		String sql = "SELECT * FROM BOOK WHERE book_name=?";
+		
 		try {
+			getConnection();
+			String sql = "SELECT * FROM BOOK WHERE book_name=?";
+			
 			ps = conn.prepareStatement(sql);
+			
 			ps.setString(1, book_name);
+			
 			rs = ps.executeQuery();
+			
 			if (rs.next()) {
 				int get_num = rs.getInt(1);
 				String get_name = rs.getString(2);
@@ -73,6 +79,9 @@ public class bookDAO {
 		return dto;
 
 	}
+	
+	
+
 
 
 }

@@ -8,7 +8,7 @@
 		<link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png">
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-		<link href="style_ar_searchBook.css" rel="stylesheet" type="text/css">
+		<link href="style_searchBook.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -33,10 +33,13 @@
 	<hr />
 	</div>
 	<div>	
+	
 	<form action="searchBookService" method="post">
-		<input type="text" placeholder="책 제목, 출판사, 작가명 검색">
-		<!-- <button type="button"><img src="이미지 경로" alt="">버튼명</button> -->
-		<input type="submit" class="icon_search_submit" name="search_submit" value="검색">
+		<input type="text" placeholder=
+		"책 제목, 출판사, 작가명 검색">
+		<!-- <button type="button">
+		<img src="이미지 경로" alt="">버튼명</button> -->
+		<input type="submit" class="icon_search_submit" name="search_submit" value="  ">
 	</form>
 	</div>
 	
