@@ -11,8 +11,8 @@
 	</head>
 	<body>
 	<%
-		memberDTO dto = (memberDTO)session.getAttribute("member");
-		bookDTO dto1 = (bookDTO)session.getAttribute("book");
+		//memberDTO dto = (memberDTO)session.getAttribute("member");
+		//bookDTO dto1 = (bookDTO)session.getAttribute("book");
 	%>
 		<div>
 		<header>
@@ -30,23 +30,15 @@
 			</ul>
 		<hr />
 		</div>
-	
-	<div>
-		<p>다음</p>
-	</div>
-	
 	<form action="analysisService" method="get">
 	<div>
-		<h1><%=dto.getNickname()%>님, 좋아하는 책 5권을 골라주세요!</h1>
+		<h1>좋아하는 책 5권을 골라주세요!</h1>
 	</div>
 	</form>
 	
-	<div>
-	</div>
-	
 	<form action="analysisService" method="get">
 	<div>
-		<%=dto1.getBook_image()%>
+		
 	</div>
 	</form>
 	

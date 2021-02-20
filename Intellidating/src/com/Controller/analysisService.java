@@ -24,7 +24,7 @@ public class analysisService extends HttpServlet {
 		bookDTO dto1 = (bookDTO)session.getAttribute("book");
 		String bookimage = dto1.getBook_image();
 		
-		
+
 		
 		
 		
