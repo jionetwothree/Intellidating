@@ -46,7 +46,7 @@ public class bookDAO {
 		}
 	}
 
-	public bookDTO selectbook(String book_name) {
+	public bookDTO selectBook(String book_name) {
 		bookDTO dto = null;
 		getConnection();
 		String sql = "SELECT * FROM BOOK WHERE book_name=?";

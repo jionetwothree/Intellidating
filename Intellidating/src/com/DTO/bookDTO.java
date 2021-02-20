@@ -26,6 +26,12 @@ public class bookDTO {
 		this.book_category3 = book_category3;
 	
 	}
+	public bookDTO(String book_name) {
+
+		super();
+		this.book_name = book_name;
+	
+	}
 
 
 	public int getBook_num() {

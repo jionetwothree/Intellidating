@@ -20,11 +20,11 @@ public class commentService extends HttpServlet {
 		//값 받아오기
 		String sendCmt = request.getParameter("sendCmt");
 		
-		//commentsDTO(책 번호, 작성자 번호, 댓글 내용, 작성일자)
-		//commentsDTO dto = new commentsDTO();
-				  
-		
-		//commentsDAO dao = new commentsDAO();
+		//commentsDTO(책 번호, 작성자 번호, 댓글 내용)
+//		commentsDTO dto = new commentsDTO();
+//				  
+//		
+//		commentsDAO dao = new commentsDAO();
 	}
 
 }
