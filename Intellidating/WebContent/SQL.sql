@@ -24,8 +24,8 @@ book_num number(10) CONSTRAINT book_num_pk primary key, -- 책 번호 시퀀스 seq_bo
 book_name varchar2(200) not null, -- 책 이름
 book_author varchar2(200) not null, -- 책 저자
 book_publisher varchar2(200) not null, -- 책 출판사
-book_date number(10), -- 책 발행일자
-book_image varchar2(200), -- 책 이미지 주소
+book_date number(10) not null, -- 책 발행일자
+book_image varchar2(200) not null, -- 책 이미지 주소
 book_category1 varchar2(50), -- 분류 1
 book_category2 varchar2(50), -- 분류 2
 book_category3 varchar2(50) -- 분류 3
@@ -98,6 +98,26 @@ nominvalue
 nocycle
 nocache;
 
+CREATE TABLE recom_club(
+recom_num number(10) CONSTRAINT recom_num_pk primary key, -- 추천 번호
+mem_num number(10), -- 멤버 번호
+recom_club1 number(10), -- 추천 클럽 번호1
+recom_club2 number(10), -- 추천 클럽 번호2
+recom_club3 number(10), -- 추천 클럽 번호3
+FOREIGN KEY (mem_num) REFERENCES member(mem_num),
+FOREIGN KEY (recom_club1) REFERENCES club(club_num),
+FOREIGN KEY (recom_club2) REFERENCES club(club_num),
+FOREIGN KEY (recom_club3) REFERENCES club(club_num)
+);
+
+create sequence seq_recom_num -- 댓글 번호 시퀀스
+start with 1
+increment by 1
+nomaxvalue
+nominvalue
+nocycle
+nocache;
+
 insert into member(mem_num, mem_email, mem_password, mem_username, mem_nickname) 
 values(seq_mem_num.NEXTVAL, 'admin','1234','관리자','관리자');
 
@@ -116,8 +136,8 @@ insert into book values (seq_book_num.NEXTVAL,'앨리스 죽이기','고바야시 야스미',
 insert into book values (seq_book_num.NEXTVAL,'파리에 간 고양이','피터 게더스','MEDIA2.0', 20060723, 'http://image.kyobobook.co.kr/images/book/large/421/l9788990739421.jpg
 ', '시에세이', '나라별 에세이', '영미에세이');
 
-drop table comments;
+drop table 
 DROP TABLE book CASCADE CONSTRAINTS;
 drop sequence seq_mem_num;
 
-select * from club;
+select * from book;
