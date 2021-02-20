@@ -3,6 +3,7 @@ package com.Controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,15 +22,17 @@ public class searchBookService extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		request.setCharacterEncoding("EUC-KR");
-		
+		response.setCharacterEncoding("EUC-KR");
 		String search_submit = request.getParameter("search_submit");
 		
 		bookDAO dao = new bookDAO();
 		bookDTO dto = dao.selectBook(search_submit);
-		
+
 		if (dto != null) {
 			System.out.println("검색 성공!");
-			response.sendRedirect("after_searchBook.jsp");
+			request.setAttribute("bookDTO", dto);
+			RequestDispatcher rd = request.getRequestDispatcher("after_searchBook.jsp");
+			rd.forward(request, response);
 		} else {
 			System.out.println("검색 실패!");
 		}

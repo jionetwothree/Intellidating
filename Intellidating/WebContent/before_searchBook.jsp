@@ -35,8 +35,7 @@
 	<div>	
 	
 	<form action="searchBookService" method="post">
-		<input type="text" placeholder=
-		"책 제목, 출판사, 작가명 검색">
+		<input type="text" name="search_submit" placeholder="책 제목, 출판사, 작가명 검색">
 		<!-- <button type="button">
 		<img src="이미지 경로" alt="">버튼명</button> -->
 		<input type="submit" class="icon_search_submit" name="search_submit" value="  ">
