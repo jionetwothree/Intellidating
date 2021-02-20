@@ -35,11 +35,6 @@
 					} else {
 				%>
 				<li><a href="mypage.html">마이페이지</a>
-					<ul>
-						<li><a href="mytaste.html">마이취향</a></li>
-						<li><a href="myinteli.html">마이모임</a></li>
-						<li><a href="myaccount.html">계정 설정</a></li>
-					</ul></li>
 				<li><a href="logoutService">로그아웃</a></li>
 			</ul>
 			<%
