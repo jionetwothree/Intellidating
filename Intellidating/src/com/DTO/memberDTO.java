@@ -24,6 +24,11 @@ public class memberDTO {
 		this.name = name;
 		this.nickname = nickname;
 	}
+	
+	public memberDTO(String nickname) {
+		super();
+		this.nickname = nickname;
+	}
 
 	public String getEmail() {
 		return email;
