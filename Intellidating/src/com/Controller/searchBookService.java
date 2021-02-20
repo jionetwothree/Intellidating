@@ -32,6 +32,8 @@ public class searchBookService extends HttpServlet {
 			response.sendRedirect("after_searchBook.jsp");
 		} else {
 			System.out.println("검색 실패!");
+			
+			
 		}
 	}
 }
