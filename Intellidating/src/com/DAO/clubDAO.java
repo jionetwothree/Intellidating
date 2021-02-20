@@ -76,7 +76,7 @@ public class clubDAO {
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, mem_num);
 			ps.executeUpdate();
-			sql = "UPDATE MEMBER set mem_club1=? where club_num=?";
+			sql = "UPDATE MEMBER set mem_club1=? where mem_num=?";
 			// 하나의 클럽만 가입
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, club_num);

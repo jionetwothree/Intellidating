@@ -1,6 +1,3 @@
-<%@page import="com.DAO.bookDAO"%>
-<%@page import="com.DTO.bookDTO"%>
-<%@page import="java.util.ArrayList"%>
 <%@page import="com.DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -12,12 +9,13 @@
 <title>책 정보 페이지</title>
 </head>
 <body>
+
 <%
-	 memberDTO dto = (memberDTO)session.getAttribute("member");
+	memberDTO dto = (memberDTO)session.getAttribute("member");
 %>
 
 	<!-- 책 정보 -->
-
+	<div class="book_info">
 		<img alt="책 이미지" src="images/ant.jpg">
 		<div>
 			<!-- 책제목 -->
@@ -145,34 +143,14 @@
 				</div>
 		</div>  
 	<!-- 책 댓글 작성 -->
-<!-- 	<div id="disqus_thread"></div>
-		<script type="text/javascript">
-		    /**
-		    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-		    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-		    /*
-		    var disqus_config = function () {
-		    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-		    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-		    };
-		    */
-		    (function() { // DON'T EDIT BELOW THIS LINE
-		    var d = document, s = d.createElement('script');
-		    s.src = 'https://web-1-uxzfietzzh.disqus.com/embed.js';
-		    s.setAttribute('data-timestamp', +new Date());
-		    (d.head || d.body).appendChild(s);
-		    })();
-		</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	 -->
-	<form action="commentService.jsp" method="post">
+	<form action="commentService" method="get">
 		<div class="cmtInput">
-		        <div>
-					<textarea name="sendCmt" id="cmt" rows="7" cols="40" placeholder="댓글을 작성하려면 로그인을 하셔야 합니다."></textarea>
-				</div>
-				<div>
-					<input type="submit" id="cmt_smt" value="등록"></div>
-				</div>
+			<div>
+				<textarea name="sendCmt" id="cmt" rows="10" cols="30"></textarea>
+			</div>
+			<div>
+				<input type="submit" value="등록"></div>
+			</div>
 		</div>
 	</form>
 </body>

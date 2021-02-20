@@ -61,7 +61,7 @@
 				<p><a href="#">전체보기</a></p>
 					<div>
 						<article>
-								<h3><a href="intellipage.html">독서 모임1</a></h3>
+								<h3><a href="intellipage.jsp">독서 모임1</a></h3>
 						</article>
 
 						<article>
