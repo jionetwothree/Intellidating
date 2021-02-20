@@ -12,13 +12,12 @@
 </head>
 <body>
 	<%
-		memberDTO dto = (memberDTO) session.getAttribute("member");
-		bookDTO dto1 = (bookDTO) session.getAttribute("book");
+		memberDTO m_dto = (memberDTO) session.getAttribute("member");
 	%>
 	<header>
 		<div>
 			<p>
-			<h2>인텔리데이팅</h2>
+			<h2><a href="main.jsp">인텔리데이팅</a></h2>
 			</p>
 		</div>
 	</header>
@@ -27,7 +26,7 @@
 			<ul>
 				<li><a href="searchbook.jsp">책 검색하기</a></li>
 				<%
-					if (dto == null) {
+					if (m_dto == null) {
 				%>
 				<li><a href="login.html">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
@@ -46,14 +45,14 @@
 	<div>
 		<form action="analysisService" method="get">
 			<div>
-				<h1><%=dto.getNickname()%>좋아하는 책 5권을 골라주세요!
+				<h1><%=m_dto.getNickname()%>좋아하는 책 5권을 골라주세요!
 				</h1>
 			</div>
 		</form>
 
 		<form action="analysisService" method="get">
 			<div>
-				<%=dto1.getBook_image()%>
+				<!-- DB책 이미지 -->
 			</div>
 		</form>
 	</div>

@@ -18,34 +18,35 @@
 		clubDAO dao = new clubDAO();
 		clubDTO dto = dao.selectclub(2);
 	%>
-	<div id="#">
-		<header>
+	
+	<header>
+		<div>
 			<p>
-			<h2>인텔리데이팅</h2>
+			<h2><a href="main.jsp">인텔리데이팅</a></h2>
 			</p>
-		</header>
-		<ul>
-			<li><a href="#">책 검색하기</a></li>
+		</div>
+	</header>
+	<nav>
+		<div>
+			<ul>
+				<li><a href="searchbook.jsp">책 검색하기</a></li>
+				<%
+					if (m_dto == null) {
+				%>
+				<li><a href="login.html">로그인</a></li>
+				<li><a href="join.jsp">회원가입</a></li>
+				<%
+					} else {
+				%>
+				<li><a href="mypage.jsp">마이페이지</a>
+				<li><a href="logoutService">로그아웃</a></li>
+			</ul>
 			<%
-				if (m_dto == null) {
+				}
 			%>
-			<li><a href="login.html">로그인</a></li>
-			<li><a href="join.jsp">회원가입</a></li>
-			<%
-				} else {
-			%>
-			<li><a href="mypage.html">마이페이지</a>
-				<ul>
-					<li><a href="mytaste.html">마이취향</a></li>
-					<li><a href="myinteli.html">마이모임</a></li>
-					<li><a href="account.html">계정 설정</a></li>
-				</ul></li>
-			<li><a href="logoutService">로그아웃</a></li>
-		</ul>
-		<%
-			}
-		%>
-		<hr />
+			<hr />
+		</div>
+	</nav>
 		<div>
 			
 				<p>
