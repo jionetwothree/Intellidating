@@ -34,7 +34,7 @@ public class loginService extends HttpServlet {
 			if(dto1 != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("member", dto);
-			response.sendRedirect("loginmain.jsp");
+			response.sendRedirect("main.jsp");
 			System.out.println("로그인 성공!");
 			}else {
 				response.sendRedirect("analysis.jsp");

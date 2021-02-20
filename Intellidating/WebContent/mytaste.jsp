@@ -9,12 +9,12 @@
 </head>
 <body>
 	<%
-		memberDTO dto = (memberDTO) session.getAttribute("member");
+		memberDTO m_dto = (memberDTO) session.getAttribute("member");
 	%>
 	<header>
 		<div>
 			<p>
-			<h2>인텔리데이팅</h2>
+			<h2><a href="main.jsp">인텔리데이팅</a></h2>
 			</p>
 		</div>
 	</header>
@@ -23,7 +23,7 @@
 			<ul>
 				<li><a href="searchbook.jsp">책 검색하기</a></li>
 				<%
-					if (dto == null) {
+					if (m_dto == null) {
 				%>
 				<li><a href="login.html">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
@@ -39,7 +39,6 @@
 			<hr />
 		</div>
 	</nav>
-
 
 	<footer>
 		<div>

@@ -26,7 +26,7 @@ public class joinService extends HttpServlet {
 		memberDAO dao = new memberDAO();
 		int cnt = dao.joinMember(email, password, name, nickname);
 		if (cnt > 0) {
-			response.sendRedirect("loginmain.jsp");
+			response.sendRedirect("main.jsp");
 		} else {
 			System.out.println("가입 실패");
 		}
