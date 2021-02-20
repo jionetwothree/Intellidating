@@ -37,25 +37,7 @@
 		<input type="submit" class="icon_search_submit" value="  ">
 	</form>
 	</div>	
-	<div>
-		<%=dto.getBook_author()%>
-	</div>
-	<div>
-		<%=dto.getBook_name()%>
-	</div>
-	<div>
-		<%=dto.getBook_author()%>
-	</div>
-	<div>
-		<%=dto.getBook_category1() %>
-	</div>
-	<div>
-		<%=dto.getBook_category2() %>
-	</div>
-	<div>
-		<%=dto.getBook_category3()%>
-	</div>
-	
+
 	<%
 		bookDAO b_dao = new bookDAO();
 	%>
