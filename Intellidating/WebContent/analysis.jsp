@@ -34,7 +34,7 @@
 				<%
 					} else {
 				%>
-				<li><a href="mypage.html">마이페이지</a>
+				<li><a href="mypage.jsp">마이페이지</a>
 				<li><a href="logoutService">로그아웃</a></li>
 			</ul>
 			<%
