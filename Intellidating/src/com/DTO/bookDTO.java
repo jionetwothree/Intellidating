@@ -8,6 +8,9 @@ public class bookDTO {
 	private String book_publisher;
 	private String book_date;
 	private String book_image;
+	private String book_category1;
+	private String book_category2;
+	private String book_category3;
 	
 	public bookDTO(int book_num, String book_name, String book_author, String book_publisher, String book_date,
 			String book_image) {
@@ -19,6 +22,7 @@ public class bookDTO {
 		this.book_date = book_date;
 		this.book_image = book_image;
 	}
+
 	public bookDTO(String book_name) {
 
 		super();
@@ -48,6 +52,18 @@ public class bookDTO {
 
 	public String getBook_image() {
 		return book_image;
+	}
+
+	public String getBook_category1() {
+		return book_category1;
+	}
+
+	public String getBook_category2() {
+		return book_category2;
+	}
+
+	public String getBook_category3() {
+		return book_category3;
 	}
 	
 }

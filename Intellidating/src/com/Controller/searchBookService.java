@@ -15,6 +15,7 @@ import com.DAO.memberDAO;
 import com.DTO.bookDTO;
 import com.DTO.memberDTO;
 
+
 @WebServlet("/searchBookService")
 public class searchBookService extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,5 +32,4 @@ public class searchBookService extends HttpServlet {
 			System.out.println("검색 실패!");
 		}
 	}
-
 }
