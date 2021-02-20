@@ -33,6 +33,5 @@ public class searchBookService extends HttpServlet {
 		} else {
 			System.out.println("검색 실패!");
 		}
-		
 	}
 }
