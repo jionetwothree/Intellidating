@@ -67,8 +67,11 @@
 
 	<div>
 		<section>
+		<%
+					if (m_dto == null) {
+				%>
 			<p>
-			<h3>곧 시작하는 인텔리</h3>
+			<h3><!-- 인기있는 모임 --></h3>
 			</p>
 			<p>
 				<a href="#">전체보기</a>
@@ -134,7 +137,71 @@
 	<div>
 		<section>
 			<p>
-			<h3>꾸준한 인기</h3>
+			<h3><!-- 인기있는 책 --></h3>
+			</p>
+			<p>
+				<a href="#">전체보기</a>
+			</p>
+		</section>
+		<section>
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임1</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임2</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임3</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임4</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임5</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임6</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임7</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임8</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.html">독서 모임9</a>
+				</h3>
+			</div>
+		</section>
+	</div>
+	<%} else { %>
+	<p>
+			<h3><!-- 취향에 맞는 모임 --></h3>
 			</p>
 			<p>
 				<a href="#">전체보기</a>
@@ -197,6 +264,72 @@
 		</section>
 	</div>
 
+	<div>
+		<section>
+			<p>
+			<h3><!-- 취향에 맞는 책 --></h3>
+			</p>
+			<p>
+				<a href="#">전체보기</a>
+			</p>
+		</section>
+		<section>
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임1</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임2</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임3</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임4</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임5</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임6</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임7</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.jsp">독서 모임8</a>
+				</h3>
+			</div>
+
+			<div>
+				<h3>
+					<a href="intellipage.html">독서 모임9</a>
+				</h3>
+			</div>
+		</section>
+	</div>
+	<% } %>
 	<footer>
 		<div>
 			<p>
