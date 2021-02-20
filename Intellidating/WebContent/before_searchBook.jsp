@@ -33,7 +33,7 @@
 	<hr />
 	</div>
 	<div>	
-	<form name="search" action="dbbook" method="post">
+	<form action="searchBookService" method="post">
 		<input type="text" placeholder="책 제목, 출판사, 작가명 검색">
 		<!-- <button type="button"><img src="이미지 경로" alt="">버튼명</button> -->
 		<input type="submit" class="icon_search_submit" name="search_submit" value="검색">
