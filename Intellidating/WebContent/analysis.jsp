@@ -14,7 +14,7 @@
 		memberDTO dto = (memberDTO)session.getAttribute("member");
 		bookDTO dto1 = (bookDTO)session.getAttribute("book");
 	%>
-		<div>
+		<div> 
 		<header>
 		<p><h2>인텔리데이팅</h2></p>
 		</header>
