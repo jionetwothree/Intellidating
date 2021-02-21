@@ -14,6 +14,8 @@
 <body>
 	<%
 		bookDTO dto = (bookDTO)session.getAttribute("book");
+	
+	
 	%>
 	<div>
 	<header>

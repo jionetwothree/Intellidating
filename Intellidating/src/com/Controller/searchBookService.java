@@ -24,9 +24,11 @@ public class searchBookService extends HttpServlet {
 		request.setCharacterEncoding("EUC-KR");
 		response.setCharacterEncoding("EUC-KR");
 		String search_submit = request.getParameter("search_submit");
+		System.out.println(search_submit);
+		
 		
 		bookDAO dao = new bookDAO();
-		bookDTO dto = dao.selectBook(search_submit);
+		bookDTO dto = dao.searchBook(search_submit);
 
 		if (dto != null) {
 			System.out.println("검색 성공!");
