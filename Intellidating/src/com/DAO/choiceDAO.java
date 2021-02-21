@@ -51,7 +51,7 @@ public class choiceDAO {
 		try {
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, mem_num);
-			
+			rs = ps.executeQuery();
 			
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -61,9 +61,27 @@ public class choiceDAO {
 		return dto;
 		
 	}
-	
 
-	
+	public int insertchoice(int mem_num, String choice1, String choice2, String choice3, String choice4, String choice5) {
+		int cnt=0;
+		getConnectecion();
+		String sql = "INSERT INTO CHOICE VALUES(seq_choice_num.NEXTVAL,?,?,?,?,?,?)";
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, mem_num);
+			ps.setString(2, choice1);
+			ps.setString(3, choice2);
+			ps.setString(4, choice3);
+			ps.setString(5, choice4);
+			ps.setString(6, choice5);
+			cnt = ps.executeUpdate();
+			
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return cnt;
 	}
-
+}
 

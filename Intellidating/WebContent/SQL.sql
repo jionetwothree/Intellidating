@@ -65,20 +65,23 @@ nocycle
 nocache;
 
 CREATE TABLE choice(
-choice_num number(10) CONSTRAINT choice_num_pk primary key,
+choice_num number(10) CONSTRAINT choice_num_pk primary key, -- 시퀀스
 mem_num number(10) NOT NULL, -- 멤버 번호 외래키
-choice1 number(10) NOT NULL, -- 선택한 책 1
-choice2 number(10) NOT NULL, -- 선택한 책 2
-choice3 number(10) NOT NULL, -- 선택한 책 3
-choice4 number(10) NOT NULL, -- 선택한 책 4
-choice5 number(10) NOT NULL, -- 선택한 책 5
-CONSTRAINT FK_mem_num FOREIGN KEY (mem_num) REFERENCES member(mem_num),
-CONSTRAINT FK_choice1 FOREIGN KEY (choice1) REFERENCES book(book_num),
-CONSTRAINT FK_choice2 FOREIGN KEY (choice2) REFERENCES book(book_num),
-CONSTRAINT FK_choice3 FOREIGN KEY (choice3) REFERENCES book(book_num),
-CONSTRAINT FK_choice4 FOREIGN KEY (choice4) REFERENCES book(book_num),
-CONSTRAINT FK_choice5 FOREIGN KEY (choice5) REFERENCES book(book_num)
+choice1 varchar2(50) NOT NULL, -- 선택한 책 1
+choice2 varchar2(50) NOT NULL, -- 선택한 책 2
+choice3 varchar2(50) NOT NULL, -- 선택한 책 3
+choice4 varchar2(50) NOT NULL, -- 선택한 책 4
+choice5 varchar2(50) NOT NULL, -- 선택한 책 5
+CONSTRAINT FK_mem_num FOREIGN KEY (mem_num) REFERENCES member(mem_num)
 );
+
+create sequence seq_choice_num -- 선택 번호 시퀀스
+start with 1
+increment by 1
+nomaxvalue
+nominvalue
+nocycle
+nocache;
 
 CREATE TABLE comments(
 comment_num number(10) CONSTRAINT comment_num_pk primary key, -- 댓글 번호
@@ -98,16 +101,22 @@ nominvalue
 nocycle
 nocache;
 
-CREATE TABLE recom_club(
+CREATE TABLE recommendation(
 recom_num number(10) CONSTRAINT recom_num_pk primary key, -- 추천 번호
 mem_num number(10), -- 멤버 번호
 recom_club1 number(10), -- 추천 클럽 번호1
 recom_club2 number(10), -- 추천 클럽 번호2
 recom_club3 number(10), -- 추천 클럽 번호3
+recom_book1 number(10), -- 추천 도서 번호1
+recom_book2 number(10), -- 추천 도서 번호2
+recom_book3 number(10), -- 추천 도서 번호3
 FOREIGN KEY (mem_num) REFERENCES member(mem_num),
 FOREIGN KEY (recom_club1) REFERENCES club(club_num),
 FOREIGN KEY (recom_club2) REFERENCES club(club_num),
-FOREIGN KEY (recom_club3) REFERENCES club(club_num)
+FOREIGN KEY (recom_club3) REFERENCES club(club_num),
+FOREIGN KEY (recom_book1) REFERENCES book(book_num),
+FOREIGN KEY (recom_book2) REFERENCES book(book_num),
+FOREIGN KEY (recom_book3) REFERENCES book(book_num)
 );
 
 create sequence seq_recom_num -- 댓글 번호 시퀀스
@@ -117,6 +126,15 @@ nomaxvalue
 nominvalue
 nocycle
 nocache;
+
+CREATE TABLE print_book(
+select_num number(10) CONSTRAINT select_num_pk primary key,
+book_num number(10) not null,
+book_name varchar2(200) not null,
+book_image varchar2(200) not null,
+book_category3 varchar2(50) not null,
+FOREIGN KEY (book_num) REFERENCES book(book_num)
+);
 
 insert into member(mem_num, mem_email, mem_password, mem_username, mem_nickname) 
 values(seq_mem_num.NEXTVAL, 'admin','1234','관리자','관리자');
@@ -136,8 +154,8 @@ insert into book values (seq_book_num.NEXTVAL,'앨리스 죽이기','고바야시 야스미',
 insert into book values (seq_book_num.NEXTVAL,'파리에 간 고양이','피터 게더스','MEDIA2.0', 20060723, 'http://image.kyobobook.co.kr/images/book/large/421/l9788990739421.jpg
 ', '시에세이', '나라별 에세이', '영미에세이');
 
-drop table 
-DROP TABLE book CASCADE CONSTRAINTS;
+DROP TABLE choice;
 drop sequence seq_mem_num;
 
-select * from book;
+select * from print_book;
+delete from print_book;

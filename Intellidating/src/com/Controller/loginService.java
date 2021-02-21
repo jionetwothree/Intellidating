@@ -21,22 +21,20 @@ public class loginService extends HttpServlet {
 	
 		String email = request.getParameter("email");
 		String password = request.getParameter("pw");
-		int mem_num = Integer.parseInt(request.getParameter("mem_num"));
 		
-		
-		PrintWriter out = response.getWriter();
 		memberDAO dao = new memberDAO();
 		memberDTO dto = dao.loginMember(email, password);
-		choiceDAO dao1 = new choiceDAO();
-		choiceDTO dto1 = dao1.choicedata(mem_num);
 		
 		if (dto != null) {
-			if(dto1 != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("member", dto);
+			int mem_num = dto.getNum();
+			choiceDAO dao1 = new choiceDAO();
+			choiceDTO dto1 = dao1.choicedata(mem_num);
+			if(dto1 != null) {
 			response.sendRedirect("main.jsp");
 			System.out.println("로그인 성공!");
-			}else {
+			} else {
 				response.sendRedirect("analysis.jsp");
 			}
 		} else {
