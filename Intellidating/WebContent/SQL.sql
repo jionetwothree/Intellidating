@@ -12,9 +12,9 @@ club_num number(10) CONSTRAINT club_num_pk primary key, -- 번호 시퀀스 seq_club_
 club_name varchar2(50) not null, -- 모임 이름
 club_mem_cnt number(3) default 0, -- 모임 가입 인원
 club_detail varchar2(500), -- 모임 설명
-club_type1 varchar2(500) not null, -- 모임 성격
-club_type2 varchar2(500) not null,
-club_type3 varchar2(500) not null,
+club_type1 varchar2(500), -- 모임 성격
+club_type2 varchar2(500),
+club_type3 varchar2(500),
 CONSTRAINT UQ_club_name unique (club_name)
 );
 
@@ -64,7 +64,7 @@ CONSTRAINT UQ_mem_nick unique (mem_nickname)
 );
 
 create sequence seq_mem_num -- 멤버 번호 시퀀스
-start with 1
+start with 101
 increment by 1
 nomaxvalue
 nominvalue
@@ -83,7 +83,7 @@ CONSTRAINT FK_mem_num FOREIGN KEY (mem_num) REFERENCES member(mem_num)
 );
 
 create sequence seq_choice_num -- 선택 번호 시퀀스
-start with 1
+start with 101
 increment by 1
 nomaxvalue
 nominvalue
@@ -126,7 +126,7 @@ FOREIGN KEY (recom_book2) REFERENCES book(book_num),
 FOREIGN KEY (recom_book3) REFERENCES book(book_num)
 );
 
-create sequence seq_recom_num -- 댓글 번호 시퀀스
+create sequence seq_recom_num -- 추천 번호 시퀀스
 start with 1
 increment by 1
 nomaxvalue
@@ -201,6 +201,20 @@ INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGO
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (39,1385,'가장 예쁜 생각을 너에게 주고 싶다','http://image.kyobobook.co.kr/images/book/large/820/l9788925561820.jpg','현대시');
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (40,1427,'흔들리지 않고 피는 꽃이 어디 있으랴','http://image.kyobobook.co.kr/images/book/large/774/l9788925552774.jpg','현대시');
 
+INSERT INTO club(club_num, club_name) VALUES(seq_club_num.NEXTVAL, 'Hyacinth');
+INSERT INTO club(club_num, club_name) VALUES(seq_club_num.NEXTVAL, 'Adonis');
+INSERT INTO club(club_num, club_name) VALUES(seq_club_num.NEXTVAL, 'Tulipa');
+INSERT INTO club(club_num, club_name) VALUES(seq_club_num.NEXTVAL, 'Daffodil');
+INSERT INTO club(club_num, club_name) VALUES(seq_club_num.NEXTVAL, 'Lilac');
+INSERT INTO club(club_num, club_name) VALUES(seq_club_num.NEXTVAL, 'Marigold');
+INSERT INTO club(club_num, club_name) VALUES(seq_club_num.NEXTVAL, 'Lavendar');
+INSERT INTO club(club_num, club_name) VALUES(seq_club_num.NEXTVAL, 'Freesia');
+INSERT INTO club(club_num, club_name) VALUES(seq_club_num.NEXTVAL, 'Rosemary');
+INSERT INTO club(club_num, club_name) VALUES(seq_club_num.NEXTVAL, 'Chrysanthemum');
+
+drop sequence seq_choice_num;
+
+delete from choice;
 select * from choice;
 
 INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');

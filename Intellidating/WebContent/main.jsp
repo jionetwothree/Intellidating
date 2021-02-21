@@ -1,3 +1,8 @@
+<%@page import="com.DTO.clubDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.DAO.clubDAO"%>
+<%@page import="com.DTO.recommendationDTO"%>
+<%@page import="com.DAO.recommendationDAO"%>
 <%@page import="com.DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
@@ -201,6 +206,12 @@
 	</div>
 	<%} else { %>
 	<p>
+	<%
+		recommendationDAO recom_dao = new recommendationDAO();
+		recommendationDTO recom_dto = recom_dao.selectrecomclub(m_dto.getNum());
+		clubDAO club_dao = new clubDAO();
+		ArrayList<clubDTO> al_club = club_dao.selectallclub(recom_dto);
+	%>
 			<h3><!-- 취향에 맞는 모임 --></h3>
 			</p>
 			<p>
@@ -210,19 +221,19 @@
 		<section>
 			<div>
 				<h3>
-					<a href="intellipage.jsp">독서 모임1</a>
+					<a href="intellipage.jsp"><%=al_club.get(0).getClub_name() %></a>
 				</h3>
 			</div>
 
 			<div>
 				<h3>
-					<a href="intellipage.jsp">독서 모임2</a>
+					<a href="intellipage.jsp"><%=al_club.get(1).getClub_name() %></a>
 				</h3>
 			</div>
 
 			<div>
 				<h3>
-					<a href="intellipage.jsp">독서 모임3</a>
+					<a href="intellipage.jsp"><%=al_club.get(2).getClub_name() %></a>
 				</h3>
 			</div>
 
