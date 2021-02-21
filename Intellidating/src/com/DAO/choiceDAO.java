@@ -44,26 +44,47 @@ public class choiceDAO {
 		}
 	}
 	
-	public choiceDTO choicedata(int mem_num) {
+	public int choicedata(int mem_num) {
+		int result=0; // 선택한 데이터가 있으면 1, 없으면 0
 		choiceDTO dto = null;
 		getConnectecion();
 		String sql = "SELECT * FROM CHOICE WHERE mem_num=?";
 		try {
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, mem_num);
-			
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				result=1;
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return result;
+		
+	}
+
+	public int insertchoice(int mem_num, String choice1, String choice2, String choice3, String choice4, String choice5) {
+		int cnt=0;
+		getConnectecion();
+		String sql = "INSERT INTO CHOICE VALUES(seq_choice_num.NEXTVAL,?,?,?,?,?,?)";
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, mem_num);
+			ps.setString(2, choice1);
+			ps.setString(3, choice2);
+			ps.setString(4, choice3);
+			ps.setString(5, choice4);
+			ps.setString(6, choice5);
+			cnt = ps.executeUpdate();
 			
 		}catch(SQLException e){
 			e.printStackTrace();
 		}finally {
 			close();
 		}
-		return dto;
-		
+		return cnt;
 	}
-	
-
-	
-	}
-
+}
 
