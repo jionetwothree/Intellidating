@@ -32,10 +32,16 @@ public class analysisService extends HttpServlet {
 		String[] choice = request.getParameterValues("choice");
 		int mem_num = Integer.parseInt(request.getParameter("mem_num"));
 		
-		int cnt = dao.insertchoice(mem_num, choice[0], choice[1], choice[2], choice[3], choice[4]);
-		
-		if(cnt>0) {
-			System.out.println("취향 선택 완료");
+		int result = dao.choicedata(mem_num);
+		if(result==0) {
+			int cnt = dao.insertchoice(mem_num, choice[0], choice[1], choice[2], choice[3], choice[4]);
+			if(cnt>0) {
+				System.out.println("취향 선택 완료");
+			}
+		}
+		else {
+			System.out.println("도서 선택 데이터가 있는 회원입니다.");
+			// 선택 여러번 할 수 있으면 업데이트 가능하게 수정
 		}
 
 	}

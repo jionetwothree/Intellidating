@@ -30,8 +30,8 @@ public class loginService extends HttpServlet {
 			session.setAttribute("member", dto);
 			int mem_num = dto.getNum();
 			choiceDAO dao1 = new choiceDAO();
-			choiceDTO dto1 = dao1.choicedata(mem_num);
-			if(dto1 != null) {
+			int result = dao1.choicedata(mem_num);
+			if(result==1) {
 			response.sendRedirect("main.jsp");
 			System.out.println("로그인 성공!");
 			} else {

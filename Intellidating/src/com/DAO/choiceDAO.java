@@ -44,7 +44,8 @@ public class choiceDAO {
 		}
 	}
 	
-	public choiceDTO choicedata(int mem_num) {
+	public int choicedata(int mem_num) {
+		int result=0; // 선택한 데이터가 있으면 1, 없으면 0
 		choiceDTO dto = null;
 		getConnectecion();
 		String sql = "SELECT * FROM CHOICE WHERE mem_num=?";
@@ -52,13 +53,15 @@ public class choiceDAO {
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, mem_num);
 			rs = ps.executeQuery();
-			
+			if(rs.next()) {
+				result=1;
+			}
 		}catch(SQLException e){
 			e.printStackTrace();
 		}finally {
 			close();
 		}
-		return dto;
+		return result;
 		
 	}
 
