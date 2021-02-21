@@ -22,7 +22,7 @@ public class bookDTO {
 		this.book_date = book_date;
 		this.book_image = book_image;
 	}
-	
+
 	public bookDTO(String book_name) {
 
 		super();

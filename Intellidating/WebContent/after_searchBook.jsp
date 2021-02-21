@@ -1,3 +1,5 @@
+<%@page import="com.DAO.bookDAO"%>
+<%@page import="com.DTO.bookDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -6,8 +8,12 @@
 		<link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png">
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+		<link href="style_searchBook.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
+	<%
+		bookDTO dto = (bookDTO) request.getAttribute("bookDTO");
+	%>
 		<div>
 		<header>
 		<p><h2>인텔리데이팅</h2></p>
@@ -28,62 +34,49 @@
 		<div>	
 	<form name="search" action="dbbook" method="post">
 		<input type="text" placeholder="책 제목, 출판사, 작가명 검색">
+		<input type="submit" class="icon_search_submit" value="  ">
 	</form>
 	</div>	
-	<div>
-		<p>인문</p>
-	</div>
-	<div>
-		<p>시/에세이</p>
-	</div>
-	<div>
-		<p>베르나르 베르베르</p>
-	</div>
-	<div>
-		<p>과학</p>
-	</div>
-	<div>
-		<p>경제경영</p>
-	</div>
-	<div>
-		<p>자기계발</p>
-	</div>
-	
+
+	<%
+		bookDAO b_dao = new bookDAO();
+	%>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<img src="<%=dto.getBook_image()%>">
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<%=dto.getBook_image()%>
 	</div>
 	<div class="#">
-		<img alt="책 이미지" src="#">
+		<a href="bookInfo_HJ" target="_blank"><img src="이미지경로" /></a>
+		<%=dto.getBook_image()%>
 	</div>
 	
 	<div>

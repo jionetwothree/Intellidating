@@ -66,7 +66,7 @@ public class memberDAO {
 		return cnt;
 
 	}
-
+	
 	public memberDTO loginMember(String email, String password) {
 
 		memberDTO dto = null;

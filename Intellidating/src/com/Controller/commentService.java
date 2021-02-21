@@ -16,14 +16,14 @@ public class commentService extends HttpServlet {
 		request.setCharacterEncoding("EUC-KR");
 		
 		//값 받아오기
-		String sendNick = request.getParameter("sendNick");
+
 		String sendCmt = request.getParameter("sendCmt");
 		
-		//CmtDTO(작성자닉네임, 댓글)
-		//CmtDTO dto = new CmtDTO(sendNick, s);
-				  
-		
-		//CmtDAO dao = new CmtDAO();
-	}
 
+		//commentsDTO(책 번호, 작성자 번호, 댓글 내용)
+//		commentsDTO dto = new commentsDTO();
+//				  
+
+
+	}
 }
