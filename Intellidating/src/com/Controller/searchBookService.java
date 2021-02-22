@@ -2,6 +2,8 @@ package com.Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,11 +30,19 @@ public class searchBookService extends HttpServlet {
 		
 		
 		bookDAO dao = new bookDAO();
-		bookDTO dto = dao.searchBook(search_submit);
+		ArrayList<bookDTO> al_book = null;
+		try {
+			al_book = dao.searchBook3(search_submit);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+		// class java.util.ArrayList cannot be cast to class com.DTO.bookDTO
 
-		if (dto != null) {
+		if (al_book != null) {
 			System.out.println("검색 성공!");
-			request.setAttribute("bookDTO", dto);
+			request.setAttribute("bookDTO", al_book);
 			RequestDispatcher rd = request.getRequestDispatcher("after_searchBook.jsp");
 			rd.forward(request, response);
 		} else {
