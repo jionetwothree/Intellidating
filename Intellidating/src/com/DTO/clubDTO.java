@@ -9,6 +9,7 @@ public class clubDTO {
 	private String club_type1;
 	private String club_type2;
 	private String club_type3;
+	private String club_image;
 	
 	public clubDTO(int club_num, String club_name, int club_mem_int, String club_detail, String club_type1, String club_type2,
 			String club_type3) {
@@ -27,8 +28,10 @@ public class clubDTO {
 		this.club_detail = club_detail;
 	}
 
-	public clubDTO(String club_name) {
+	public clubDTO(int club_num, String club_name, String club_image) {
+		this.club_num = club_num;
 		this.club_name = club_name;
+		this.club_image = club_image;
 	}
 
 	public String getClub_name() {
@@ -77,6 +80,18 @@ public class clubDTO {
 
 	public void setClub_type3(String club_type3) {
 		this.club_type3 = club_type3;
+	}
+	public int getClub_num() {
+		return club_num;
+	}
+	public void setClub_num(int club_num) {
+		this.club_num = club_num;
+	}
+	public String getClub_image() {
+		return club_image;
+	}
+	public void setClub_image(String club_image) {
+		this.club_image = club_image;
 	}
 	
 }

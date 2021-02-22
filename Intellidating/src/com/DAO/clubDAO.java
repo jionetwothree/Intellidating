@@ -163,9 +163,11 @@ public class clubDAO {
 			ps.setInt(3, dto.getRecom_club3());
 			rs = ps.executeQuery();
 			while (rs.next()) {
+				int get_num = rs.getInt(1);
 				String get_name = rs.getString(2);
+				String get_image = rs.getString(3);
 
-				club_dto = new clubDTO(get_name);
+				club_dto = new clubDTO(get_num, get_name, get_image);
 				al_club.add(club_dto);
 			}
 		} catch (SQLException e) {
