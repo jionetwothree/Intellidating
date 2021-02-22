@@ -1,6 +1,7 @@
 <%@page import="com.DTO.memberDTO"%>
 <%@page import="com.DTO.clubDTO"%>
 <%@page import="com.DAO.clubDAO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -12,6 +13,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+<script>
+
+function openPopup(url) {
+
+window.open(url, 'new', 'width=400, height=450, toolbars=no, scrollbars=yes');
+}
+
+</script>
 	<%
 		memberDTO m_dto = (memberDTO) session.getAttribute("member");
 
@@ -47,22 +56,28 @@
 		%>
 		<hr />
 		<div>
+		<table>
+							<caption><h2>모임목록</h2></caption>
+							<tr>
+								<td>모임이름</td>
+								<td></td>							
+							</tr>
+							<%
+								ArrayList<clubDTO> al = dao.selectcb();
+								for(int i=0;  i<al.size(); i++){
+							
+									out.print("<tr>");
+									
+									out.print("<td><a href=javascript:openPopup('bookpop.jsp')>"+al.get(i).getClub_name()+"</a></td>"); 
+									if(m_dto!=null){
+									out.print("<td><a href='joinClub?clubname="+al.get(i).getClub_name()+"'>가입하기</a></td>");
+									}
+									out.print("</tr>");
+									}
+									
+							%>
+						</table>
 			
-				<p>
-					<a href="bookpop.jsp" onclick="window.open('bookpop.jsp', 'new', 'width=400, height=450, toolbars=no, scrollbars=yes'); return false;"><%=dto.getClub_name()%></a>
-				</p>
-			<%
-				if (m_dto != null) {
-			%>
-			<form action="joinClub">
-				<input type="submit" value="모임가입">
-			</form>
-			<%
-				}
-			%>
-
-
-			<img src="#">
 		</div>
 
 		<p>

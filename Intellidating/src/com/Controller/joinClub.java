@@ -15,11 +15,13 @@ import com.DTO.memberDTO;
 public class joinClub extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		memberDTO dto  = (memberDTO)session.getAttribute("member");
-		String email = dto.getEmail();
+//		HttpSession session = request.getSession();
+//		memberDTO dto  = (memberDTO)session.getAttribute("member");
+//		String email = dto.getEmail();
+//		System.out.println(email);
+		String email = request.getParameter("clubname");
 		System.out.println(email);
-		
+		response.sendRedirect("loginmain.jsp");
 
 	}
 

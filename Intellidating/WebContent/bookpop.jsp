@@ -8,18 +8,10 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-function javascript(){
-    self.close();   //자기자신창을 닫습니다.
-}
-</script>
+
 </head>
 <body>
 	<%
-		memberDTO m_dto = (memberDTO) session.getAttribute("member");
-		String email = m_dto.getEmail();
 		clubDAO dao = new clubDAO();
 		clubDTO dto = dao.selectclub(2);
 	%>
