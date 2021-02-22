@@ -142,6 +142,8 @@ book_image varchar2(200) not null,
 book_category3 varchar2(50) not null
 );
 
+select * from PRINT_BOOK;
+
 insert into member(mem_num, mem_email, mem_password, mem_username, mem_nickname) 
 values(seq_mem_num.NEXTVAL, 'admin','1234','包府磊','包府磊');
 
