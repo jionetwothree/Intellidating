@@ -28,7 +28,7 @@ public class searchBookService extends HttpServlet {
 		String search_submit = request.getParameter("search_submit");
 		System.out.println(search_submit);
 		
-		if(search_submit.equals("")) {
+		if(!search_submit.equals("")) {
 			bookDAO dao = new bookDAO();
 			ArrayList<bookDTO> al_book = null;
 			try {
@@ -48,12 +48,12 @@ public class searchBookService extends HttpServlet {
 				rd.forward(request, response);
 			} else {
 				System.out.println("검색 실패!");
-				response.sendRedirect("before_searchBook");
+				response.sendRedirect("before_searchBook.jsp");
 	
 			}
 			
 		} else {
-			response.sendRedirect("before_searchBook");
+			response.sendRedirect("before_searchBook.jsp");
 		}
 		
 		
