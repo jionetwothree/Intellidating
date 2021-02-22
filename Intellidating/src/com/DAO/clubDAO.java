@@ -76,13 +76,13 @@ public class clubDAO {
 		String sql = "UPDATE CLUB set club_mem_cnt=club_mem_cnt+1 where club_num=?";
 		try {
 			ps = conn.prepareStatement(sql);
-			ps.setInt(1, mem_num);
+			ps.setInt(1, club_num);
 			ps.executeUpdate();
 			sql = "UPDATE MEMBER set mem_club1=? where mem_num=?";
 			// 하나의 클럽만 가입
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, club_num);
-			ps.setInt(2, club_num);
+			ps.setInt(2, mem_num);
 			cnt = ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -106,9 +106,10 @@ public class clubDAO {
 			rs = ps.executeQuery();
 
 			while (rs.next()) {
+				int get_num  = rs.getInt(1);
 				String get_name = rs.getString(2);
 				String get_detail = rs.getString(4);			
-				clubDTO dto  = new clubDTO(get_name, get_detail);
+				clubDTO dto  = new clubDTO(get_name, get_detail,get_num);
 				al.add(dto);
 				
 			}

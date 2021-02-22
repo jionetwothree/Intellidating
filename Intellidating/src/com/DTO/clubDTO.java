@@ -21,11 +21,12 @@ public class clubDTO {
 		this.club_type2 = club_type2;
 		this.club_type3 = club_type3;
 	}
-	public clubDTO( String club_name, String club_detail) {
+	public clubDTO( String club_name, String club_detail, int club_num) {
 		super();
 		
 		this.club_name = club_name;
 		this.club_detail = club_detail;
+		this.club_num = club_num;
 	}
 
 	public clubDTO(int club_num, String club_name, String club_image) {
