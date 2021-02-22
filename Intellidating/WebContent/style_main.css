@@ -1,0 +1,213 @@
+@charset "EUC-KR";
+@font-face{font-family:'Nanum Gothic';
+			src:url('/fonts/NanumGothic.eot');
+			src:url('/fonts/NanumGothic.eot') format('embedded-opentype'),
+			url('/fonts/NanumGothic.woff')format('woff');
+			}
+	body{
+		margin-left:100px;
+		margin-right:100px;
+	}
+	
+	a{
+		font-style:"Nanum Gothic";
+		text-decoration: none;
+		font-color:
+	}
+
+	
+	#title{
+		float:left;
+		width:80%;
+		height:80px;
+		float:left;	
+		
+	
+	}
+	#title p{		
+		text-decoration:none;
+		font-size:25px;
+		text-align:left;
+		padding: 15px 8px 10px 8px;
+		margin-left:70px;
+		margin-top:0px;
+	}
+	
+	#menu{
+		float:left;
+		width:20%;	
+	}
+	
+	#menu li{
+		list-style:none;
+		text-align:center;
+		float:left;
+		text-size:20px;
+		padding: 5px 20px 20px 8px;
+	}
+	
+	
+	#banner{
+		float:left;
+		width:100%;
+		height:300px;
+		background-color:#C2E2E8;
+		text-align:center;
+	}
+	
+	#banner a{
+		line-height:300px;
+		font-size:35px;
+	}
+	
+	#explain{
+		float:left;
+	}
+	.clubtopic{
+		float:left;
+		width:70%;
+		height:10px;
+		text-align:left;
+	}
+	
+	.clubtopic p{
+		text-size:10px;
+	}
+	
+	.all{
+		float:left;
+		width:30%;
+		height:10px;
+		text-align:right;
+	}
+	
+	.all p{
+		text-size:10px;
+	}
+	
+	.clubs{
+		float:left;
+		width:100%
+		position: relative;
+		overflow: hidden;
+		padding: 2em 0 2em 0;
+		margin-bottom: 0;
+	}
+	.clubs .forward, .clubs .backward {
+			position: absolute;
+			top: 50%;
+			width: 6em;
+			height: 12em;
+			margin-top: -6em;
+			cursor: pointer;
+		}
+		.clubs .forward:before, .clubs .backward:before {
+				content: '';
+				display: block;
+				width: 6em;
+				height: 6em;
+				border-radius: 100%;
+				background-color: rgba(72, 57, 73, 0.5);
+				position: absolute;
+				top: 50%;
+				margin-top: -3em;
+				-moz-transition: background-color 0.35s ease-in-out;
+				-webkit-transition: background-color 0.35s ease-in-out;
+				-o-transition: background-color 0.35s ease-in-out;
+				-ms-transition: background-color 0.35s ease-in-out;
+				transition: background-color 0.35s ease-in-out;
+				-webkit-backface-visibility: hidden;
+			}
+
+			.clubs .forward:after, .clubs .backward:after {
+				content: '';
+				width: 3em;
+				height: 3em;
+				position: absolute;
+				top: 50%;
+				margin: -1.5em 0 0 0;
+				background: url("images/arrow.svg") no-repeat center center;
+			}
+
+			.clubs .forward:hover:before, .clubs .backward:hover:before {
+				background-color: rgba(239, 131, 118, 0.75);
+			}
+
+		.clubs .forward {
+			right: 0;
+		}
+
+			.clubs .forward:before {
+				right: -3em;
+			}
+
+			.clubs .forward:after {
+				right: -0.25em;
+			}
+
+		.clubs .backward {
+			left: 0;
+		}
+
+			.clubs .backward:before {
+				left: -3em;
+			}
+
+			.clubs .backward:after {
+				left: -0.25em;
+				-moz-transform: scaleX(-1);
+				-webkit-transform: scaleX(-1);
+				-ms-transform: scaleX(-1);
+				transform: scaleX(-1);
+			}
+
+		.clubs .reel {
+			white-space: nowrap;
+			position: relative;
+			-webkit-overflow-scrolling: touch;
+			padding: 0 2em 0 2em;
+		}
+
+		.clubs div {
+			display: inline-block;
+			width: 18em;
+			background: #fff;
+			text-align: center;
+			padding: 0 1em 3em 1em;
+			margin: 0 2em 0 0;
+			white-space: normal;
+			opacity: 1.0;
+			-moz-transition: opacity 0.75s ease-in-out;
+			-webkit-transition: opacity 0.75s ease-in-out;
+			-ms-transition: opacity 0.75s ease-in-out;
+			transition: opacity 0.75s ease-in-out;
+		}
+
+			.clubs div.loading {
+				opacity: 0;
+			}
+
+			.clubs div .image {
+				position: relative;
+				left: -1em;
+				top: 0;
+				width: auto;
+				margin-right: -2em;
+				margin-bottom: 3em;
+			}
+
+	}
+	
+	footer{
+		background-color:silver;
+		float:left;
+		width:100%
+	}
+	footer div p{
+		text-decoration:none;
+		float:left;
+		text-size:20px;
+		padding: 15px 8px 15px 8px;
+	}
+	
+	
