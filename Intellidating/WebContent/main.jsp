@@ -1,3 +1,4 @@
+
 <%@page import="com.DTO.clubDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.DAO.clubDAO"%>
@@ -32,7 +33,7 @@
 	<nav>
 		<div id="menu">
 			<ul>
-				<li><a href="searchbook.jsp">책 검색하기</a></li>
+				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
 				<%
 					if (m_dto == null) {
 				%>
@@ -341,4 +342,5 @@
 				</div>
 			</footer>
 </body>
+
 </html>
