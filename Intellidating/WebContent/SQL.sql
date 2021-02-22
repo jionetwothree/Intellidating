@@ -219,7 +219,7 @@ INSERT INTO club(club_num, club_name) VALUES(seq_club_num.NEXTVAL, 'Chrysanthemu
 
 drop sequence seq_choice_num;
 
-delete from choice;
+delete from choice where mem_num=101;
 select * from choice;
 
 INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');
