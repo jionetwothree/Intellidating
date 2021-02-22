@@ -46,14 +46,20 @@ public class bookDAO {
 		}
 	}
 
-	public bookDTO selectbook(String book_name) {
+	public bookDTO selectBook(String book_name) {
+		
 		bookDTO dto = null;
-		getConnection();
-		String sql = "SELECT * FROM BOOK WHERE book_name=?";
+		
 		try {
+			getConnection();
+			String sql = "SELECT * FROM BOOK WHERE book_name=?";
+
 			ps = conn.prepareStatement(sql);
+			
 			ps.setString(1, book_name);
+			
 			rs = ps.executeQuery();
+			
 			if (rs.next()) {
 				int get_num = rs.getInt(1);
 				String get_name = rs.getString(2);
@@ -73,5 +79,43 @@ public class bookDAO {
 		return dto;
 
 	}
+	
+
+          public bookDTO searchBook(String book_name) {
+      		
+      		bookDTO dto = null;
+      		
+      		try {
+      			getConnection();
+      			String sql = "SELECT * FROM BOOK WHERE LIKE '%?%'";
+
+      			ps = conn.prepareStatement(sql);
+      			
+      			ps.setString(1, book_name);
+      			
+      			rs = ps.executeQuery();
+      			
+      			if (rs.next()) {
+      				int get_num = rs.getInt(1);
+      				String get_name = rs.getString(2);
+      				String get_author = rs.getString(3);
+      				String get_publisher = rs.getString(4);
+      				String get_date = rs.getString(5);
+      				String get_image = rs.getString(6);
+
+      				dto = new bookDTO(get_num, get_name, get_author, get_publisher, get_date, get_image);
+      			}
+      		} catch (SQLException e) {
+      			e.printStackTrace();
+      		} finally {
+      			close();
+      		}
+
+      		return dto;
+
+      	}      
+	
+
+
 
 }

@@ -5,11 +5,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import com.DTO.memberDTO;
+import com.DTO.recommendationDTO;
 
-public class memberDAO {
+public class recommendationDAO {
 
 	private Connection conn;
 	private PreparedStatement ps;
@@ -45,17 +45,17 @@ public class memberDAO {
 			e.printStackTrace();
 		}
 	}
-
-	public int joinMember(String email, String password, String name, String nickname) {
+	
+	public int insertrecomclub(int mem_num, int recom_club1, int recom_club2, int recom_club3) {
 		int cnt = 0;
 		getConnection();
-		String sql = "INSERT INTO MEMBER(mem_num, mem_email, mem_password, mem_username, mem_nickname) VALUES(seq_mem_num.NEXTVAL,?,?,?,?)";
+		String sql = "INSERT INTO recommendation(recom_num, mem_num, recom_club1, recom_club2, recom_club3) VALUES(seq_recom_num.NEXTVAL,?,?,?,?)";
 		try {
 			ps = conn.prepareStatement(sql);
-			ps.setString(1, email);
-			ps.setString(2, password);
-			ps.setString(3, name);
-			ps.setString(4, nickname);
+			ps.setInt(1, mem_num);
+			ps.setInt(2, recom_club1);
+			ps.setInt(3, recom_club2);
+			ps.setInt(4, recom_club3);
 			cnt = ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -67,31 +67,27 @@ public class memberDAO {
 
 	}
 	
-	public memberDTO loginMember(String email, String password) {
-
-		memberDTO dto = null;
+	public recommendationDTO selectrecomclub(int mem_num) {
+		recommendationDTO dto = null;
 		getConnection();
-		String sql = "SELECT * FROM MEMBER WHERE mem_email=? AND mem_password=?";
+		String sql = "SELECT * FROM recommendation WHERE mem_num=?";
 		try {
 			ps = conn.prepareStatement(sql);
-			ps.setString(1, email);
-			ps.setString(2, password);
+			ps.setInt(1, mem_num);
 			rs = ps.executeQuery();
 			if (rs.next()) {
-				int get_num = rs.getInt(1);
-				String get_email = rs.getString(2);
-				String get_pw = rs.getString(3);
-				String get_name = rs.getString(4);
-				String get_nickname = rs.getString(5);
+				int get_recom_club1 = rs.getInt(3);
+				int get_recom_club2 = rs.getInt(4);
+				int get_recom_club3 = rs.getInt(5);
 
-				dto = new memberDTO(get_num, get_email, get_pw, get_name, get_nickname);
+				dto = new recommendationDTO(mem_num, get_recom_club1, get_recom_club2, get_recom_club3);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			close();
 		}
-
+		
 		return dto;
 	}
 

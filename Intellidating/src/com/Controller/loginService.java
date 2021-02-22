@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.DAO.choiceDAO;
 import com.DAO.memberDAO;
+import com.DTO.choiceDTO;
 import com.DTO.memberDTO;
 
 @WebServlet("/loginService")
@@ -19,15 +21,22 @@ public class loginService extends HttpServlet {
 	
 		String email = request.getParameter("email");
 		String password = request.getParameter("pw");
-		PrintWriter out = response.getWriter();
+		
 		memberDAO dao = new memberDAO();
 		memberDTO dto = dao.loginMember(email, password);
 		
 		if (dto != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("member", dto);
-			response.sendRedirect("loginmain.jsp");
+			int mem_num = dto.getNum();
+			choiceDAO dao1 = new choiceDAO();
+			int result = dao1.choicedata(mem_num);
+			if(result==1) {
+			response.sendRedirect("main.jsp");
 			System.out.println("로그인 성공!");
+			} else {
+				response.sendRedirect("analysis.jsp");
+			}
 		} else {
 			System.out.println("로그인 실패!");
 		}

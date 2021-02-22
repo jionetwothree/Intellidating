@@ -7,12 +7,19 @@ public class commentsDTO {
 	private String content;
 	private String comment_date;
 	
-	public commentsDTO(int book_num, int mem_num, String content, String comment_date) {
+	public commentsDTO(int book_num, int mem_num, String content) {
 		super();
 		this.book_num = book_num;
 		this.mem_num = mem_num;
 		this.content = content;
-		this.comment_date = comment_date;
+	}
+	
+	public commentsDTO(int book_num, int mem_num, String content, String content_date) {
+		super();
+		this.book_num = book_num;
+		this.mem_num = mem_num;
+		this.content = content;
+		this.comment_date = content_date;
 	}
 
 	public int getBook_num() {

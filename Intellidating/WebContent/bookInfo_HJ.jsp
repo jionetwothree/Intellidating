@@ -1,16 +1,20 @@
-<%@page import="com.DTO.memberDTO"%>
+<%@ page import="com.DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="style_bookInfo_HJ.css">
+<link rel="stylesheet" href="style_
+bookInfo_HJ.css">
 <title>책 정보 페이지</title>
 </head>
 <body>
 
+
+
 <%
+
 	memberDTO dto = (memberDTO)session.getAttribute("member");
 %>
 

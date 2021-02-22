@@ -12,7 +12,6 @@ public class clubDTO {
 	
 	public clubDTO(int club_num, String club_name, int club_mem_int, String club_detail, String club_type1, String club_type2,
 			String club_type3) {
-		super();
 		this.club_num = club_num;
 		this.club_name = club_name;
 		this.club_mem_int = club_mem_int;
@@ -26,6 +25,10 @@ public class clubDTO {
 		
 		this.club_name = club_name;
 		this.club_detail = club_detail;
+	}
+
+	public clubDTO(String club_name) {
+		this.club_name = club_name;
 	}
 
 	public String getClub_name() {
