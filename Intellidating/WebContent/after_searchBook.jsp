@@ -1,3 +1,6 @@
+<%@page import="com.DTO.memberDTO"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.DAO.bookDAO"%>
 <%@page import="com.DTO.bookDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -12,8 +15,12 @@
 	</head>
 	<body>
 	<%
-		bookDTO dto = (bookDTO) request.getAttribute("bookDTO");
+	
+		memberDTO m_dto = (memberDTO)session.getAttribute("member");
+		bookDTO b_dto = (bookDTO)session.getAttribute("book");
+
 	%>
+
 		<div>
 		<header>
 		<p><h2>인텔리데이팅</h2></p>
@@ -33,51 +40,31 @@
 		</div>
 		<div>	
 	<form name="search" action="dbbook" method="post">
-		<input type="text" placeholder="책 제목, 출판사, 작가명 검색">
-		<input type="submit" class="icon_search_submit" value="  ">
+		<input type="text" placeholder="책 제목 검색">
+		<input type="submit" class="icon_search_submit" name="search_submit" value="  ">
 	</form>
 	</div>	
-
-	<%
-		bookDAO b_dao = new bookDAO();
-	%>
-	<div class="#">
-		<img src="<%=dto.getBook_image()%>">
-	</div>
-	<div class="#">
-		<%=dto.getBook_image()%>
-	</div>
-	<div class="#">
-		<%=dto.getBook_image()%>
-	</div>
-	<div class="#">
-		<%=dto.getBook_image()%>
-	</div>
-	<div class="#">
-		<%=dto.getBook_image()%>
-	</div>
-	<div class="#">
-		<%=dto.getBook_image()%>
-	</div>
-	<div class="#">
-		<%=dto.getBook_image()%>
-	</div>
-	<div class="#">
-		<%=dto.getBook_image()%>
-	</div>
-	<div class="#">
-		<%=dto.getBook_image()%>
-	</div>
-	<div class="#">
-		<%=dto.getBook_image()%>
-	</div>
-	<div class="#">
-		<%=dto.getBook_image()%>
-	</div>
-	<div class="#">
-		<a href="bookInfo_HJ" target="_blank"><img src="이미지경로" /></a>
-		<%=dto.getBook_image()%>
-	</div>
+		<table>
+			<%
+				/* String attr = request.getParameter("bookDTO"); */
+				
+				ArrayList<bookDTO> dto = (ArrayList<bookDTO>) request.getAttribute("bookDTO"); 
+				System.out.print(dto.size());
+				
+				for(int i = 0; i < dto.size(); i++) {
+					out.print("<tr>");
+					out.print("<td>"+dto.get(i).getBook_name()+"</td>");
+					out.print("<td>"+dto.get(i).getBook_author()+"</td>");
+					out.print("<td>"+dto.get(i).getBook_publisher()+"</td>");
+					out.print("<td>"+dto.get(i).getBook_date()+"</td>");%>
+					<td>
+						<a href='bookInfoService?book=dto.get(i).getBook_image()'>
+							<img src="<%=dto.get(i).getBook_image()%>">
+						</a>
+					</td>
+					<tr>
+			<%}%>
+		</table>
 	
 	<div>
 			<p><a href="#">자주 묻는 질문</a></p>

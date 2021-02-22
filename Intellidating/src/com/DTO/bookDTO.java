@@ -1,7 +1,8 @@
 package com.DTO;
 
+import java.util.ArrayList;
 
-public class bookDTO {
+public class bookDTO<E> {
 
 	private int book_num;
 	private String book_name;
@@ -12,6 +13,7 @@ public class bookDTO {
 	private String book_category1;
 	private String book_category2;
 	private String book_category3;
+	private ArrayList<E> arr;
 	
 	public bookDTO(int book_num, String book_name, String book_author, String book_publisher, String book_date,
 			String book_image) {
@@ -30,6 +32,14 @@ public class bookDTO {
 
 		super();
 		this.book_name = book_name;
+	
+	}
+	
+	
+	public bookDTO(ArrayList<E> arr) {
+
+		super();
+		this.arr = arr;
 	
 	}
 
