@@ -39,7 +39,7 @@
 		<hr />
 		</div>
 		<div>	
-	<form name="search" action="dbbook" method="post">
+	<form name="search" action="searchBookService" method="post">
 		<input type="text" placeholder="책 제목 검색">
 		<input type="submit" class="icon_search_submit" name="search_submit" value="  ">
 	</form>
