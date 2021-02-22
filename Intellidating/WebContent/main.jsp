@@ -203,9 +203,9 @@
 			<p>
 				<%
 					recommendationDAO recom_dao = new recommendationDAO();
-						recommendationDTO recom_dto = recom_dao.selectrecomclub(m_dto.getNum());
-						clubDAO club_dao = new clubDAO();
-						ArrayList<clubDTO> al_club = club_dao.selectallclub(recom_dto);
+					recommendationDTO recom_dto = recom_dao.selectrecomclub(m_dto.getNum());
+					clubDAO club_dao = new clubDAO();
+					ArrayList<clubDTO> al_club = club_dao.selectallclub(recom_dto);
 				%>
 			
 			<div id="clubs">
