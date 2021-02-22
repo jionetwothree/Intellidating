@@ -5,10 +5,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.DTO.bookDTO;
 import com.DTO.clubDTO;
 import com.DTO.memberDTO;
+import com.DTO.recommendationDTO;
 
 public class clubDAO {
 
@@ -106,7 +108,7 @@ public class clubDAO {
 				String get_detail = rs.getString(4);
 				String get_type1 = rs.getString(5);
 				String get_type2 = rs.getString(6);
-				String get_type3 = rs.getString(6);
+				String get_type3 = rs.getString(7);
 
 				dto = new clubDTO(get_num, get_name, get_mem_cnt, get_detail, get_type1, get_type2, get_type3);
 			}
@@ -118,5 +120,30 @@ public class clubDAO {
 
 		return dto;
 
+	}
+	
+	public ArrayList<clubDTO> selectallclub(recommendationDTO dto){
+		ArrayList<clubDTO> al_club = new ArrayList<clubDTO>();
+		clubDTO club_dto = null;
+		getConnection();
+		String sql = "SELECT * FROM CLUB WHERE club_num=? or club_num=? or club_num=?";
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, dto.getRecom_club1());
+			ps.setInt(2, dto.getRecom_club2());
+			ps.setInt(3, dto.getRecom_club3());
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				String get_name = rs.getString(2);
+
+				club_dto = new clubDTO(get_name);
+				al_club.add(club_dto);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}		
+		return al_club;
 	}
 }
