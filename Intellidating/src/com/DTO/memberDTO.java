@@ -25,6 +25,14 @@ public class memberDTO {
 		this.nickname = nickname;
 	}
 	
+	public memberDTO(String password, String name, String nickname) {
+		super();
+		this.password = password;
+		this.name = name;
+		this.nickname = nickname;
+	}
+	
+	
 	public int getNum() {
 		return num;
 	}

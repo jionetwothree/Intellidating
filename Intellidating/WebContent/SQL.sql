@@ -1,3 +1,20 @@
+DROP TABLE choice; -- 드랍
+DROP TABLE CLUB; --드랍
+DROP TABLE book; -- 드랍
+DROP TABLE member; -- 드랍
+DROP TABLE comments; -- 드랍
+DROP TABLE print_book; --드랍
+DROP TABLE recommendation; --드랍
+
+
+drop sequence seq_club_num; --드랍
+drop sequence seq_mem_num; --드랍
+drop sequence seq_book_num; --드랍
+drop sequence seq_choice_num; --드랍
+drop sequence seq_co_num; --드랍 
+drop sequence seq_recom_num; --드랍
+
+
 CREATE TABLE club(
 club_num number(10) CONSTRAINT club_num_pk primary key, -- 번호 시퀀스 seq_club_num.NEXTVAR
 club_name varchar2(50) not null, -- 모임 이름
@@ -8,8 +25,8 @@ club_type2 varchar2(500) not null,
 club_type3 varchar2(500) not null,
 CONSTRAINT UQ_club_name unique (club_name)
 );
-select * from club
-INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');
+
+
 
 create sequence seq_club_num -- 모임 번호 시퀀스
 start with 1
@@ -30,6 +47,7 @@ book_category1 varchar2(50), -- 분류 1
 book_category2 varchar2(50), -- 분류 2
 book_category3 varchar2(50) -- 분류 3
 );
+
 
 create sequence seq_book_num -- 책 번호 시퀀스
 start with 1
@@ -132,9 +150,10 @@ select_num number(10) CONSTRAINT select_num_pk primary key,
 book_num number(10) not null,
 book_name varchar2(200) not null,
 book_image varchar2(200) not null,
-book_category3 varchar2(50) not null,
-FOREIGN KEY (book_num) REFERENCES book(book_num)
+book_category3 varchar2(50) not null
 );
+
+select * from print_book;
 
 insert into member(mem_num, mem_email, mem_password, mem_username, mem_nickname) 
 values(seq_mem_num.NEXTVAL, 'admin','1234','관리자','관리자');
@@ -195,8 +214,14 @@ INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGO
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (39,1385,'가장 예쁜 생각을 너에게 주고 싶다','http://image.kyobobook.co.kr/images/book/large/820/l9788925561820.jpg','현대시');
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (40,1427,'흔들리지 않고 피는 꽃이 어디 있으랴','http://image.kyobobook.co.kr/images/book/large/774/l9788925552774.jpg','현대시');
 
-DROP TABLE choice;
-drop sequence seq_mem_num;
 
+select * from club;
+select * from PRINT_BOOK;
+select * from member;
+
+--INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');--이건 일단 인서트 하지 말고 놔둬보세여 테스트 용이라
+
+
+select * from club;
 select * from choice;
 delete from print_book;

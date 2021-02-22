@@ -1,6 +1,8 @@
 package chat;
 
 import java.io.IOException;
+import java.net.URLDecoder;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,8 +21,8 @@ public class ChatSubmitSerlvet extends HttpServlet {
 
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html);charset=UTF-8");
-		String chatName = request.getParameter("chatName");
-		String chatContent = request.getParameter("chatContent");
+		String chatName = URLDecoder.decode(request.getParameter("chatName"),"UTF-8");
+		String chatContent = URLDecoder.decode(request.getParameter("chatContent"),"UTF-8");
 		
 		System.out.println("name : " + chatName);
 		System.out.println("chatContent : " + chatContent);

@@ -88,7 +88,7 @@
 				<h3>
 					<a href="intellipage.jsp">독서 모임2</a>
 				</h3>
-			</div>
+			</div> 
 
 			<div>
 				<h3>
