@@ -33,7 +33,7 @@
 	<nav>
 		<div id="menu">
 			<ul>
-				<li><a href="searchbook.jsp">책 검색하기</a></li>
+				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
 				<%
 					if (m_dto == null) {
 				%>
