@@ -5,10 +5,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.DTO.bookDTO;
 import com.DTO.clubDTO;
 import com.DTO.memberDTO;
+import com.DTO.recommendationDTO;
 
 public class clubDAO {
 
@@ -74,13 +76,13 @@ public class clubDAO {
 		String sql = "UPDATE CLUB set club_mem_cnt=club_mem_cnt+1 where club_num=?";
 		try {
 			ps = conn.prepareStatement(sql);
-			ps.setInt(1, mem_num);
+			ps.setInt(1, club_num);
 			ps.executeUpdate();
 			sql = "UPDATE MEMBER set mem_club1=? where mem_num=?";
 			// 하나의 클럽만 가입
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, club_num);
-			ps.setInt(2, club_num);
+			ps.setInt(2, mem_num);
 			cnt = ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -89,6 +91,36 @@ public class clubDAO {
 		}
 		
 		return cnt;
+	}
+	public ArrayList<clubDTO> selectcb() {
+
+		ArrayList<clubDTO> al = new ArrayList<clubDTO>();
+
+		try {
+			getConnection();
+
+			String sql = "select * from club ";
+
+			ps = conn.prepareStatement(sql);
+
+			rs = ps.executeQuery();
+
+			while (rs.next()) {
+				int get_num  = rs.getInt(1);
+				String get_name = rs.getString(2);
+				String get_detail = rs.getString(4);			
+				clubDTO dto  = new clubDTO(get_name, get_detail,get_num);
+				al.add(dto);
+				
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return al;
+
 	}
 	
 	public clubDTO selectclub(int club_num) {
@@ -106,7 +138,7 @@ public class clubDAO {
 				String get_detail = rs.getString(4);
 				String get_type1 = rs.getString(5);
 				String get_type2 = rs.getString(6);
-				String get_type3 = rs.getString(6);
+				String get_type3 = rs.getString(7);
 
 				dto = new clubDTO(get_num, get_name, get_mem_cnt, get_detail, get_type1, get_type2, get_type3);
 			}
@@ -118,5 +150,32 @@ public class clubDAO {
 
 		return dto;
 
+	}
+	
+	public ArrayList<clubDTO> selectallclub(recommendationDTO dto){
+		ArrayList<clubDTO> al_club = new ArrayList<clubDTO>();
+		clubDTO club_dto = null;
+		getConnection();
+		String sql = "SELECT * FROM CLUB WHERE club_num=? or club_num=? or club_num=?";
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, dto.getRecom_club1());
+			ps.setInt(2, dto.getRecom_club2());
+			ps.setInt(3, dto.getRecom_club3());
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				int get_num = rs.getInt(1);
+				String get_name = rs.getString(2);
+				String get_image = rs.getString(3);
+
+				club_dto = new clubDTO(get_num, get_name, get_image);
+				al_club.add(club_dto);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}		
+		return al_club;
 	}
 }

@@ -3,15 +3,17 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.DTO.bookDTO"%>
 <%@page import="com.DTO.memberDTO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="EUC-KR"%>
+<% request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="icon" sizes="192x192"
+
 	href="https://static.wixstatic.com/media/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png">
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <SCRIPT LANGUAGE="JavaScript">
 <!--
 function fchk() {
@@ -95,7 +97,7 @@ function check(obj,condition, n) {
 			<h1><%=m_dto.getNickname()%>좋아하는 책 5권을 골라주세요!</h1>
 		</div>
 
-		<form name="form" action="analysisService" method="get" onsubmit="return fchk();">
+		<form name="form" action="http://localhost:8084/intellidating/predict" method="post" onsubmit="return fchk();">
 			<div>
 			<table>
 				<%
