@@ -55,17 +55,7 @@ function check(obj,condition, n) {
 }
 //-->
 </SCRIPT>
-<script>
-    function autologin(img) {
-        if(img.checked) {
-            img.checked = false;
-            img.src="images/checkboxoff.png"
-        } else {
-            img.checked = true;
-            img.src="images/checkboxon.png"
-                }
-        }
-</script>
+
 </head>
 <body>
 	<%
@@ -115,7 +105,7 @@ function check(obj,condition, n) {
 				out.println("<tr>");
 					for(int i=0;i<al_book.size();i++){
 						out.println("<td align='center' height='500px' width='300px'><img src='"+al_book.get(i).getBook_image()+"' height='350px' width='200px'><br>");
-						out.println("<input type='checkbox' name='choice' onclick='check(this,check_q1(this),5);' value="+al_book.get(i).getBook_category3()+">");
+						out.println("<input style='zoom:2.0;' type='checkbox' name='choice'  id='checkbox_agree1' onclick='check(this,check_q1(this),5);' value="+al_book.get(i).getBook_category3()+">");
 						out.println(al_book.get(i).getBook_name()+"</td>");
 						if((i+1)%5==0){
 							out.println("</tr>");
