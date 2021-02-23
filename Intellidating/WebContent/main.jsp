@@ -13,7 +13,7 @@
    href="https://static.wixstatic.com/media/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png">
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<link rel="stylesheet" type="text/css" href="main2.css">
+<link rel="stylesheet" type="text/css" href="main.css">
 <style>
    background-color: white;
    
@@ -364,7 +364,7 @@
 
 
       <footer>
-         <div>
+         <div id="foot">
             <span>
                <a href="#">자주 묻는 질문</a>
             </span>
@@ -372,12 +372,13 @@
                <a href="#">문의하기</a>
             </span>
             <span>
-               <a href="#">블로그</a>
-            </span> 
-            <p>주식회사 인텔리데이팅</p>
-            <br> <br> <br> <br> 
+               <a href="#">블로그</a></span>
+         </div>
+         <div id="foot">
+            <span>주식회사 인텔리데이팅</span>
          </div>
       </footer>
+      
       
       <script>
       
