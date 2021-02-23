@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -40,7 +40,7 @@
 		<form name="join" action="joinService">
 
 			<input type="text" name="email1" value="이메일" onfocus="this.value='';">
-			@ <input type="text" name="email2" value="" disabled> <select
+			<input type="text" name="email2" value="" disabled> <select
 				name="email" onchange="email_change()">
 
 				<option value="0">선택하세요</option>
