@@ -176,7 +176,7 @@ select * from CHAT;
 
 INSERT INTO CHAT VALUES (chatid.nextval, 'a', 'b', sysdate)
 
--시퀀스 만들기-
+-시퀀스 만들기- 
 
 create sequence chatid
 start with 1
