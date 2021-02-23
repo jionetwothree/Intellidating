@@ -29,10 +29,11 @@ public class clubDTO {
 		this.club_num = club_num;
 	}
 
-	public clubDTO(int club_num, String club_name, String club_image) {
+	public clubDTO(int club_num, String club_name, String club_image, String club_detail) {
 		this.club_num = club_num;
 		this.club_name = club_name;
 		this.club_image = club_image;
+		this.club_detail = club_detail;
 	}
 
 	public String getClub_name() {

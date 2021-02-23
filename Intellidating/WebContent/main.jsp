@@ -111,11 +111,6 @@
 					인기있는 모임
 				</span>
 			</div>
-			<div class="all"style= "float:right">
-				<span>
-					<a href="#">전체보기</a>
-				</span>
-			</div>
 			</div>
 			<section class="carousel">
         <div class="reel">
@@ -200,11 +195,6 @@
          <div  class="clubtitle">
             <span>
                인기있는 책
-            </span>
-         </div>
-         <div class="all" style= "float:right">
-            <span>
-               <a href="#">전체보기</a>
             </span>
          </div>
          <section class="carousel">
@@ -303,34 +293,32 @@
                취향에 맞는 모임
             </span>
          </div>
-         <div class="all">
-            <span>
-               <a href="#">전체보기</a>
-            </span>
-         </div>
       </div>
       
       <section class="carousel">
         <div class="reel">
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_club.get(0).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
-                    <h3><a href="#">모임이름</a></h3>
+                    <h3><a href="#"><%=al_club.get(0).getClub_name() %></a></h3>
+                    <h5><%=al_club.get(0).getClub_detail() %></h5>
                 </header>
             </article>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_club.get(1).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
-                    <h3><a href="#">모임이름</a></h3>
+                    <h3><a href="#"><%=al_club.get(1).getClub_name() %></a></h3>
+                    <h5><%=al_club.get(1).getClub_detail() %></h5>
                 </header>
             </article>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_club.get(2).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
-                    <h3><a href="#">모임이름</a></h3>
+                    <h3><a href="#"><%=al_club.get(2).getClub_name() %></a></h3>
+                    <h5><%=al_club.get(2).getClub_detail() %></h5>
                 </header>
             </article>
 
@@ -341,11 +329,6 @@
          <div class="clubtopic">
             <span>
                취향에 맞는 책
-            </span>
-         </div>
-         <div class="all">
-            <span>
-               <a href="#">전체보기</a>
             </span>
          </div>
       <section class="carousel">
