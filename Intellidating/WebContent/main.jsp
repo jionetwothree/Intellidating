@@ -296,7 +296,7 @@
       </div>
       
       <section class="carousel">
-        <div class="reel">
+        <div>
 
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(0).getClub_image() %>" height='200' width='400' alt="" /></a>
@@ -332,7 +332,7 @@
             </span>
          </div>
       <section class="carousel">
-        <div class="reel">
+        <div>
 
             <article>
                 <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
@@ -364,7 +364,7 @@
 
 
       <footer>
-         <div>
+         <div id="foot">
             <span>
                <a href="#">자주 묻는 질문</a>
             </span>
@@ -372,12 +372,14 @@
                <a href="#">문의하기</a>
             </span>
             <span>
-               <a href="#">블로그</a>
-            </span> 
-            <p>주식회사 인텔리데이팅</p>
-            <br> <br> <br> <br> 
+               <a href="#">블로그</a></span>
+         </div>
+         <div id="foot">
+            <span>주식회사 인텔리데이팅</span>
          </div>
       </footer>
+      
+      
       
       <script>
       
