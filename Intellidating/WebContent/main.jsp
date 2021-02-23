@@ -67,7 +67,6 @@
 	<nav>
 		<div id="menu">
 			<ul>
-				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
 				<%
 					if (m_dto == null) {
 				%>
@@ -76,6 +75,7 @@
 				<%
 					} else {
 				%>
+				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
 				<li><a href="mypage.jsp">마이페이지</a>
 				<li><a href="logoutService">로그아웃</a></li>
 			</ul>
@@ -305,7 +305,7 @@
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(0).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_club.get(0).getClub_name() %></a></h3>
+                    <h3><a  href='selectClub?clubnum=<%=al_club.get(0).getClub_num()%>'><%=al_club.get(0).getClub_name() %></a></h3>
                     <h5><%=al_club.get(0).getClub_detail() %></h5>
                 </header>
             </article>
@@ -313,7 +313,7 @@
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(1).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_club.get(1).getClub_name() %></a></h3>
+                    <h3><a  href='selectClub?clubnum=<%=al_club.get(1).getClub_num()%>'><%=al_club.get(1).getClub_name() %></a></h3>
                     <h5><%=al_club.get(1).getClub_detail() %></h5>
                 </header>
             </article>
@@ -321,7 +321,7 @@
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(2).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_club.get(2).getClub_name() %></a></h3>
+                    <h3><a  href='selectClub?clubnum=<%=al_club.get(2).getClub_num()%>'><%=al_club.get(2).getClub_name() %></a></h3>
                     <h5><%=al_club.get(2).getClub_detail() %></h5>
                 </header>
             </article>
