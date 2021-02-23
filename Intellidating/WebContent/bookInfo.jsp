@@ -1,6 +1,12 @@
+<%@page import="java.io.PrintWriter"%>
+<%@page import="javax.websocket.SendResult"%>
+<%@page import="com.DAO.bookDAO"%>
+<%@page import="com.DTO.bookDTO"%>
 <%@ page import="com.DTO.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@page import="java.net.URLDecoder"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,14 +17,24 @@
 <body>
 
 <%
+	memberDTO m_dto = (memberDTO)session.getAttribute("member");
 
-	memberDTO dto = (memberDTO)session.getAttribute("member");
-	String book = request.getParameter("book");
+		
+	String bookNum = request.getParameter("book");
+	System.out.println(bookNum);
+	
+	bookDAO dao = new bookDAO();
+	System.out.println("실행1");
+	
+	bookDTO b_dto = dao.selectBookByNum(bookNum);
+	System.out.println(b_dto);
+
+	
 %>
 
 	<!-- 책 정보 -->
 	<div class="book_info">
-		<img alt="책 이미지" src="<%=book%>">
+		<img alt="책 이미지" src="<%=b_dto.getBook_image()%>">
 		<div>
 			<!-- 책제목 -->
 			<h2 class="bookName">개미</h2>
@@ -108,45 +124,13 @@
 					<span class="cmt_wtr">현진스 생일</span>
 				</div>
 		</div>
-		<div class="cmtInfoBox">
-				<!-- 책에 대한 코멘트 -->
-				<div class="cmt_cont">
-					<span class="txt">책 정말 재미있어요!!</span>
-				</div>
-				<!-- 날짜 및 작성자 -->
-				<div class="cmt_etc">
-					<span class="cmt_date">2021년 6월 12일</span>
-					<span class="divi">|</span>
-					<span class="cmt_wtr">현진스 생일</span>
-				</div>
-		</div>
-		<div class="cmtInfoBox">
-				<!-- 책에 대한 코멘트 -->
-				<div class="cmt_cont">
-					<span class="txt">책 정말 재미있어요!!</span>
-				</div>
-				<!-- 날짜 및 작성자 -->
-				<div class="cmt_etc">
-					<span class="cmt_date">2021년 6월 12일</span>
-					<span class="divi">|</span>
-					<span class="cmt_wtr">현진스 생일</span>
-				</div>
-		</div>
-		<div class="cmtInfoBox">
-				<!-- 책에 대한 코멘트 -->
-				<div class="cmt_cont">
-					<span class="txt">책 정말 재미있어요!!</span>
-				</div>
-				<!-- 날짜 및 작성자 -->
-				<div class="cmt_etc">
-					<span class="cmt_date">2021년 6월 12일</span>
-					<span class="divi">|</span>
-					<span class="cmt_wtr">현진스 생일</span>
-				</div>
-		</div>  
+
 	<!-- 책 댓글 작성 -->
 	<form action="commentService" method="get">
 		<div class="cmtInput">
+			<div>
+				<span><%= m_dto.getName()%></span>
+			</div>
 			<div>
 				<textarea name="sendCmt" id="cmt" rows="10" cols="30"></textarea>
 			</div>

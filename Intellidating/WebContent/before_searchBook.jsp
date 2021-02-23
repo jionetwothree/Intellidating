@@ -17,40 +17,39 @@
 	<%
 	
 	memberDTO m_dto = (memberDTO)session.getAttribute("member");
-	bookDTO b_dto = new bookDTO();
 
 	%>
 	<div>
 	<header>
-	<p><h2>ì¸í…”ë¦¬ë°ì´íŒ…</h2></p>
+	<p><h2>ÀÎÅÚ¸®µ¥ÀÌÆÃ</h2></p>
 	</header>
 		<ul>
-			<li><a href="after_searchBook.jsp">ì±… ê²€ìƒ‰í•˜ê¸°</a></li>
-			<li><a href="mypage.html">ë§ˆì´íŽ˜ì´ì§€</a>
+			<li><a href="after_searchBook.jsp">Ã¥ °Ë»öÇÏ±â</a></li>
+			<li><a href="mypage.html">¸¶ÀÌÆäÀÌÁö</a>
 					<ul>
-						<li><a href="mytaste.html">ë§ˆì´ì·¨í–¥</a></li>
-						<li><a href="myinteli.html">ë§ˆì´ëª¨ìž„</a></li>
-						<li><a href="account.html">ê³„ì • ì„¤ì •</a></li>
+						<li><a href="mytaste.html">¸¶ÀÌÃëÇâ</a></li>
+						<li><a href="myinteli.html">¸¶ÀÌ¸ðÀÓ</a></li>
+						<li><a href="account.html">°èÁ¤ ¼³Á¤</a></li>
 					</ul>
 				</li>
-			<li><a href="nologinmain.html">ë¡œê·¸ì•„ì›ƒ</a></li>
+			<li><a href="nologinmain.html">·Î±×¾Æ¿ô</a></li>
 		</ul>
 	<hr />
 	</div>
 	<div>	
 	
 	<form action="searchBookService" method="post">
-		<input type="text" name="search_submit" placeholder="ì±… ì œëª© ê²€ìƒ‰">
+		<input type="text" name="search_submit" placeholder="Ã¥ Á¦¸ñ °Ë»ö">
 		<input type="submit" class="icon_search_submit" name="search_submit" value="   ">
 	</form>
 	
-			<p><a href="#">ìžì£¼ ë¬»ëŠ” ì§ˆë¬¸</a></p>
-			<p><a href="#">ë¬¸ì˜í•˜ê¸°</a></p>
-			<p><a href="#">ë¸”ë¡œê·¸</a></p>
+			<p><a href="#">ÀÚÁÖ ¹¯´Â Áú¹®</a></p>
+			<p><a href="#">¹®ÀÇÇÏ±â</a></p>
+			<p><a href="#">ºí·Î±×</a></p>
 			<br>
 			<br>
 			<br>
-			<p>ì£¼ì‹íšŒì‚¬ ì¸í…”ë¦¬ë°ì´íŒ…</p>
+			<p>ÁÖ½ÄÈ¸»ç ÀÎÅÚ¸®µ¥ÀÌÆÃ</p>
 			
 			</div>
 

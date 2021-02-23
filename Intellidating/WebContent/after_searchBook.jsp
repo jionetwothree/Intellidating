@@ -5,6 +5,8 @@
 <%@page import="com.DTO.bookDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@page import="java.net.URLEncoder"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +20,7 @@
 	
 		memberDTO m_dto = (memberDTO)session.getAttribute("member");
 		bookDTO b_dto = (bookDTO)session.getAttribute("book");
+		request.setCharacterEncoding("EUC-KR");
 
 	%>
 
@@ -53,12 +56,12 @@
 				
 				for(int i = 0; i < dto.size(); i++) {
 					out.print("<tr>");%>
-					<td><a href='bookInfo.jsp?book=dto.get(i).getBook_name()'><%=dto.get(i).getBook_name()%></a></td>
+					<td><a href='bookInfo.jsp?book=<%= dto.get(i).getBook_num()%>'><%=dto.get(i).getBook_name()%></a></td>
 					<%out.print("<td>"+dto.get(i).getBook_author()+"</td>");
 					out.print("<td>"+dto.get(i).getBook_publisher()+"</td>");
 					out.print("<td>"+dto.get(i).getBook_date()+"</td>");%>
 					<td>
-						<a href='bookInfo.jsp?book=dto.get(i).getBook_image()'>
+						<a href='bookInfo.jsp?book=<%= dto.get(i).getBook_num()%>'>
 							<img src="<%=dto.get(i).getBook_image()%>">
 						</a>
 					</td>

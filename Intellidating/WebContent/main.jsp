@@ -65,7 +65,6 @@
 	<nav>
 		<div id="menu">
 			<ul>
-				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
 				<%
 					if (m_dto == null) {
 				%>
@@ -74,6 +73,7 @@
 				<%
 					} else {
 				%>
+				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
 				<li><a href="mypage.jsp">마이페이지</a>
 				<li><a href="logoutService">로그아웃</a></li>
 			</ul>
