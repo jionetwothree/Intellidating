@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head >
+<head>
 	<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
 	<mete name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -102,13 +102,17 @@
 <body>
 
 <fieldset>
-	<legend>공지사항 </legend>
+	<legend><h2>공지사항 </h2></legend>
 	<form action="#" method="post" name="notice"></form>
+		
 		<tr>
-			<a href="#">1번내용</a><br>
-			<a href="#">2번내용</a><br>
-			<a href="#">3번내용</a><br>
+		<ul>
+			<li><a href="notice1.jsp">1번내용</a><br> </li>
+			<li><a href="notice2.jsp">2번내용</a><br> </li>
+			<li><a href="notice3.jsp">3번내용</a><br> </li>
+		</ul>
 		</tr>
+
 </fieldset>
 
 <br>

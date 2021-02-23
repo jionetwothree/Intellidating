@@ -264,5 +264,5 @@ select * from member;
 select * from club;
 select * from recommendation;
 delete from choice;
-select * from member;
+select * from book;
 drop sequence seq_club_num;
