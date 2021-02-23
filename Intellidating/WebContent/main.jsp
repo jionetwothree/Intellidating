@@ -13,32 +13,16 @@
    href="https://static.wixstatic.com/media/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png">
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 <style>
-<<<<<<< HEAD
    background-color: white;
    
    
    .carousel {
       overflow-x: auto;
    }
-=======
-	background-color: white;
-	
-	
-	
-	
-	.carousel {
-		overflow-x: auto;
-	}
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 
 
-<<<<<<< HEAD
-   body.homepage.is-preload #header:after {
-      opacity: 0;
-   }
-=======
 	body.homepage.is-preload #header:after {
 		opacity: 0;
 	}
@@ -51,9 +35,6 @@
 		width:100%;
 		height:500px;
 	}
-	
-	
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 
 </style>
 
@@ -80,29 +61,6 @@
 
       </div>
    </header>
-
-<<<<<<< HEAD
-   <nav>
-      <div id="menu">
-         <ul>
-            <li><a href="before_searchBook.jsp">책 검색하기</a></li>
-            <%
-               if (m_dto == null) {
-            %>
-            <li><a href="login.html">로그인</a></li>
-            <li><a href="join.jsp">회원가입</a></li>
-            <%
-               } else {
-            %>
-            <li><a href="mypage.jsp">마이페이지</a>
-            <li><a href="logoutService">로그아웃</a></li>
-         </ul>
-         <%
-            }
-         %>
-      </div>
-   </nav>
-=======
 
 	<nav>
 		<div id="menu">
@@ -141,55 +99,7 @@
 					}
 				%>
 			</div>
-		</div>
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
-
-<<<<<<< HEAD
-   <div id="banner"><img src="images/bg.jpg">
-      <%
-         if (m_dto == null) {
-      %>
-      <a href="login.html">인텔리데이팅 시작하기</a>
-      <%
-         } else {
-      %>
-      <a href="rule.html">인텔리데이팅 이용규칙</a>
-      <%
-         }
-      %>
-   </div>
-   
-   
-         <%
-            if (m_dto == null) {
-         %>
-      <div id="clubs">
-         <div class="clubtitle">
-            <span>
-               인기있는 모임
-            </span>
-         </div>
-         <div class="all"style= "float:right">
-            <span>
-               <a href="#">전체보기</a>
-            </span>
-         </div>
-         <section class="carousel">
-=======
-<%-- 	<div id="banner"><img src="images/bg.jpg">
-		<%
-			if (m_dto == null) {
-		%>
-		<a class="main_title" href="login.html">인텔리데이팅 시작하기</a>
-		<%
-			} else {
-		%>
-		<a class="main_title" href="rule.html">인텔리데이팅 이용규칙</a>
-		<%
-			}
-		%>
-	</div> --%>
-	
+		</div>	
 	
 			<%
 				if (m_dto == null) {
@@ -208,7 +118,6 @@
 			</div>
 			</div>
 			<section class="carousel">
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
         <div class="reel">
 
             <article>
@@ -377,8 +286,7 @@
       </div>
          <%
             } else {
-         %>
-         <%
+
                   recommendationDAO recom_dao = new recommendationDAO();
                   recommendationDTO recom_dto = recom_dao.selectrecomclub(m_dto.getNum());
                   clubDAO club_dao = new clubDAO();
@@ -469,7 +377,7 @@
    </div>
       <%
             }
-         %>
+      %>
 
 
       <footer>
