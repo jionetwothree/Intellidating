@@ -5,22 +5,20 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="style_
-bookInfo_HJ.css">
+<link rel="stylesheet" href="style_bookInfo_HJ.css">
 <title>책 정보 페이지</title>
 </head>
 <body>
 
-
-
 <%
 
 	memberDTO dto = (memberDTO)session.getAttribute("member");
+	String book = request.getParameter("book");
 %>
 
 	<!-- 책 정보 -->
 	<div class="book_info">
-		<img alt="책 이미지" src="images/ant.jpg">
+		<img alt="책 이미지" src="<%=book%>">
 		<div>
 			<!-- 책제목 -->
 			<h2 class="bookName">개미</h2>
@@ -49,7 +47,7 @@ bookInfo_HJ.css">
 				</li>
 			</ul>
 			
-			<!-- 책분류 -->			<ul class="infoBtm">
+			<!-- 책분류 --><ul class="infoBtm">
 					<span>소설</span>
 					<span class="brkt">></span>
 					<span>프랑스소설</span>
