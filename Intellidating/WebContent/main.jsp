@@ -144,6 +144,7 @@
                 </header>
             </article>
 
+
             <article>
                 <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
                 <header>
