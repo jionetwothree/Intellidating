@@ -263,6 +263,6 @@ select * from member;
 
 select * from club;
 select * from recommendation;
-delete from choice;
+delete from book;
 select * from book;
 drop sequence seq_club_num;
