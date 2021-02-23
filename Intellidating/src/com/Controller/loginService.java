@@ -2,9 +2,11 @@ package com.Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLEncoder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -32,6 +34,8 @@ public class loginService extends HttpServlet {
 			choiceDAO dao1 = new choiceDAO();
 			int result = dao1.choicedata(mem_num);
 			if(result==1) {
+			Cookie cookie = new Cookie("count", "0"); 
+			response.addCookie(cookie);
 			response.sendRedirect("main.jsp");
 			System.out.println("로그인 성공!");
 			} else {
