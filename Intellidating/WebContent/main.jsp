@@ -296,7 +296,7 @@
       </div>
       
       <section class="carousel">
-        <div class="reel">
+        <div>
 
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(0).getClub_image() %>" height='200' width='400' alt="" /></a>
@@ -332,7 +332,7 @@
             </span>
          </div>
       <section class="carousel">
-        <div class="reel">
+        <div>
 
             <article>
                 <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
