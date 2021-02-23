@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Random;
 
 import com.DTO.memberDTO;
 import com.DTO.recommendationDTO;
@@ -45,7 +46,7 @@ public class recommendationDAO {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public int insertrecomclub(int mem_num, int recom_club1, int recom_club2, int recom_club3) {
 		int cnt = 0;
 		getConnection();
@@ -66,7 +67,7 @@ public class recommendationDAO {
 		return cnt;
 
 	}
-	
+
 	public recommendationDTO selectrecomclub(int mem_num) {
 		recommendationDTO dto = null;
 		getConnection();
@@ -79,16 +80,82 @@ public class recommendationDAO {
 				int get_recom_club1 = rs.getInt(3);
 				int get_recom_club2 = rs.getInt(4);
 				int get_recom_club3 = rs.getInt(5);
+				int get_recom_book1 = rs.getInt(6);
+				int get_recom_book2 = rs.getInt(7);
+				int get_recom_book3 = rs.getInt(8);
 
-				dto = new recommendationDTO(mem_num, get_recom_club1, get_recom_club2, get_recom_club3);
+				dto = new recommendationDTO(mem_num, get_recom_club1, get_recom_club2, get_recom_club3, get_recom_book1, get_recom_book2, get_recom_book3);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			close();
 		}
-		
+
 		return dto;
+	}
+
+	public int insertrecombook(int mem_num, String search1, String search2, String search_submit) {
+		int cnt = 0;
+		Random rd = new Random();
+		String get_search1 = "", get_search2 = "", get_search3 = "";
+		int get_booknum1 = 0, get_booknum2 = 0, get_booknum3 = 0;
+		getConnection();
+		String sql = "select book_category3 from book where book_name like ?";
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, search1);
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				get_search1 = rs.getString(1);
+			}
+			ps.setString(1, search2);
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				get_search2 = rs.getString(1);
+			}
+			ps.setString(1, search_submit);
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				get_search3 = rs.getString(1);
+			}
+			sql = "select book_num from book where book_category3=?";
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, get_search1);
+			rs = ps.executeQuery();
+			for (int i = 0; i < rd.nextInt(30); i++) {
+				if (rs.next()) {
+					get_booknum1 = rs.getInt(1);
+				}
+			}
+			ps.setString(1, get_search2);
+			rs = ps.executeQuery();
+			for (int i = 0; i < rd.nextInt(30); i++) {
+				if (rs.next()) {
+				get_booknum2 = rs.getInt(1);
+				}
+			}
+			ps.setString(1, get_search3);
+			rs = ps.executeQuery();
+			for (int i = 0; i < rd.nextInt(30); i++) {
+				if (rs.next()) {
+				get_booknum3 = rs.getInt(1);
+				}
+			}
+			sql = "UPDATE recommendation SET recom_book1=?, recom_book2=?, recom_book3=? where mem_num=?";
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, get_booknum1);
+			ps.setInt(2, get_booknum2);
+			ps.setInt(3, get_booknum3);
+			ps.setInt(4, mem_num);
+			cnt = ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+
+		return cnt;
 	}
 
 }

@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import com.DTO.bookDTO;
 import com.DTO.commentsDTO;
 import com.DTO.memberDTO;
+import com.DTO.recommendationDTO;
 
 public class bookDAO {
 
@@ -83,23 +84,62 @@ public class bookDAO {
 
 	}
 	
+	public bookDTO selectBookByNum(String book_num) {
+			
+			bookDTO dto = null;
+			
+			try {
+				getConnection();
+				String sql = "SELECT * FROM BOOK WHERE book_num=?";
 	
-	  public bookDTO searchBook(String book_name) {
+				ps = conn.prepareStatement(sql);
+				
+				ps.setString(1, book_num);
+				
+				rs = ps.executeQuery();
+				
+				if (rs.next()) {
+					int get_num = rs.getInt(1);
+					String get_name = rs.getString(2);
+					String get_author = rs.getString(3);
+					String get_publisher = rs.getString(4);
+					String get_date = rs.getString(5);
+					String get_image = rs.getString(6);
+					String get_category1 = rs.getString(7);
+					String get_category2 = rs.getString(8);
+					String get_category3 = rs.getString(9);
+	
+					dto = new bookDTO(get_num, get_name, get_author, get_publisher, get_date, get_image, get_category1, get_category2, get_category3);
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				close();
+			}
+	
+			return dto;
+	
+		}
+	
+	
+	  public ArrayList<bookDTO> searchBook(recommendationDTO recom_dto) {
 		
-		bookDTO dto = null;
+		ArrayList<bookDTO> al_book = new ArrayList<bookDTO>();
+		bookDTO dto = new bookDTO();
 		
 		try {
 			getConnection();
-			String sql = "SELECT * FROM BOOK WHERE = ?";
+			String sql = "SELECT * FROM BOOK WHERE book_num= ? or book_num=? or  book_num=?";
 	
 			ps = conn.prepareStatement(sql);
 			
-			ps.setString(1, book_name);
+			ps.setInt(1, recom_dto.getRecom_book1());
+			ps.setInt(2, recom_dto.getRecom_book2());
+			ps.setInt(3, recom_dto.getRecom_book3());
 			
 			rs = ps.executeQuery();
 			
-			
-			if (rs.next()) {
+			while (rs.next()) {
 				int get_num = rs.getInt(1);
 				String get_name = rs.getString(2);
 				String get_author = rs.getString(3);
@@ -108,6 +148,7 @@ public class bookDAO {
 				String get_image = rs.getString(6);
 	
 				dto = new bookDTO(get_num, get_name, get_author, get_publisher, get_date, get_image);
+				al_book.add(dto);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -115,7 +156,7 @@ public class bookDAO {
 			close();
 		}
 
-      		return dto;
+      		return al_book;
 
       	}
 
@@ -191,6 +232,7 @@ public class bookDAO {
 				    vo.setBook_publisher(rs.getString("book_publisher"));
 				    vo.setBook_date(rs.getString("book_date"));
 				    vo.setBook_image(rs.getString("book_image"));
+				    vo.setBook_category3(rs.getString("book_category3"));
 				    System.out.println("½ÇÇà3");
 				    b_list.add(vo);
 			   }
