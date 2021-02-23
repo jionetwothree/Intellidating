@@ -262,7 +262,7 @@ select * from member;
 --INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');--이건 일단 인서트 하지 말고 놔둬보세여 테스트 용이라
 
 select * from club;
-select * from choice;
-delete from print_book;
+select * from recommendation;
+delete from recommendation where mem_num=101;
 select * from member;
 
