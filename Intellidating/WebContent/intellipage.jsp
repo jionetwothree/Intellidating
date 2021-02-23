@@ -25,7 +25,6 @@ window.open(url, 'new', 'width=400, height=450, toolbars=no, scrollbars=yes');
 		memberDTO m_dto = (memberDTO) session.getAttribute("member");
 
 		clubDAO dao = new clubDAO();
-		clubDTO dto = dao.selectclub(2);
 	%>
 	
 	<header>
@@ -71,7 +70,7 @@ window.open(url, 'new', 'width=400, height=450, toolbars=no, scrollbars=yes');
 									
 									out.print("<td><a href=javascript:openPopup('bookpop.jsp')>"+al.get(i).getClub_name()+"</a></td>"); 
 									if(m_dto!=null){
-									out.print("<td><a href='joinClub?clubname="+al.get(i).getClub_name()+"'>가입하기</a></td>");
+									out.print("<td><a href='joinClub?clubnum="+al.get(i).getClub_num()+"'>가입하기</a></td>");
 									}
 									out.print("</tr>");
 									}

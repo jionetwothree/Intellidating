@@ -214,4 +214,3 @@ INSERT INTO club(club_num, club_name, club_image) VALUES(seq_club_num.NEXTVAL, '
 
 select * from member;
 
-INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');

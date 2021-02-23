@@ -11,13 +11,9 @@
 
 </head>
 <body>
-	<%
-		clubDAO dao = new clubDAO();
-		clubDTO dto = dao.selectclub(2);
-	%>
-	<h1 id="<%=dto.getClub_name()%>"><%=dto.getClub_name()%></h1>
-	<hr />
-	<h2><%=dto.getClub_detail()%></h2>
+<%
+	
+%>
 <input type="submit" value="´Ý±â" onclick="window.close()">
 </body>
 </html>
