@@ -18,11 +18,13 @@ public class joinService extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setCharacterEncoding("EUC-KR");
-		String email = request.getParameter("email");
+		response.setCharacterEncoding("EUC-KR");
+		String email1 = request.getParameter("email1");
+		String email2 = request.getParameter("email");
 		String password = request.getParameter("password");
 		String name = request.getParameter("name");
-		String nickname = request.getParameter("nickname");
-		System.out.println(email+","+password);
+		String nickname = request.getParameter("nick");
+		String email = (email1+"@").concat(email2);
 
 		memberDAO dao = new memberDAO();
 		int cnt = dao.joinMember(email, password, name, nickname);
