@@ -32,6 +32,13 @@ public class memberDTO {
 		this.nickname = nickname;
 	}
 	
+
+	public memberDTO(int num, String nickname) {
+		super();
+		this.num = num;
+		this.nickname = nickname;
+	}
+	
 	
 	public int getNum() {
 		return num;

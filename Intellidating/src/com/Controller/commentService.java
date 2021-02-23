@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.DAO.commentsDAO;
+import com.DTO.commentsDTO;
+
 
 @WebServlet("/commentService")
 public class commentService extends HttpServlet {
@@ -16,10 +19,20 @@ public class commentService extends HttpServlet {
 		request.setCharacterEncoding("EUC-KR");
 		
 		//값 받아오기
-
+		int sendBook = Integer.parseInt(request.getParameter("sendBookNum"));
+		int sendName = Integer.parseInt(request.getParameter("sendMemNum"));
 		String sendCmt = request.getParameter("sendCmt");
 		
-
+		commentsDAO dao = new commentsDAO();
+		
+		int cnt = dao.insertComment(sendBook, sendName, sendCmt);
+		
+		if(cnt>0) {
+			System.out.println("댓글 작성 성공");
+		}else {
+			System.out.println("댓글 작성 실패");
+			
+		}
 		//commentsDTO(책 번호, 작성자 번호, 댓글 내용)
 //		commentsDTO dto = new commentsDTO();
 //				  

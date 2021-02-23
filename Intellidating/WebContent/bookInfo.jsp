@@ -1,3 +1,7 @@
+<%@page import="com.DAO.memberDAO"%>
+<%@page import="com.DTO.commentsDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.DAO.commentsDAO"%>
 <%@page import="java.io.PrintWriter"%>
 <%@page import="javax.websocket.SendResult"%>
 <%@page import="com.DAO.bookDAO"%>
@@ -20,12 +24,12 @@
 	memberDTO m_dto = (memberDTO)session.getAttribute("member");
 
 		
-	String bookNum = request.getParameter("book");
+	int bookNum = Integer.parseInt(request.getParameter("book"));
 	System.out.println(bookNum);
 	
-	bookDAO dao = new bookDAO();
+	bookDAO b_dao = new bookDAO();
 	
-	bookDTO b_dto = dao.selectBookByNum(bookNum);
+	bookDTO b_dto = b_dao.selectBookByNum(bookNum);
 
 	
 %>
@@ -73,65 +77,44 @@
 	</div>
 	
 	<!-- 댓글 목록 -->
+	
 	<div class="comment_list">
+	
+	<%
+	
+	commentsDAO c_dao = new commentsDAO();
+	ArrayList<commentsDTO> al = c_dao.selectComment(bookNum);
+	
+	
+	
+	for(int i = 0; i < al.size(); i++){%>
 		<div class="cmtInfoBox">
 				<!-- 책에 대한 코멘트 -->
 				<div class="cmt_cont">
-					<span class="txt">책 정말 재미있어요!!</span>
+					<span class="txt"><%=al.get(i).getContent()%></span>
 				</div>
 				<!-- 날짜 및 작성자 -->
 				<div class="cmt_etc">
-					<span class="cmt_date">2021년 6월 12일</span>
+					<span class="cmt_date"><%=al.get(i).getComment_date()%></span>
+					<%
+						memberDAO m_dao = new memberDAO();
+						memberDTO com_mem_dto = m_dao.selectMember(al.get(i).getMem_num());
+					%>
 					<span class="divi">|</span>
-					<span class="cmt_wtr">현진스 생일</span>
+					<span class="cmt_wtr"><%=com_mem_dto.getNickname()%></span>
 				</div>
 		</div>
-		<div class="cmtInfoBox">
-				<!-- 책에 대한 코멘트 -->
-				<div class="cmt_cont">
-					<span class="txt">책 정말 재미있어요!!</span>
-				</div>
-				<!-- 날짜 및 작성자 -->
-				<div class="cmt_etc">
-					<span class="cmt_date">2021년 6월 12일</span>
-					<span class="divi">|</span>
-					<span class="cmt_wtr">현진스 생일</span>
-				</div>
-		</div>
-		<div class="cmtInfoBox">
-				<!-- 책에 대한 코멘트 -->
-				<div class="cmt_cont">
-					<span class="txt">책 정말 재미있어요!!</span>
-				</div>
-				<!-- 날짜 및 작성자 -->
-				<div class="cmt_etc">
-					<span class="cmt_date">2021년 6월 12일</span>
-					<span class="divi">|</span>
-					<span class="cmt_wtr">현진스 생일</span>
-				</div>
-		</div>
-		<div class="cmtInfoBox">
-				<!-- 책에 대한 코멘트 -->
-				<div class="cmt_cont">
-					<span class="txt">책 정말 재미있어요!!</span>
-				</div>
-				<!-- 날짜 및 작성자 -->
-				<div class="cmt_etc">
-					<span class="cmt_date">2021년 6월 12일</span>
-					<span class="divi">|</span>
-					<span class="cmt_wtr">현진스 생일</span>
-				</div>
-		</div>
+		
+	<%} %>
+	
 
 	<!-- 책 댓글 작성 -->
-	<form action="commentService" method="get">
+	<form action="commentService" method="post">
 		<div class="cmtInput">
 			<div>
-				<span><%= m_dto.getName()%></span>
-			</div>
-			<div>
+				<input type="hidden" name="sendBookNum" value="<%=b_dto.getBook_num()%>"></div>
+				<input type="hidden" name="sendMemNum" value="<%=m_dto.getNum()%>">
 				<textarea name="sendCmt" id="cmt" rows="10" cols="30"></textarea>
-			</div>
 			<div>
 				<input type="submit" value="등록"></div>
 			</div>

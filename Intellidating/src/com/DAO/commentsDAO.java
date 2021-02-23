@@ -47,11 +47,13 @@ public class commentsDAO {
 		}
 	}
 
-	public int insertcomment(int book_num, int mem_num, String content) {
+	public int insertComment(int book_num, int mem_num, String content) {
 		int cnt = 0;
 		getConnection();
-		String sql = "INSERT INTO COMMENTS(comment_num, book_num, mem_num, contents) VALUES(seq_co_num.NEXTVAL,?,?,?)";
+		String sql = "INSERT INTO COMMENTS(comment_num, book_num, mem_num, content) VALUES(seq_co_num.NEXTVAL,?,?,?)";
+		System.out.println("실행1");
 		try {
+			System.out.println("실행2");
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, book_num);
 			ps.setInt(2, mem_num);
@@ -67,7 +69,7 @@ public class commentsDAO {
 
 	}
 
-	public ArrayList<commentsDTO> selectcomment(int book_num) {
+	public ArrayList<commentsDTO> selectComment(int book_num) {
 
 		ArrayList<commentsDTO> al_comments = new ArrayList<commentsDTO>();
 		commentsDTO dto = null;
@@ -77,7 +79,7 @@ public class commentsDAO {
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, book_num);
 			rs = ps.executeQuery();
-			if (rs.next()) {
+			while (rs.next()) {
 				int get_book_num = rs.getInt(2);
 				int get_mem_num = rs.getInt(3);
 				String get_content = rs.getString(4);
@@ -94,4 +96,5 @@ public class commentsDAO {
 
 		return al_comments;
 	}
+	
 }

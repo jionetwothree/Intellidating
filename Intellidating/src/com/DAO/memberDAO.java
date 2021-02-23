@@ -96,7 +96,29 @@ public class memberDAO {
 		return dto;
 	}
 	
-	
+	public memberDTO selectMember(int mem_num) {
+
+		memberDTO dto = null;
+		getConnection();
+		String sql = "SELECT * FROM MEMBER WHERE mem_num=?";
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, mem_num);
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				int get_num = rs.getInt(1);
+				String get_nickname = rs.getString(5);
+
+				dto = new memberDTO(get_num, get_nickname);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+
+		return dto;
+	}
 	
 
 }

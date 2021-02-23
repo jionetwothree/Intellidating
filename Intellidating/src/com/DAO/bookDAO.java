@@ -83,7 +83,7 @@ public class bookDAO {
 
 	}
 	
-	public bookDTO selectBookByNum(String book_num) {
+	public bookDTO selectBookByNum(int book_num) {
 			
 			bookDTO dto = null;
 			
@@ -93,7 +93,7 @@ public class bookDAO {
 	
 				ps = conn.prepareStatement(sql);
 				
-				ps.setString(1, book_num);
+				ps.setInt(1, book_num);
 				
 				rs = ps.executeQuery();
 				
