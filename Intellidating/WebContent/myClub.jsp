@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta charset="EUC-KR">
+<link rel="stylesheet" href="style_myClub.css">
 
 <title>Insert title here</title>
 </head>
 <body>
-
 
 
   <%
@@ -50,7 +50,7 @@
 		</div>
 	</nav>
 	
-	<table border="1" width = "100%">
+	<table  class ="table_as">
 	<tr>
 		<td><a href="chatting.jsp">독서모임1</a></td>
 		</tr>

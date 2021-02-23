@@ -366,7 +366,7 @@
       <footer>
          <div id="foot">
             <span>
-               <a href="#">자주 묻는 질문</a>
+               <a href="question.html">자주 묻는 질문</a>
             </span>
             <span>
                <a href="#">문의하기</a>

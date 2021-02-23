@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<%
 		memberDTO m_dto = (memberDTO) session.getAttribute("member");
 	%>
