@@ -1,3 +1,19 @@
+DROP TABLE choice; -- 드랍
+DROP TABLE CLUB; --드랍
+DROP TABLE book; -- 드랍
+DROP TABLE member; -- 드랍
+DROP TABLE comments; -- 드랍
+DROP TABLE print_book; --드랍
+DROP TABLE recommendation; --드랍
+
+
+drop sequence seq_club_num; --드랍
+drop sequence seq_mem_num; --드랍
+drop sequence seq_book_num; --드랍
+drop sequence seq_choice_num; --드랍
+drop sequence seq_co_num; --드랍 
+drop sequence seq_recom_num; --드랍
+
 DROP TABLE print_book;
 DROP TABLE choice;
 DROP TABLE recommendation;
@@ -43,6 +59,14 @@ book_category1 varchar2(50), -- 분류 1
 book_category2 varchar2(50), -- 분류 2
 book_category3 varchar2(50) -- 분류 3
 );
+
+create sequence seq_book_num -- 책 번호 시퀀스
+start with 1
+increment by 1
+nomaxvalue
+nominvalue
+nocycle
+nocache;
 
 CREATE TABLE member(
 mem_num number(10) CONSTRAINT mem_num_pk primary key, -- 번호 시퀀스 seq_mem_num.NEXTVAR
@@ -140,6 +164,25 @@ book_image varchar2(200) not null,
 book_category3 varchar2(50) not null
 );
 
+create table CHAT (
+	chatID number,
+	chatName VARCHAR(20),
+	chatContent VARCHAR(100),
+	chatTime date,
+	constraint CHAT_ID_pk primary key(chatID)
+);
+
+select * from CHAT;
+
+INSERT INTO CHAT VALUES (chatid.nextval, 'a', 'b', sysdate)
+
+-시퀀스 만들기-
+
+create sequence chatid
+start with 1
+increment by 1
+
+select * from print_book;
 select * from PRINT_BOOK;
 
 insert into member(mem_num, mem_email, mem_password, mem_username, mem_nickname) 
@@ -212,5 +255,14 @@ INSERT INTO club(club_num, club_name, club_image) VALUES(seq_club_num.NEXTVAL, '
 INSERT INTO club(club_num, club_name, club_image) VALUES(seq_club_num.NEXTVAL, 'Rosemary','https://www.thermofisher.com/blog/proteomics/wp-content/uploads/sites/2/2017/01/shutterstock_408614731.jpg');
 INSERT INTO club(club_num, club_name, club_image) VALUES(seq_club_num.NEXTVAL, 'Chrysanthemum','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYavTqCXGvEG0ditLuUZ3wDvLkYWtDXDb-5Q&usqp=CAU');
 
+select * from club;
+select * from PRINT_BOOK;
+select * from member;
+
+--INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');--이건 일단 인서트 하지 말고 놔둬보세여 테스트 용이라
+
+select * from club;
+select * from recommendation;
+delete from recommendation where mem_num=101;
 select * from member;
 

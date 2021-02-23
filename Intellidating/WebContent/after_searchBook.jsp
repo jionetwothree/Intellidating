@@ -26,7 +26,7 @@
 		<p><h2>인텔리데이팅</h2></p>
 		</header>
 			<ul>
-				<li><a href="searchbook.jsp">책 검색하기</a></li>
+				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
 				<li><a href="mypage.html">마이페이지</a>
 						<ul>
 							<li><a href="mytaste.html">마이취향</a></li>
