@@ -167,8 +167,9 @@ public class clubDAO {
 				int get_num = rs.getInt(1);
 				String get_name = rs.getString(2);
 				String get_image = rs.getString(3);
+				String get_detail = rs.getString(5);
 
-				club_dto = new clubDTO(get_num, get_name, get_image);
+				club_dto = new clubDTO(get_num, get_name, get_image, get_detail);
 				al_club.add(club_dto);
 			}
 		} catch (SQLException e) {

@@ -1,6 +1,6 @@
+<%@page import="com.DTO.bookDTO"%>
 <%@page import="com.DTO.memberDTO"%>
 <%@page import="com.DAO.bookDAO"%>
-<%@page import="com.DTO.bookDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -15,8 +15,8 @@
 <body>
 	<%
 	
-		memberDTO m_dto = (memberDTO)session.getAttribute("member");
-		bookDTO b_dto = new bookDTO();
+	memberDTO m_dto = (memberDTO)session.getAttribute("member");
+	bookDTO b_dto = new bookDTO();
 
 	%>
 	<div>
