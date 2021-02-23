@@ -5,10 +5,11 @@
 <html>
 <head>
 <meta charset="EUC-KR">
+<link rel="stylesheet" href="style_myClub.css">
+
 <title>Insert title here</title>
 </head>
 <body>
-
 
 
   <%
@@ -44,11 +45,12 @@
 			</ul>
 			<%
 				}
+				
 			%>
 		</div>
 	</nav>
 	
-	<table border="1" width = "100%">
+	<table  class ="table_as">
 	<tr>
 		<td><a href="chatting.jsp">독서모임1</a></td>
 		</tr>
@@ -62,6 +64,24 @@
 	</table>
 	
 	
+	
+		<footer>
+		<div>
+			<span>
+				<a href="#">자주 묻는 질문</a>
+			</span>
+
+			<span>
+				<a href="#">문의하기</a>
+			</span>
+			
+			<span>
+				<a href="#">블로그</a>
+			</span>
+			<br> <br> <br>
+			<p>주식회사 인텔리데이팅</p>
+		</div>
+	</footer>
 	
 
 

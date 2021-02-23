@@ -26,7 +26,7 @@
 
 		<div>
 		<header>
-		<p><h2>인텔리데이팅</h2></p>
+		<p><h2><a href="main.jsp">인텔리데이팅</a></h2></p>
 		</header>
 			<ul>
 				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
@@ -44,6 +44,9 @@
 		<div>	
 	<form name="search" action="searchBookService" method="post">
 		<input type="text" name="search_submit" placeholder="책 제목 검색">
+		<% if(m_dto!=null){%>
+			<input type="hidden" name="mem_num" value=<%= m_dto.getNum() %> >
+		<%} %>
 		<input type="submit" class="icon_search_submit" name="search_submit" value="  ">
 	</form>
 	</div>	
