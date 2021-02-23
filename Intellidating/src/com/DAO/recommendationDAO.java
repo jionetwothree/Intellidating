@@ -203,4 +203,24 @@ public class recommendationDAO {
 
 		return cnt;
 	}
+
+	public int setrecomclub(int mem_num, int recom_club1, int recom_club2, int recom_club3) {
+		int cnt = 0;
+		getConnection();
+		String sql = "UPDATE recommendation set recom_club1=?, recom_club2=?, recom_club3=? where mem_num=?"; 
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, recom_club1);
+			ps.setInt(2, recom_club2);
+			ps.setInt(3, recom_club3);
+			ps.setInt(4, mem_num);
+			cnt = ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+
+		return cnt;
+	}
 }
