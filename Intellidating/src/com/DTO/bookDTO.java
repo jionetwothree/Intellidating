@@ -48,6 +48,8 @@ public class bookDTO<E> {
 		
 	}
 	
+	
+	
 	public bookDTO(int book_num, String book_name, String book_author, String book_publisher, String book_date,
 			String book_image, String book_category1, String book_category2, String book_category3) {
 		super();
