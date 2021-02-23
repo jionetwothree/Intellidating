@@ -122,6 +122,7 @@
 				if (m_dto == null) {
 			%>
 		<div id="clubs">
+			<div class="align">
 			<div class="clubtitle">
 				<span>
 					인기있는 모임
@@ -131,6 +132,7 @@
 				<span>
 					<a href="#">전체보기</a>
 				</span>
+			</div>
 			</div>
 			<section class="carousel">
         <div class="reel">
