@@ -288,11 +288,11 @@
                   ArrayList<bookDTO> al_book = book_dao.searchBook(recom_dto);
             %>
             
-      <p><%=m_dto.getNickname()%>
-            님의 취향은 #소설 #로맨스 #주식투자(이)군요!
-      </p>
       
       <div id="clubs">
+      <h5><%=m_dto.getNickname()%>
+            님의 취향은 #소설 #로맨스 #주식투자(이)군요!
+      </h5><br>
          <div class="clubtopic">
             <span>
                취향에 맞는 모임
