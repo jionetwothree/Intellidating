@@ -24,10 +24,8 @@
 	System.out.println(bookNum);
 	
 	bookDAO dao = new bookDAO();
-	System.out.println("실행1");
 	
 	bookDTO b_dto = dao.selectBookByNum(bookNum);
-	System.out.println(b_dto);
 
 	
 %>
@@ -37,7 +35,7 @@
 		<img alt="책 이미지" src="<%=b_dto.getBook_image()%>">
 		<div>
 			<!-- 책제목 -->
-			<h2 class="bookName">개미</h2>
+			<h2 class="bookName"><%=b_dto.getBook_name()%></h2>
 			
 			<!-- 저자, 출판사, 출판일 -->
 			<ul class="infoTop">
@@ -45,30 +43,30 @@
 				<li>
 					<h4>저자</h4>
 					<em class="divi">|</em>
-					<h4>베르나르 베르베르</h4>
+					<h4><%=b_dto.getBook_author()%></h4>
 				</li>
 				
 				<!-- 출판사 -->
 				<li>
 					<h4>출판사</h4>
 					<em class="divi">|</em>
-					<h4>열린책들</h4>
+					<h4><%=b_dto.getBook_publisher()%></h4>
 				</li>
 				
 				<!-- 출판일 -->
 				<li>
 					<h4>출판일</h4>
 					<em class="divi">|</em>
-					<h4>2001년 02월 15일</h4>
+					<h4><%=b_dto.getBook_date()%></h4>
 				</li>
 			</ul>
 			
 			<!-- 책분류 --><ul class="infoBtm">
-					<span>소설</span>
+					<span><%=b_dto.getBook_category1()%></span>
 					<span class="brkt">></span>
-					<span>프랑스소설</span>
+					<span><%=b_dto.getBook_category2()%></span>
 					<span class="brkt">></span>
-					<span>프랑스소설일반</span>
+					<span><%=b_dto.getBook_category3()%></span>
 				</li>
 			</ul>
 		</div>
