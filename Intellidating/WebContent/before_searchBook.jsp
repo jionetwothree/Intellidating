@@ -1,3 +1,4 @@
+<%@page import="com.DTO.memberDTO"%>
 <%@page import="com.DAO.bookDAO"%>
 <%@page import="com.DTO.bookDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -13,16 +14,17 @@
 </head>
 <body>
 	<%
-		bookDTO dto = (bookDTO)session.getAttribute("book");
 	
-	
+		memberDTO m_dto = (memberDTO)session.getAttribute("member");
+		bookDTO b_dto = new bookDTO();
+
 	%>
 	<div>
 	<header>
 	<p><h2>인텔리데이팅</h2></p>
 	</header>
 		<ul>
-			<li><a href="searchbook.jsp">책 검색하기</a></li>
+			<li><a href="after_searchBook.jsp">책 검색하기</a></li>
 			<li><a href="mypage.html">마이페이지</a>
 					<ul>
 						<li><a href="mytaste.html">마이취향</a></li>
@@ -37,18 +39,10 @@
 	<div>	
 	
 	<form action="searchBookService" method="post">
-		<input type="text" name="search_submit" placeholder="책 제목, 출판사, 작가명 검색">
-		<!-- <button type="button">
-		<img src="이미지 경로" alt="">버튼명</button> -->
-		<input type="submit" class="icon_search_submit" name="search_submit" value="  ">
+		<input type="text" name="search_submit" placeholder="책 제목 검색">
+		<input type="submit" class="icon_search_submit" name="search_submit" value="   ">
 	</form>
-	</div>
 	
-	<%
-		bookDAO b_dao = new bookDAO();
-	%>
-	
-	<div>
 			<p><a href="#">자주 묻는 질문</a></p>
 			<p><a href="#">문의하기</a></p>
 			<p><a href="#">블로그</a></p>

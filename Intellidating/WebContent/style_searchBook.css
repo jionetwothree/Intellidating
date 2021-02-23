@@ -5,7 +5,7 @@ input.icon_search_submit{
 	width:40px; 
     height:40px; 
     border: 0;
-    background-size: 100%; /* To fill the dimensions of container (button), or */
+    background-size: 100%; /* To fill the dimensions of container (button)*/
     cursor: pointer;
 
 }
