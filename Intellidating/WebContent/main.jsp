@@ -1,3 +1,5 @@
+<%@page import="com.DTO.bookDTO"%>
+<%@page import="com.DAO.bookDAO"%>
 <%@page import="com.DTO.clubDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.DAO.clubDAO"%>
@@ -65,7 +67,6 @@
 	<nav>
 		<div id="menu">
 			<ul>
-				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
 				<%
 					if (m_dto == null) {
 				%>
@@ -74,6 +75,7 @@
 				<%
 					} else {
 				%>
+				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
 				<li><a href="mypage.jsp">마이페이지</a>
 				<li><a href="logoutService">로그아웃</a></li>
 			</ul>
@@ -281,6 +283,8 @@
                   recommendationDTO recom_dto = recom_dao.selectrecomclub(m_dto.getNum());
                   clubDAO club_dao = new clubDAO();
                   ArrayList<clubDTO> al_club = club_dao.selectallclub(recom_dto);
+                  bookDAO book_dao = new bookDAO();
+                  ArrayList<bookDTO> al_book = book_dao.searchBook(recom_dto);
             %>
             
       <p><%=m_dto.getNickname()%>
@@ -335,23 +339,23 @@
         <div>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(0).getBook_image() %>"  alt="" /></a>
                 <header>
-                    <h3><a href="#">책 이름</a></h3>
+                    <h3><a href="#"><%=al_book.get(0).getBook_name() %></a></h3>
                 </header>
             </article>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(1).getBook_image() %>"  alt="" /></a>
                 <header>
-                    <h3><a href="#">책이름</a></h3>
+                    <h3><a href="#"><%=al_book.get(1).getBook_name() %></a></h3>
                 </header>
             </article>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(2).getBook_image() %>"  alt="" /></a>
                 <header>
-                    <h3><a href="#">책이름</a></h3>
+                    <h3><a href="#"><%=al_book.get(2).getBook_name() %></a></h3>
                 </header>
             </article>
            </div>
