@@ -1,6 +1,6 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.DTO.memberDTO"%>
 <%@page import="java.util.List"%>
-<%@page import="java.util.ArrayList"%>
 <%@page import="com.DAO.bookDAO"%>
 <%@page import="com.DTO.bookDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -52,13 +52,13 @@
 				System.out.print(dto.size());
 				
 				for(int i = 0; i < dto.size(); i++) {
-					out.print("<tr>");
-					out.print("<td>"+dto.get(i).getBook_name()+"</td>");
-					out.print("<td>"+dto.get(i).getBook_author()+"</td>");
+					out.print("<tr>");%>
+					<td><a href='bookInfo.jsp?book=dto.get(i).getBook_name()'><%=dto.get(i).getBook_name()%></a></td>
+					<%out.print("<td>"+dto.get(i).getBook_author()+"</td>");
 					out.print("<td>"+dto.get(i).getBook_publisher()+"</td>");
 					out.print("<td>"+dto.get(i).getBook_date()+"</td>");%>
 					<td>
-						<a href='bookInfoService?book=dto.get(i).getBook_image()'>
+						<a href='bookInfo.jsp?book=dto.get(i).getBook_image()'>
 							<img src="<%=dto.get(i).getBook_image()%>">
 						</a>
 					</td>
