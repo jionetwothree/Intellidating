@@ -273,7 +273,9 @@ select * from book;
 drop sequence seq_club_num;
 
 DELETE FROM COMMENTS WHERE book_num = 6;
-DELETE FROM BOOK WHERE book_num = 6;
+delete from choice;
+delete from RECOMMENDATION;
+DELETE FROM member;
 
 SELECT CONSTRAINT_NAME, TABLE_NAME, R_CONSTRAINT_NAME FROM USER_CONSTRAINTS
 WHERE CONSTRAINT_NAME = 'SYS_C007391';

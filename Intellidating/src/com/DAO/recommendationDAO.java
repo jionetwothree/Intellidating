@@ -84,7 +84,8 @@ public class recommendationDAO {
 				int get_recom_book2 = rs.getInt(7);
 				int get_recom_book3 = rs.getInt(8);
 
-				dto = new recommendationDTO(mem_num, get_recom_club1, get_recom_club2, get_recom_club3, get_recom_book1, get_recom_book2, get_recom_book3);
+				dto = new recommendationDTO(mem_num, get_recom_club1, get_recom_club2, get_recom_club3, get_recom_book1,
+						get_recom_book2, get_recom_book3);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -132,14 +133,14 @@ public class recommendationDAO {
 			rs = ps.executeQuery();
 			for (int i = 0; i < rd.nextInt(30); i++) {
 				if (rs.next()) {
-				get_booknum2 = rs.getInt(1);
+					get_booknum2 = rs.getInt(1);
 				}
 			}
 			ps.setString(1, get_search3);
 			rs = ps.executeQuery();
 			for (int i = 0; i < rd.nextInt(30); i++) {
 				if (rs.next()) {
-				get_booknum3 = rs.getInt(1);
+					get_booknum3 = rs.getInt(1);
 				}
 			}
 			sql = "UPDATE recommendation SET recom_book1=?, recom_book2=?, recom_book3=? where mem_num=?";
@@ -158,4 +159,48 @@ public class recommendationDAO {
 		return cnt;
 	}
 
+	public int setrecombook(int mem_num, String choice1, String choice2, String choice3) {
+		int cnt = 0;
+		getConnection();
+		Random rd = new Random();
+		int get_booknum1 = 0, get_booknum2 = 0, get_booknum3 = 0;
+		String sql = "select book_num from book where book_category3=?";
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, choice1);
+			rs = ps.executeQuery();
+			for (int i = 0; i < rd.nextInt(20); i++) {
+				if (rs.next()) {
+					get_booknum1 = rs.getInt(1);
+				}
+			}
+			ps.setString(1, choice2);
+			rs = ps.executeQuery();
+			for (int i = 0; i < rd.nextInt(20); i++) {
+				if (rs.next()) {
+					get_booknum2 = rs.getInt(1);
+				}
+			}
+			ps.setString(1, choice3);
+			rs = ps.executeQuery();
+			for (int i = 0; i < rd.nextInt(20); i++) {
+				if (rs.next()) {
+					get_booknum3 = rs.getInt(1);
+				}
+			}
+			sql = "UPDATE recommendation SET recom_book1=?, recom_book2=?, recom_book3=? where mem_num=?";
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1, get_booknum1);
+			ps.setInt(2, get_booknum2);
+			ps.setInt(3, get_booknum3);
+			ps.setInt(4, mem_num);
+			cnt = ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+
+		return cnt;
+	}
 }
