@@ -26,6 +26,18 @@
 	body.homepage.is-preload #header:after {
 		opacity: 0;
 	}
+	
+	#main_img{
+		float:left;
+		position : relative;
+		background-color:#D9E5FF;
+		background-size: cover;
+		width:100%;
+		height:500px;
+
+
+	}
+	
 
 </style>
 
@@ -73,20 +85,38 @@
 			%>
 		</div>
 	</nav>
+	
+	
+		<div id="banner">
+		
+			<div id="main_img">
+				<%
+					if (m_dto == null) {
+				%>
+				<a class="main_title" href="login.html">인텔리데이팅 시작하기</a>
+				<%
+					} else {
+				%>
+				<a class="main_title" href="rule.html">인텔리데이팅 이용규칙</a>
+				<%
+					}
+				%>
+			</div>
+		</div>
 
-	<div id="banner"><img src="images/bg.jpg">
+<%-- 	<div id="banner"><img src="images/bg.jpg">
 		<%
 			if (m_dto == null) {
 		%>
-		<a href="login.html">인텔리데이팅 시작하기</a>
+		<a class="main_title" href="login.html">인텔리데이팅 시작하기</a>
 		<%
 			} else {
 		%>
-		<a href="rule.html">인텔리데이팅 이용규칙</a>
+		<a class="main_title" href="rule.html">인텔리데이팅 이용규칙</a>
 		<%
 			}
 		%>
-	</div>
+	</div> --%>
 	
 	
 			<%
