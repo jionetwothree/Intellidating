@@ -301,7 +301,7 @@
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(0).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_club.get(0).getClub_name() %></a></h3>
+                    <h3><a  href='selectClub?clubnum=<%=al_club.get(0).getClub_num()%>'><%=al_club.get(0).getClub_name() %></a></h3>
                     <h5><%=al_club.get(0).getClub_detail() %></h5>
                 </header>
             </article>
@@ -309,7 +309,7 @@
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(1).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_club.get(1).getClub_name() %></a></h3>
+                    <h3><a  href='selectClub?clubnum=<%=al_club.get(1).getClub_num()%>'><%=al_club.get(1).getClub_name() %></a></h3>
                     <h5><%=al_club.get(1).getClub_detail() %></h5>
                 </header>
             </article>
@@ -317,7 +317,7 @@
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(2).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_club.get(2).getClub_name() %></a></h3>
+                    <h3><a  href='selectClub?clubnum=<%=al_club.get(2).getClub_num()%>'><%=al_club.get(2).getClub_name() %></a></h3>
                     <h5><%=al_club.get(2).getClub_detail() %></h5>
                 </header>
             </article>
