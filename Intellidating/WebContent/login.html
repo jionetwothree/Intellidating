@@ -1,57 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="EUC-KR">
+<title>Insert title here</title>
 <link rel="stylesheet" href="css/style_login.css">
-<title>Login</title>
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
 
 </head>
-
 <body>
+<div class="pen-title">
+  <a href="main.jsp"><h1>���ڸ�����Ʈ</h1></a>
+</div>
+<div class="container">
+  <div class="card"></div>
+  <div class="card">
+    <h1 class="title">�α���</h1>
+    <form action ="loginService">
+      <div class="input-container">
+        <input type="#{type}" name="email" required="required"/>
+        <label for="#{label}">�̸���</label>
+        <div class="bar"></div>
+      </div>
+      <!-- �α����� -->
+      <div class="input-container">
+        <input type="#{type}" name="password" required="required"/>
+        <label for="#{label}">��й�ȣ</label>
+        <div class="bar"></div>
+      </div>
+      <div class="button-container">
+        <button><span>�α��� �ϱ�</span></button>
+      </div>
+    </form>
+  </div>
+  <div class="card alt">
+    <div class="toggle"></div>
+    <h1 class="title">ȸ������
+      <div class="close"></div>
+    </h1>
+    <form action ="joinService">
+      <div class="input-container">
+        <input type="#{type}" name="email" required="required"/>
+        <label for="#{label}">�̸���</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="#{type}" name="password" required="required"/>
+        <label for="#{label}">��й�ȣ</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="#{type}" name="name" required="required"/>
+        <label for="#{label}">�̸�</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="#{type}" name="nick" required="required"/>
+        <label for="#{label}">�г���</label>
+        <div class="bar"></div>
+      </div>
+      <div class="button-container">
+        <button><span>�����ϱ�</span></button>
+      </div>
+    </form>
+  </div>
+</div>
 
 
-	<div id="title">
+<script type="text/javascript" src="js/login.js"></script>
 
-		<span> <a href="main.jsp">인텔리데이팅</a>
-		</span>
-
-	</div>
-	</header>
-
-
-	<nav>
-		<div id="menu">
-			<ul>
-				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
-				<li><a href="login.html">로그인</a></li>	
-			</ul>
-	
-		
-		</div>
-	</nav>
-	
-	<center>
-						<h2>로그인</h2>
-		<form action="loginService" method="post">
-			<input type="text" placeholder="이메일" name="email"><br> 
-			<input type="password" placeholder="비밀번호" name="pw"><br> 
-			<input type="submit" value="로그인 하기" class="button fit">
-		</form>
-		<div>
-			아직 인텔리데이팅 회원이 아닌가요?<br> <a href="join.jsp">인텔리데이팅 가입하기</a>
-		</div>
-	</center>
-	
-	<div calss="left">
-		<h6 class="color-high">
-
-			주식회사 인텔리데이팅<br>
-		</h6>
-	</div>
-
-	<script type="text/javascript" src="js/login.js"></script> 
 </body>
 </html>
-

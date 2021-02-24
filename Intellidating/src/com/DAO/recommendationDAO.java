@@ -123,6 +123,7 @@ public class recommendationDAO {
 			sql = "select book_num from book where book_category3=?";
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, get_search1);
+
 			rs = ps.executeQuery();
 			for (int i = 0; i < a[0]; i++) {
 				if (rs.next()) {
@@ -130,15 +131,21 @@ public class recommendationDAO {
 				}
 			}
 			ps.setString(1, get_search2);
+
 			rs = ps.executeQuery();
+
 			for (int i = 0; i < a[1]; i++) {
+
 				if (rs.next()) {
 					get_booknum2 = rs.getInt(1);
 				}
 			}
 			ps.setString(1, get_search3);
+
 			rs = ps.executeQuery();
+
 			for (int i = 0; i < a[2]; i++) {
+
 				if (rs.next()) {
 					get_booknum3 = rs.getInt(1);
 				}
