@@ -191,56 +191,56 @@
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(0).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(0).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(0).getBook_name() %></a></h4>
                 </header>
             </article >
 
              <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(1).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(1).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(1).getBook_name() %></a></h4>
                 </header>
             </article >
 
              <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(2).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(2).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(2).getBook_name() %></a></h4>
                 </header>
             </article >
 
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(3).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(3).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(3).getBook_name() %></a></h4>
                 </header>
             </article >
 
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(4).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(4).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(4).getBook_name() %></a></h4>
                 </header>
             </article >
 
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(5).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(5).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(5).getBook_name() %></a></h4>
                 </header>
             </article >
 			
 			 <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(6).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(6).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(6).getBook_name() %></a></h4>
                 </header>
             </article >
             
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(7).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(7).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(7).getBook_name() %></a></h4>
                 </header>
             </article >
 
@@ -317,23 +317,23 @@
         <div>
 
             <article class="taste">
-                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(0).getBook_image() %>" height='330' width='175' alt="" /></a>
                 <header height='50' width='175'>
-                    <h3><a href="#">책 이름</a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(0).getBook_name() %></a></h4>
                 </header>
             </article>
 
             <article class="taste">
-                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(1).getBook_image() %>" height='330' width='175' alt="" /></a>
                 <header height='50' width='175'>
-                    <h3><a href="#">책이름</a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(1).getBook_name() %></a></h4>
                 </header>
             </article>
 
             <article class="taste">
-                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(2).getBook_image() %>" height='330' width='175' alt="" /></a>
                 <header height='50' width='175'>
-                    <h3><a href="#">책이름</a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(2).getBook_name() %></a></h4>
                 </header>
             </article>
            </div>
