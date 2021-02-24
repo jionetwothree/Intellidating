@@ -13,8 +13,8 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-<link rel="stylesheet" type="text/css" href="css/main2.css">
 <link rel="stylesheet" type="text/css" href="style_analysis.css">
+<link rel="stylesheet" type="text/css" href="css/main2.css">
 <style>
 	a{
 	text-decoration: none;
@@ -75,41 +75,34 @@ function check(obj,condition, n) {
 		ArrayList<printbookDTO> al_book = dao.allBook();
 	%>
 	 <header>
-			<div id="title">
+			<div id="wrapper">
 
-				<span> <a href="main.jsp">intellidating</a>
-				</span>
-
-			</div>
-		</header>
-
-		<nav>
-			<div id="menu">
-
-				<ul style="display: inline-block;">
-					<%
+				<h1 id="title"><a href="main.jsp">intellidating</a></h1>
+				<nav>
+					<ul class="menu" style="display: inline-block;">
+						<%
 					if (m_dto == null) {
 				%>
-					<li><a href="login.html">로그인/회원가입</a></li>
+						<li><a href="login.html">로그인/회원가입</a></li>
 
-					<%
+						<%
 					} else {
 				%>
-					<li><a href="analysis.jsp">추천받기</a>
-					<li><a href="before_searchBook.jsp">책 검색하기</a></li>
-					<li><a href="mypage.jsp">마이모임</a>
-					<li><a href="logoutService">로그아웃</a></li>
-				</ul>
-				<%
-				}
-			%>
+						<li><a href="analysis.jsp">추천받기</a>
+						<li><a href="before_searchBook.jsp">책 검색하기</a></li>
+						<li><a href="mypage.jsp">마이모임</a>
+						<li><a href="logoutService">로그아웃</a></li>
+					</ul>
+					<%
+					}
+				%>
+				</nav>
 			</div>
-		</nav>
+		</header>
 	
-	<div>
 
 		<div class="explain">
-			<p><%=m_dto.getNickname()%>님 관심이 가는 책 5권을 골라주세요!<p>
+			<p><span style="font-weight: bold"><%=m_dto.getNickname()%></span>님 관심이 가는 책 5권을 골라주세요!<p>
 
 		</div>
 		<form name="form" action="http://localhost:8084/intellidating/predict" method="post" onsubmit="return fchk();">
