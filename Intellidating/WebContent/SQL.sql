@@ -68,10 +68,14 @@ nominvalue
 nocycle
 nocache;
 <<<<<<< HEAD
+select * from book;
+=======
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
+>>>>>>> branch 'master' of https://junghoonshim@github.com/jionetwothree/Intellidating
 
 
 CREATE TABLE member(
@@ -153,7 +157,7 @@ FOREIGN KEY (recom_book1) REFERENCES book(book_num),
 FOREIGN KEY (recom_book2) REFERENCES book(book_num),
 FOREIGN KEY (recom_book3) REFERENCES book(book_num)
 );
-select * from member;
+select * from club;
 create sequence seq_recom_num -- 추천 번호 시퀀스
 start with 1
 increment by 1
@@ -275,7 +279,11 @@ select * from member;
 
 <<<<<<< HEAD
 select * from club;
+<<<<<<< HEAD
+select * from choice;
 =======
+=======
+>>>>>>> branch 'master' of https://junghoonshim@github.com/jionetwothree/Intellidating
 
 select * from club;
 
