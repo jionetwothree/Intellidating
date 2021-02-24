@@ -20,37 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="main.css">
-<<<<<<< HEAD
-<style>
-   background-color: white;
-   
-   
-   
-   
-  
-   
-   
-   .carousel {
-      overflow-x: auto;
-   }
 
-
-	body.homepage.is-preload #header:after {
-		opacity: 0;
-	}
-	
-	#main_img{
-		float:left;
-		position : relative;
-		background-color:#D9E5FF;
-		background-size: cover;
-		width:100%;
-		height:500px;
-	}
-	
-</style>
-=======
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 
    <script src="js/jquery.min.js"></script>
          <script src="js/jquery.dropotron.min.js"></script>
@@ -261,31 +231,20 @@
                   recommendationDAO recom_dao = new recommendationDAO();
                   recommendationDTO recom_dto = recom_dao.selectrecomclub(m_dto.getNum());
                   clubDAO club_dao = new clubDAO();
-<<<<<<< HEAD
-                  ArrayList<clubDTO> al_club = club_dao.selectallclub(recom_dto);   		
-=======
+
                   ArrayList<clubDTO> al_club = club_dao.selectallclub(recom_dto);
                   bookDAO book_dao = new bookDAO();
                   ArrayList<bookDTO> al_book = book_dao.searchBook(recom_dto);
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
+
             %>
             
-<<<<<<< HEAD
-      <div class="explain">
-      <span><%=m_dto.getNickname()%>님의 취향은 #소설 #로맨스 #주식투자(이)군요!</span>
-      </div>
-=======
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
-      
-<<<<<<< HEAD
-      <div class="afterlogin">
-      	<div id="clubs">
-=======
+     
+
       <div id="clubs">
       <h5><%=m_dto.getNickname()%>
             님의 취향은 #소설 #로맨스 #주식투자(이)군요!
       </h5><br>
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
+
          <div class="clubtopic">
             <span>
              	  취향에 맞는 모임
@@ -294,49 +253,31 @@
       </div>
       
       <section class="carousel">
-<<<<<<< HEAD
-            <article class="taste">
-                <a href="#" class="image featured"><img src="<%=al_club.get(0).getClub_image() %>" alt="" /></a>
-                <header height='50' width='175'>
-                    <h3><a href="#"><%=al_club.get(0).getClub_name() %></a></h3>
-=======
+
         <div>
 
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(0).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
                     <h3><a  href='selectClub?clubnum=<%=al_club.get(0).getClub_num()%>'><%=al_club.get(0).getClub_name() %></a></h3>
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
                     <h5><%=al_club.get(0).getClub_detail() %></h5>
                 </header>
             </article>
 
-<<<<<<< HEAD
-            <article class="taste">
-                <a href="#" class="image featured"><img src="<%=al_club.get(1).getClub_image() %>"alt="" /></a>
-                <header height='50' width='175'>
-                    <h3><a href="#"><%=al_club.get(1).getClub_name() %></a></h3>
-=======
+
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(1).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
                     <h3><a  href='selectClub?clubnum=<%=al_club.get(1).getClub_num()%>'><%=al_club.get(1).getClub_name() %></a></h3>
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
                     <h5><%=al_club.get(1).getClub_detail() %></h5>
                 </header>
             </article>
 
-<<<<<<< HEAD
-            <article class="taste">
-                <a href="#" class="image featured"><img src="<%=al_club.get(2).getClub_image() %>" alt="" /></a>
-                <header height='50' width='175'>
-                    <h3><a href="#"><%=al_club.get(2).getClub_name() %></a></h3>
-=======
+
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(2).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
                     <h3><a  href='selectClub?clubnum=<%=al_club.get(2).getClub_num()%>'><%=al_club.get(2).getClub_name() %></a></h3>
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
                     <h5><%=al_club.get(2).getClub_detail() %></h5>
                 </header>
             </article>
@@ -356,45 +297,28 @@
       <section class="carousel">
         <div>
 
-<<<<<<< HEAD
-            <article class="taste">
-                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
-                <header height='50' width='175'>
-                    <h3><a href="#">책 이름</a></h3>
-=======
+
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(0).getBook_image() %>"  alt="" /></a>
                 <header>
                     <h3><a href="#"><%=al_book.get(0).getBook_name() %></a></h3>
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
+
                 </header>
             </article>
 
-<<<<<<< HEAD
-            <article class="taste">
-                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
-                <header height='50' width='175'>
-                    <h3><a href="#">책이름</a></h3>
-=======
+
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(1).getBook_image() %>"  alt="" /></a>
                 <header>
                     <h3><a href="#"><%=al_book.get(1).getBook_name() %></a></h3>
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
                 </header>
             </article>
 
-<<<<<<< HEAD
-            <article class="taste">
-                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
-                <header height='50' width='175'>
-                    <h3><a href="#">책이름</a></h3>
-=======
+
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(2).getBook_image() %>"  alt="" /></a>
                 <header>
                     <h3><a href="#"><%=al_book.get(2).getBook_name() %></a></h3>
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
                 </header>
             </article>
            </div>
