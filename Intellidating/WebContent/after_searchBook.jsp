@@ -44,9 +44,7 @@
 				<li><a href="after_searchBook.jsp">책 검색하기</a></li>
 				<li><a href="mypage.html">마이페이지</a>
 					<ul class="menu">
-						<li><a href="mytaste.html">마이취향</a></li>
-						<li><a href="myinteli.html">마이모임</a></li>
-						<li><a href="account.html">계정 설정</a></li>
+						<li><a href="myClub.jsp">마이모임</a></li>
 					</ul></li>
 				<li><a href="nologinmain.html">로그아웃</a></li>
 			</ul>

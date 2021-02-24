@@ -90,7 +90,7 @@ function check(obj,condition, n) {
 				%>
 						<li><a href="analysis.jsp">추천받기</a>
 						<li><a href="before_searchBook.jsp">책 검색하기</a></li>
-						<li><a href="mypage.jsp">마이모임</a>
+						<li><a href="myClub.jsp">마이모임</a>
 						<li><a href="logoutService">로그아웃</a></li>
 					</ul>
 					<%
