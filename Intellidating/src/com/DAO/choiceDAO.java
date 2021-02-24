@@ -86,5 +86,27 @@ public class choiceDAO {
 		}
 		return cnt;
 	}
+
+	public int setchoice(int mem_num, String choice1, String choice2, String choice3, String choice4, String choice5) {
+		int cnt=0;
+		getConnectecion();
+		String sql = "UPDATE CHOICE SET choice1=?, choice2=?, choice3=?, choice4=?, choice5=? where mem_num=?";
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, choice1);
+			ps.setString(2, choice2);
+			ps.setString(3, choice3);
+			ps.setString(4, choice4);
+			ps.setString(5, choice5);
+			ps.setInt(6, mem_num);
+			cnt = ps.executeUpdate();
+			
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return cnt;
+	}
 }
 

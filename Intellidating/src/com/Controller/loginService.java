@@ -33,9 +33,8 @@ public class loginService extends HttpServlet {
 			int mem_num = dto.getNum();
 			choiceDAO dao1 = new choiceDAO();
 			int result = dao1.choicedata(mem_num);
-			if(result==1) {
-			Cookie cookie = new Cookie("count", "1"); 
-			response.addCookie(cookie);
+			if(result==1) { 
+			response.addCookie(new Cookie("count", "1"));
 			response.sendRedirect("main.jsp");
 			System.out.println("로그인 성공!");
 			} else {

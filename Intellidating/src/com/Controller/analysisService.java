@@ -1,9 +1,11 @@
 package com.Controller;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -47,19 +49,31 @@ public class analysisService extends HttpServlet {
 			if(cnt>0) {
 				System.out.println("취향 선택 완료");
 			}
+			int cnt1 = recom_dao.insertrecomclub(mem_num, club1, club2, club3);
+			if(cnt1>0) {
+				System.out.println("추천 클럽 저장 성공");
+			} else {
+				System.out.println("저장 실패");
+			}
 		}
 		else {
-			System.out.println("도서 선택 데이터가 있는 회원입니다.");
-			// 선택 여러번 할 수 있으면 업데이트 가능하게 수정
+			int cnt = dao.setchoice(mem_num, choice1, choice2, choice3, choice4, choice5);
+			if(cnt>0) {
+				System.out.println("취향 변경 완료");
+			}
+			int cnt1 = recom_dao.setrecomclub(mem_num, club1, club2, club3);
+			if(cnt1>0) {
+				System.out.println("추천 클럽 변경 성공");
+			}
 		}
 		
-		int cnt = recom_dao.insertrecomclub(mem_num, club1, club2, club3);
-		if(cnt>0) {
-			System.out.println("추천 클럽 저장 성공");
-		} else {
-			System.out.println("저장 실패");
+		int cnt2 = recom_dao.setrecombook(mem_num, choice1, choice2, choice3);
+		if(cnt2>0) {
+			System.out.println("추천 도서 저장 성공");
+		}else {
+			System.out.println("추천 도서 저장 실패");
 		}
-		
+		if(result==0) response.addCookie(new Cookie("count", "1"));
 		response.sendRedirect("main.jsp");
 	}
 
