@@ -1,2 +1,139 @@
 @charset "EUC-KR";
-  
+
+
+body {
+	    font-family: 'NanumSquare', sans-serif !important;
+	}
+
+
+
+a{
+		text-decoration: none;
+		font-color:black;
+	}
+	
+#layout{
+	margin-left:420px;
+	margin-right:420px;
+}	
+
+	
+#title{
+		float:left;
+		width:400px;
+		height:80px;
+		margin-top:20px;
+	}
+	
+#title span{		
+		text-decoration:none;
+		font-size:30px;
+		text-align:right;
+		padding: 10px 8px 5px 8px;
+		margin-left:70px;
+		margin-top:10px;
+	}
+	
+#menu{
+	float:left;
+	width:600px;
+	margin-top:20px;
+	text-align:right;
+}
+
+#menu li{
+		float:left;
+		list-style:none;
+		text-align:right;
+		text-size:18px;
+		padding: 5px 30px 20px 8px;
+}
+	
+.book_img{
+	float:left;
+	width:280px;
+	height:350px;
+	margin-left:50px;
+	margin-right:50px;
+	border-radius:8px;
+}
+
+.book_info{
+	float:left;
+	width:200px;
+	margin-top:150px;
+}
+
+.bookName{
+	float:inherit;
+	width:1000px;
+	height:30px;
+	font-size:25px;
+	font-weight:bold;
+}
+
+.infoTop{
+	float:inherit;
+	width:1000px;
+	height:100px;	
+}
+
+li{
+	display:flex;
+	flex-direction:row;
+	height:30px;
+}
+
+.infoBtm{
+	float: left;
+	width:1000px;
+	height:30px;	
+	
+}
+
+.comment_list{
+	float: left;
+}
+
+.cmtInput{
+	float: none;
+	width:100%;
+	
+}
+
+.cmtInput textarea{
+	float: left;
+}
+
+.cmtInput input{
+	float: left;
+}
+
+
+	
+	
+#foot{
+	clear:both;
+	float:left;
+	background-color:#F6F6F6;
+	bottom: 0;
+	width: 100%;
+	height:300px;
+}
+
+#foot .all{
+	margin-top:50px;
+	margin-left:450px;
+}
+
+#foot .all span{
+	font-size:18px;
+	padding: 0px 50px 0px 0px;
+}
+
+.company{
+	font-size:15px;
+	font-weight:bold;
+}
+
+	

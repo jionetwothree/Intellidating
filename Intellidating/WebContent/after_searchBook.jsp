@@ -23,23 +23,16 @@
 
 	%>
 
-		<div>
-		<header>
-		<p><h2><a href="main.jsp">인텔리데이팅</a></h2></p>
-		</header>
-			<ul>
-				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
-				<li><a href="mypage.html">마이페이지</a>
-						<ul>
-							<li><a href="mytaste.html">마이취향</a></li>
-							<li><a href="myinteli.html">마이모임</a></li>
-							<li><a href="account.html">계정 설정</a></li>
-						</ul>
-					</li>
-				<li><a href="nologinmain.html">로그아웃</a></li>
-			</ul>
-		<hr />
-		</div>
+		<div id="foot">
+	<div class="all">
+		<span> <a href="question.html">자주 묻는 질문</a>
+		</span> <span> <a href="#">문의하기</a>
+		</span> <span> <a href="#">블로그</a></span> <span class="company"> <br>
+			<br> <br> 주식회사 인텔리데이팅 <br> <br> <br>
+		</span>
+	</div>
+</div>
+
 		<div>	
 	<form name="search" action="searchBookService" method="post">
 		<input type="text" name="search_submit" placeholder="책 제목 검색">
@@ -49,6 +42,8 @@
 		<input type="submit" class="icon_search_submit" name="search_submit" value="  ">
 	</form>
 	</div>	
+	
+	
 		<table>
 			<%
 				/* String attr = request.getParameter("bookDTO"); */
@@ -71,16 +66,15 @@
 			<%}%>
 		</table>
 	
-	<div>
-			<p><a href="#">자주 묻는 질문</a></p>
-			<p><a href="#">문의하기</a></p>
-			<p><a href="#">블로그</a></p>
-			<br>
-			<br>
-			<br>
-			<p>주식회사 인텔리데이팅</p>
-			
-			</div>
+	<div id="foot">
+	<div class="all">
+		<span> <a href="question.html">자주 묻는 질문</a>
+		</span> <span> <a href="#">문의하기</a>
+		</span> <span> <a href="#">블로그</a></span> <span class="company"> <br>
+			<br> <br> 주식회사 인텔리데이팅 <br> <br> <br>
+		</span>
+	</div>
+</div>
 
 </body>
 </html>
