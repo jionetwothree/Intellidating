@@ -20,7 +20,7 @@
    background-color: white;
    
    
-   
+  
    
    
    .carousel {
