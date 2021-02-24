@@ -189,56 +189,56 @@
             <article>
                 <a href="#" class="image featured" height='30'><img src="<%=al_book.get(0).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(0).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(0).getBook_name() %></a></h4>
                 </header>
             </article >
 
              <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(1).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(1).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(1).getBook_name() %></a></h4>
                 </header>
             </article >
 
              <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(2).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(2).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(2).getBook_name() %></a></h4>
                 </header>
             </article >
 
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(3).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(3).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(3).getBook_name() %></a></h4>
                 </header>
             </article >
 
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(4).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(4).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(4).getBook_name() %></a></h4>
                 </header>
             </article >
 
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(5).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(5).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(5).getBook_name() %></a></h4>
                 </header>
             </article >
 			
 			 <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(6).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(6).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(6).getBook_name() %></a></h4>
                 </header>
             </article >
             
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(7).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(7).getBook_name() %></a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(7).getBook_name() %></a></h4>
                 </header>
             </article >
 
@@ -263,7 +263,7 @@
 
       <div class="explain">
       <span><%=m_dto.getNickname()%>
-            님의 취향은 #<%=al_book.get(0).getBook_category1() %> #<%=al_book.get(1).getBook_category2() %> #<%=al_book.get(2).getBook_category2() %>(이)군요!
+            님의 취향은 #<%=al_book.get(0).getBook_category1() %> #<%=al_book.get(1).getBook_category2() %> #<%=al_book.get(2).getBook_category3() %>(이)군요!
       </span><br>
       </div>
 
@@ -318,23 +318,23 @@
         <div>
 
             <article class="taste">
-                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(0).getBook_image() %>" height='330' width='175' alt="" /></a>
                 <header height='50' width='175'>
-                    <h3><a href="#">책 이름</a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(0).getBook_name() %></a></h4>
                 </header>
             </article>
 
             <article class="taste">
-                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(1).getBook_image() %>" height='330' width='175' alt="" /></a>
                 <header height='50' width='175'>
-                    <h3><a href="#">책이름</a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(1).getBook_name() %></a></h4>
                 </header>
             </article>
 
             <article class="taste">
-                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(2).getBook_image() %>" height='330' width='175' alt="" /></a>
                 <header height='50' width='175'>
-                    <h3><a href="#">책이름</a></h3>
+                    <h4 align="center"><a href="#"><%=al_book.get(2).getBook_name() %></a></h4>
                 </header>
             </article>
            </div>

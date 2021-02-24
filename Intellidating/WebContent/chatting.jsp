@@ -167,7 +167,6 @@
 			getInfiniteChat();
 		});
 		
-		
 	</script>
 </body>
 </html>

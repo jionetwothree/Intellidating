@@ -35,7 +35,6 @@ public class analysisService extends HttpServlet {
 		String choice3 = request.getParameter("choice3");
 		String choice4 = request.getParameter("choice4");
 		String choice5 = request.getParameter("choice5");
-		System.out.println(choice1);
 		int mem_num = Integer.parseInt(request.getParameter("mem_num"));
 		int club1 = Integer.parseInt(request.getParameter("predict1"));
 		int club2 = Integer.parseInt(request.getParameter("predict2"));

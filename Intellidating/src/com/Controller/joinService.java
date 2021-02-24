@@ -23,7 +23,7 @@ public class joinService extends HttpServlet {
 		String password = request.getParameter("password");
 		String name = request.getParameter("name");
 		String nickname = request.getParameter("nick");
-		
+		System.out.println(name);
 		memberDAO dao = new memberDAO();
 		int cnt = dao.joinMember(email, password, name, nickname);
 		if (cnt > 0) {
