@@ -190,22 +190,6 @@ select * from PRINT_BOOK;
 insert into member(mem_num, mem_email, mem_password, mem_username, mem_nickname) 
 values(seq_mem_num.NEXTVAL, 'admin','1234','관리자','관리자');
 
-insert into book values (seq_book_num.NEXTVAL,'너와 함께라면 인생도 여행이다','이태혁','위즈덤하우스', 20150301, 'http://image.kyobobook.co.kr/images/book/large/097/l9791170400097.jpg
-', '자기계발', '인간관계', '인간관계일반');
-
-insert into book values (seq_book_num.NEXTVAL,'지면서 이기는 관계술','나태주','열림원', 20191212, 'http://image.kyobobook.co.kr/images/book/large/041/l9788960866041.jpg
-', '시에세이', '한국시', '현대시');
-
-insert into book values (seq_book_num.NEXTVAL,'현명한 투자자','벤저민 그레이엄','국일증권경제연구소', 20200526, 'http://image.kyobobook.co.kr/images/book/large/305/l9788957821305.jpg
-', '경제경영', '재테크금융', '재테크');
-
-insert into book values (seq_book_num.NEXTVAL,'앨리스 죽이기','고바야시 야스미','검은숲', 20151221, 'http://image.kyobobook.co.kr/images/book/large/184/l9788952775184.jpg
-', '소설', '일본소설', '일본소설일반');
-
-insert into book values (seq_book_num.NEXTVAL,'파리에 간 고양이','피터 게더스','MEDIA2.0', 20060723, 'http://image.kyobobook.co.kr/images/book/large/421/l9788990739421.jpg
-', '시에세이', '나라별 에세이', '영미에세이');
-
-
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (1,8,'우리는 사랑일까','http://image.kyobobook.co.kr/images/book/large/373/l9788956601373.jpg','SF과학소설');
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (2,14,'파피용','http://image.kyobobook.co.kr/images/book/large/741/l9788932907741.jpg','SF과학소설');
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (3,16,'관찰의 힘','http://image.kyobobook.co.kr/images/book/large/127/l9791189352127.jpg','경영');
@@ -245,10 +229,8 @@ INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGO
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (37,1188,'나는 나로 살기로 했다','http://image.kyobobook.co.kr/images/book/large/845/l9791187119845.jpg','한국에세이');
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (38,1306,'언어의 온도','http://image.kyobobook.co.kr/images/book/large/125/l9791195522125.jpg','한국에세이');
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (39,1385,'가장 예쁜 생각을 너에게 주고 싶다','http://image.kyobobook.co.kr/images/book/large/820/l9788925561820.jpg','현대시');
-INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM
-, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (40,1427,'흔들리지 않고 피는 꽃이 어디 있으랴','http://image.kyobobook.co.kr/images/book/large/774/l9788925552774.jpg','현대시');
+INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (40,1427,'흔들리지 않고 피는 꽃이 어디 있으랴','http://image.kyobobook.co.kr/images/book/large/774/l9788925552774.jpg','현대시');
 
-<<<<<<< HEAD
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(1, '해오름','https://images.unsplash.com/photo-1572727984721-9e8bbd728f0d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80', '1번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(2, '도담도담','https://images.unsplash.com/photo-1597045145058-222946a8412c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80','2번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(3, '로운','https://images.unsplash.com/photo-1598618589908-36922bcbb433?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80','3번 모임입니다.');
@@ -259,19 +241,6 @@ INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(7, '보나',
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(8, '무슬','https://images.unsplash.com/photo-1590176661052-7d04e53d16a2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80','8번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(9, '눈꽃','https://images.unsplash.com/photo-1588144300695-f414e09350f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80','9번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(10, '리라','https://images.unsplash.com/photo-1584561775356-09cebd63d47a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=562&q=80','10번 모임입니다.');
-=======
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '해오름','https://news.cgtn.com/news/7a596a4e7863444f35417a4d7a49444e7a51444f31457a6333566d54/img/8b2c93bb7ef4452ba80963355b4e7a6c/8b2c93bb7ef4452ba80963355b4e7a6c.jpg', '1번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '도담도담','https://image.freepik.com/free-photo/flowering-of-adonis-vernalis-spring-pheasant-s-eye-yellow-pheasant-s-eye-or-false-hellebore_162695-444.jpg','2번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '로운','https://images.immediate.co.uk/production/volatile/sites/10/2018/09/eae9cbb7-9041-4113-ba62-595f18d49906-aaf58bb.jpg?quality=90&resize=960%2C640','3번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '솔빛길','https://img.freepik.com/free-photo/amazing-yellow-daffodils-flower-field-in-the-morning-sunlight_24711-255.jpg?size=626&ext=jpg','4번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '잎새', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyBn7FHJ6KmlH4O7nytXZ9si6ab_3pFe-6vA&usqp=CAU','5번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '모드니','https://www.gardeningknowhow.com/wp-content/uploads/2020/11/orange-french-marigolds.jpg','6번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '보나','https://st.depositphotos.com/1718493/5125/i/600/depositphotos_51251617-stock-photo-lavender-on-a-wooden-desk.jpg','7번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '무슬','https://www.gardendesign.com/pictures/images/900x705Max/dream-team-s-portland-garden_6/yellow-freesia-flower-yellow-flower-shutterstock-com_14849.jpg','8번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '눈꽃','https://www.thermofisher.com/blog/proteomics/wp-content/uploads/sites/2/2017/01/shutterstock_408614731.jpg','9번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '리라','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYavTqCXGvEG0ditLuUZ3wDvLkYWtDXDb-5Q&usqp=CAU','10번 모임입니다.');
-
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 
 DELETE FROM club;
 DELETE FROM club WHERE club_num = 8;
@@ -289,11 +258,6 @@ select * from member;
 
 
 select * from club;
-<<<<<<< HEAD
-select * from choice;
-=======
-
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 
 select * from recommendation;
 select * from book;
@@ -301,18 +265,9 @@ select * from MEMBER;
 drop sequence seq_club_num;
 
 DELETE FROM COMMENTS WHERE book_num = 6;
-<<<<<<< HEAD
-DELETE FROM CHOICE WHERE choice_num = 109;
-delete from choice;
-=======
 delete from club;
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 delete from RECOMMENDATION;
 DELETE FROM book;
 
 SELECT CONSTRAINT_NAME, TABLE_NAME, R_CONSTRAINT_NAME FROM USER_CONSTRAINTS
 WHERE CONSTRAINT_NAME = 'SYS_C007460';
-<<<<<<< HEAD
-
-=======
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
