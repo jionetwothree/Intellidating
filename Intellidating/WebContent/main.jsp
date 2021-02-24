@@ -21,7 +21,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="main.css">
 
-
    <script src="js/jquery.min.js"></script>
          <script src="js/jquery.dropotron.min.js"></script>
          <script src="js/jquery.scrolly.min.js"></script>

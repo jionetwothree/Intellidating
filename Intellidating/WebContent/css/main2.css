@@ -14,10 +14,11 @@ body {
 		opacity: 0;
 	}
 	
+	
 	#main_img{
 		float:left;
 		position : relative;
-		background: url(../images/alfons-morales-YLSwjSy7stw-unsplash.jpg);
+		background: url(../images/banner.jpg);
 		background-size: cover;
 		width:100%;
 		height:500px;
