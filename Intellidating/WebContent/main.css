@@ -15,9 +15,12 @@ section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	font-size: 100%;
+	font-family: 'Noto Sans KR', sans-serif;
 	font: inherit;
 	vertical-align: baseline;}
 	
+
+
 
 
 article, aside, details, figcaption, figure,
@@ -26,7 +29,6 @@ footer, header, hgroup, menu, nav, section {
 	
 
 a{
-		font-style:"Nanum Gothic";
 		text-decoration: none;
 		font-color:black;
 	}
@@ -65,6 +67,18 @@ a{
 		text-size:18px;
 		padding: 5px 30px 20px 8px;
 	}
+
+#banner{
+	top: 100;
+	right: 0;
+	left: 0;
+	bottom: 100;
+	
+}
+
+
+
+
 
 #banner .main_title{
 		position:relative;
@@ -167,7 +181,7 @@ input, select, textarea {
 		box-sizing: border-box;
 	}
 
-	*, *:before, *:after {
+	 *:before, *:after {
 		box-sizing: inherit;
 	}
 
@@ -176,7 +190,6 @@ input, select, textarea {
 		color: #5b5b5b;
 		font-size: 15pt;
 		line-height: 1.85em;
-		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
 	}
 

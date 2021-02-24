@@ -68,7 +68,10 @@ nominvalue
 nocycle
 nocache;
 
+<<<<<<< HEAD
 select * from recommendation;
+=======
+>>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 
 
 CREATE TABLE member(
@@ -206,6 +209,7 @@ insert into book values (seq_book_num.NEXTVAL,'앨리스 죽이기','고바야시 야스미',
 insert into book values (seq_book_num.NEXTVAL,'파리에 간 고양이','피터 게더스','MEDIA2.0', 20060723, 'http://image.kyobobook.co.kr/images/book/large/421/l9788990739421.jpg
 ', '시에세이', '나라별 에세이', '영미에세이');
 
+
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (1,8,'우리는 사랑일까','http://image.kyobobook.co.kr/images/book/large/373/l9788956601373.jpg','SF과학소설');
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (2,14,'파피용','http://image.kyobobook.co.kr/images/book/large/741/l9788932907741.jpg','SF과학소설');
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (3,16,'관찰의 힘','http://image.kyobobook.co.kr/images/book/large/127/l9791189352127.jpg','경영');
@@ -245,27 +249,51 @@ INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGO
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (37,1188,'나는 나로 살기로 했다','http://image.kyobobook.co.kr/images/book/large/845/l9791187119845.jpg','한국에세이');
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (38,1306,'언어의 온도','http://image.kyobobook.co.kr/images/book/large/125/l9791195522125.jpg','한국에세이');
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (39,1385,'가장 예쁜 생각을 너에게 주고 싶다','http://image.kyobobook.co.kr/images/book/large/820/l9788925561820.jpg','현대시');
-INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (40,1427,'흔들리지 않고 피는 꽃이 어디 있으랴','http://image.kyobobook.co.kr/images/book/large/774/l9788925552774.jpg','현대시');
+INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM
+, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (40,1427,'흔들리지 않고 피는 꽃이 어디 있으랴','http://image.kyobobook.co.kr/images/book/large/774/l9788925552774.jpg','현대시');
 
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Hyacinth','https://news.cgtn.com/news/7a596a4e7863444f35417a4d7a49444e7a51444f31457a6333566d54/img/8b2c93bb7ef4452ba80963355b4e7a6c/8b2c93bb7ef4452ba80963355b4e7a6c.jpg', '1번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Adonis','https://image.freepik.com/free-photo/flowering-of-adonis-vernalis-spring-pheasant-s-eye-yellow-pheasant-s-eye-or-false-hellebore_162695-444.jpg','2번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Tulipa','https://images.immediate.co.uk/production/volatile/sites/10/2018/09/eae9cbb7-9041-4113-ba62-595f18d49906-aaf58bb.jpg?quality=90&resize=960%2C640','3번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Daffodil','https://img.freepik.com/free-photo/amazing-yellow-daffodils-flower-field-in-the-morning-sunlight_24711-255.jpg?size=626&ext=jpg','4번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Lilac', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyBn7FHJ6KmlH4O7nytXZ9si6ab_3pFe-6vA&usqp=CAU','5번 모임입니다.');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '나루해오름','https://news.cgtn.com/news/7a596a4e7863444f35417a4d7a49444e7a51444f31457a6333566d54/img/8b2c93bb7ef4452ba80963355b4e7a6c/8b2c93bb7ef4452ba80963355b4e7a6c.jpg', '1번 모임입니다.');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '도담도담','https://image.freepik.com/free-photo/flowering-of-adonis-vernalis-spring-pheasant-s-eye-yellow-pheasant-s-eye-or-false-hellebore_162695-444.jpg','2번 모임입니다.');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '로운','https://images.immediate.co.uk/production/volatile/sites/10/2018/09/eae9cbb7-9041-4113-ba62-595f18d49906-aaf58bb.jpg?quality=90&resize=960%2C640','3번 모임입니다.');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '','https://img.freepik.com/free-photo/amazing-yellow-daffodils-flower-field-in-the-morning-sunlight_24711-255.jpg?size=626&ext=jpg','4번 모임입니다.');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyBn7FHJ6KmlH4O7nytXZ9si6ab_3pFe-6vA&usqp=CAU','5번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Marigold','https://www.gardeningknowhow.com/wp-content/uploads/2020/11/orange-french-marigolds.jpg','6번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Lavendar','https://st.depositphotos.com/1718493/5125/i/600/depositphotos_51251617-stock-photo-lavender-on-a-wooden-desk.jpg','7번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Freesia','https://www.gardendesign.com/pictures/images/900x705Max/dream-team-s-portland-garden_6/yellow-freesia-flower-yellow-flower-shutterstock-com_14849.jpg','8번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Rosemary','https://www.thermofisher.com/blog/proteomics/wp-content/uploads/sites/2/2017/01/shutterstock_408614731.jpg','9번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Chrysanthemum','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYavTqCXGvEG0ditLuUZ3wDvLkYWtDXDb-5Q&usqp=CAU','10번 모임입니다.');
 
+DELETE FROM club WHERE club_num = 7;
+DELETE FROM club WHERE club_num = 8;
+DELETE FROM club WHERE club_num = 9;
+DELETE FROM club WHERE club_num = 10;
+DELETE FROM RECOMMENDATION WHERE recom_num = 6;
+DELETE FROM RECOMMENDATION WHERE recom_num = 5;
+
 select * from club;
+select * from comments;
 select * from PRINT_BOOK;
 select * from member;
 
 --INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');--이건 일단 인서트 하지 말고 놔둬보세여 테스트 용이라
 
 select * from club;
+<<<<<<< HEAD
 select * from recommendation;
 delete from choice where mem_num=5;
 select * from club;
 drop sequence seq_club_num;
+=======
+select * from recommendation;
+select * from book;
+
+drop sequence seq_club_num;
+
+DELETE FROM COMMENTS WHERE book_num = 6;
+delete from choice;
+delete from RECOMMENDATION;
+DELETE FROM book;
+
+SELECT CONSTRAINT_NAME, TABLE_NAME, R_CONSTRAINT_NAME FROM USER_CONSTRAINTS
+WHERE CONSTRAINT_NAME = 'SYS_C007460';
+>>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git

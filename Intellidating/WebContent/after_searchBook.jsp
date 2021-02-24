@@ -5,6 +5,8 @@
 <%@page import="com.DTO.bookDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@page import="java.net.URLEncoder"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +25,7 @@
 
 		<div>
 		<header>
-		<p><h2>인텔리데이팅</h2></p>
+		<p><h2><a href="main.jsp">인텔리데이팅</a></h2></p>
 		</header>
 			<ul>
 				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
@@ -41,6 +43,9 @@
 		<div>	
 	<form name="search" action="searchBookService" method="post">
 		<input type="text" name="search_submit" placeholder="책 제목 검색">
+		<% if(m_dto!=null){%>
+			<input type="hidden" name="mem_num" value=<%= m_dto.getNum() %> >
+		<%} %>
 		<input type="submit" class="icon_search_submit" name="search_submit" value="  ">
 	</form>
 	</div>	
@@ -53,12 +58,12 @@
 				
 				for(int i = 0; i < dto.size(); i++) {
 					out.print("<tr>");%>
-					<td><a href='bookInfo.jsp?book=dto.get(i).getBook_name()'><%=dto.get(i).getBook_name()%></a></td>
+					<td><a href='bookInfo.jsp?book=<%= dto.get(i).getBook_num()%>'><%=dto.get(i).getBook_name()%></a></td>
 					<%out.print("<td>"+dto.get(i).getBook_author()+"</td>");
 					out.print("<td>"+dto.get(i).getBook_publisher()+"</td>");
 					out.print("<td>"+dto.get(i).getBook_date()+"</td>");%>
 					<td>
-						<a href='bookInfo.jsp?book=dto.get(i).getBook_image()'>
+						<a href='bookInfo.jsp?book=<%= dto.get(i).getBook_num()%>'>
 							<img src="<%=dto.get(i).getBook_image()%>">
 						</a>
 					</td>
