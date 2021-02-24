@@ -23,9 +23,6 @@
 
 
 
-
-
-
    <script src="js/jquery.min.js"></script>
          <script src="js/jquery.dropotron.min.js"></script>
          <script src="js/jquery.scrolly.min.js"></script>
