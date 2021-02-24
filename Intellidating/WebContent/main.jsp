@@ -22,6 +22,9 @@
 <link rel="stylesheet" type="text/css" href="main.css">
 
 
+
+
+
    <script src="js/jquery.min.js"></script>
          <script src="js/jquery.dropotron.min.js"></script>
          <script src="js/jquery.scrolly.min.js"></script>
@@ -48,8 +51,9 @@
    </header>
 
 	<nav>
-		<div id="menu">
-			<ul>
+		<div id="menu" >
+		
+			<ul style="display:inline-block;">
 				<%
 					if (m_dto == null) {
 				%>
@@ -70,9 +74,9 @@
 	</nav>
 	
 	
-		<div id="banner">
+		<div id="banner" >
 		
-			<div id="main_img">
+			<div id="main_img" style="margin-bottom:50px;">
 				<%
 					if (m_dto == null) {
 				%>
@@ -258,12 +262,14 @@
             
      
 
+
       <div id="clubs">
       <h5><%=m_dto.getNickname()%>
             님의 취향은 #<%=al_book.get(0).getBook_category1() %> #<%=al_book.get(1).getBook_category2() %> #<%=al_book.get(2).getBook_category2() %>(이)군요!
       </h5><br>
 
          <div class="clubtopic">
+
             <span>
              	  취향에 맞는 모임
             </span>
@@ -271,31 +277,26 @@
       </div>
       
       <section class="carousel">
-
-        <div>
-
-            <article>
-                <a href="#" class="image featured"><img src="<%=al_club.get(0).getClub_image() %>" height='200' width='400' alt="" /></a>
-                <header>
-                    <h3><a  href='selectClub?clubnum=<%=al_club.get(0).getClub_num()%>'><%=al_club.get(0).getClub_name() %></a></h3>
+            <article class="taste">
+                <a href="#" class="image featured"><img src="<%=al_club.get(0).getClub_image() %>" alt="" /></a>
+                <header height='50' width='175'>
+                    <h3><a href="#"><%=al_club.get(0).getClub_name() %></a></h3>
                     <h5><%=al_club.get(0).getClub_detail() %></h5>
                 </header>
             </article>
 
-
-            <article>
-                <a href="#" class="image featured"><img src="<%=al_club.get(1).getClub_image() %>" height='200' width='400' alt="" /></a>
-                <header>
-                    <h3><a  href='selectClub?clubnum=<%=al_club.get(1).getClub_num()%>'><%=al_club.get(1).getClub_name() %></a></h3>
+            <article class="taste">
+                <a href="#" class="image featured"><img src="<%=al_club.get(1).getClub_image() %>"alt="" /></a>
+                <header height='50' width='175'>
+                    <h3><a href="#"><%=al_club.get(1).getClub_name() %></a></h3>
                     <h5><%=al_club.get(1).getClub_detail() %></h5>
                 </header>
             </article>
 
-
-            <article>
-                <a href="#" class="image featured"><img src="<%=al_club.get(2).getClub_image() %>" height='200' width='400' alt="" /></a>
-                <header>
-                    <h3><a  href='selectClub?clubnum=<%=al_club.get(2).getClub_num()%>'><%=al_club.get(2).getClub_name() %></a></h3>
+            <article class="taste">
+                <a href="#" class="image featured"><img src="<%=al_club.get(2).getClub_image() %>" alt="" /></a>
+                <header height='50' width='175'>
+                    <h3><a href="#"><%=al_club.get(2).getClub_name() %></a></h3>
                     <h5><%=al_club.get(2).getClub_detail() %></h5>
                 </header>
             </article>
@@ -307,7 +308,7 @@
     
 	<div class="afterlogin">
       <div id="clubs">
-         <div class="clubtopic">
+         <div class="clubtitle">
             <span>
               	 취향에 맞는 책
             </span>
@@ -315,28 +316,24 @@
       <section class="carousel">
         <div>
 
-
-            <article>
-                <a href="#" class="image featured"><img src="<%=al_book.get(0).getBook_image() %>"  alt="" /></a>
-                <header>
-                    <h3><a href="#"><%=al_book.get(0).getBook_name() %></a></h3>
-
+            <article class="taste">
+                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
+                <header height='50' width='175'>
+                    <h3><a href="#">책 이름</a></h3>
                 </header>
             </article>
 
-
-            <article>
-                <a href="#" class="image featured"><img src="<%=al_book.get(1).getBook_image() %>"  alt="" /></a>
-                <header>
-                    <h3><a href="#"><%=al_book.get(1).getBook_name() %></a></h3>
+            <article class="taste">
+                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
+                <header height='50' width='175'>
+                    <h3><a href="#">책이름</a></h3>
                 </header>
             </article>
 
-
-            <article>
-                <a href="#" class="image featured"><img src="<%=al_book.get(2).getBook_image() %>"  alt="" /></a>
-                <header>
-                    <h3><a href="#"><%=al_book.get(2).getBook_name() %></a></h3>
+            <article class="taste">
+                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
+                <header height='50' width='175'>
+                    <h3><a href="#">책이름</a></h3>
                 </header>
             </article>
            </div>
@@ -347,7 +344,8 @@
       <%
             }
       %>
-</div>
+   </div>
+
 
       <div id="foot">
          <div class="all">

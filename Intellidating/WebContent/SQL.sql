@@ -259,6 +259,7 @@ INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_n
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '눈꽃','https://www.thermofisher.com/blog/proteomics/wp-content/uploads/sites/2/2017/01/shutterstock_408614731.jpg','9번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '리라','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYavTqCXGvEG0ditLuUZ3wDvLkYWtDXDb-5Q&usqp=CAU','10번 모임입니다.');
 
+
 DELETE FROM club WHERE club_num = 7;
 DELETE FROM club WHERE club_num = 8;
 DELETE FROM club WHERE club_num = 9;
@@ -273,7 +274,9 @@ select * from member;
 
 --INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');--이건 일단 인서트 하지 말고 놔둬보세여 테스트 용이라
 
+
 select * from club;
+
 
 select * from recommendation;
 select * from book;
@@ -281,7 +284,7 @@ select * from MEMBER;
 drop sequence seq_club_num;
 
 DELETE FROM COMMENTS WHERE book_num = 6;
-delete from choice;
+delete from club;
 delete from RECOMMENDATION;
 DELETE FROM book;
 

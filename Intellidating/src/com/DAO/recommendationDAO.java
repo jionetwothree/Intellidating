@@ -133,6 +133,7 @@ public class recommendationDAO {
 			ps.setString(1, get_search2);
 
 			rs = ps.executeQuery();
+
 			for (int i = 0; i < a[1]; i++) {
 
 				if (rs.next()) {
@@ -140,6 +141,7 @@ public class recommendationDAO {
 				}
 			}
 			ps.setString(1, get_search3);
+
 			rs = ps.executeQuery();
 
 			for (int i = 0; i < a[2]; i++) {
