@@ -25,6 +25,16 @@ public class bookDTO<E> {
 		this.book_date = book_date;
 		this.book_image = book_image;
 	}
+	
+	public bookDTO(String book_category1, String book_category2, String book_author) {
+		super();
+		this.book_num = book_num;
+		this.book_name = book_name;
+		this.book_author = book_author;
+		this.book_publisher = book_publisher;
+		this.book_date = book_date;
+		this.book_image = book_image;
+	}
 
 	
 
