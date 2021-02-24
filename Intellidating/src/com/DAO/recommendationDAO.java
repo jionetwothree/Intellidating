@@ -135,6 +135,7 @@ public class recommendationDAO {
 			rs = ps.executeQuery();
 
 			for (int i = 0; i < a[1]; i++) {
+
 				if (rs.next()) {
 					get_booknum2 = rs.getInt(1);
 				}
@@ -142,6 +143,7 @@ public class recommendationDAO {
 			ps.setString(1, get_search3);
 
 			rs = ps.executeQuery();
+
 			for (int i = 0; i < a[2]; i++) {
 
 				if (rs.next()) {

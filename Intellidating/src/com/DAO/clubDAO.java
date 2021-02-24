@@ -123,6 +123,38 @@ public class clubDAO {
 
 	}
 	
+	public ArrayList<clubDTO> selectmainclub() {
+
+		ArrayList<clubDTO> al = new ArrayList<clubDTO>();
+
+		try {
+			getConnection();
+
+			String sql = "select * from club ";
+
+			ps = conn.prepareStatement(sql);
+
+			rs = ps.executeQuery();
+
+			while (rs.next()) {
+				int get_num  = rs.getInt(1);
+				String get_name = rs.getString(2);
+				String get_image = rs.getString(3);
+				String get_detail = rs.getString(5);			
+				clubDTO dto  = new clubDTO(get_num, get_name, get_image, get_detail);
+				al.add(dto);
+				
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return al;
+
+	}
+	
 	public clubDTO selectclub(int club_num) {
 		clubDTO dto = null;
 		getConnection();

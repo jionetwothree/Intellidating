@@ -23,6 +23,8 @@
 
 
 
+
+
    <script src="js/jquery.min.js"></script>
          <script src="js/jquery.dropotron.min.js"></script>
          <script src="js/jquery.scrolly.min.js"></script>
@@ -92,7 +94,10 @@
 			<%
 				if (m_dto == null) {
 					
-					
+					clubDAO dao = new clubDAO();
+					ArrayList<clubDTO> al_club = dao.selectmainclub();
+					bookDAO book_dao = new bookDAO();
+					ArrayList<bookDTO> al_book = book_dao.selectmainbook();
 			%>
 		<div id="clubs">
 			<div class="align">
@@ -106,59 +111,67 @@
         <div class="reel">
 
             <article>
-                <a href="#" class="image featured"><img  src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img  src="<%=al_club.get(0).getClub_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">모임이름</a></h3>
+                    <h3><a href="#"><%=al_club.get(0).getClub_name() %></a></h3>
+                    <h5><%=al_club.get(0).getClub_detail() %></h5>
                 </header>
             </article>
 
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_club.get(1).getClub_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">모임이름</a></h3>
+                    <h3><a href="#"><%=al_club.get(1).getClub_name() %></a></h3>
+                    <h5><%=al_club.get(1).getClub_detail() %></h5>
                 </header>
             </article>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_club.get(2).getClub_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">모임이름</a></h3>
+                    <h3><a href="#"><%=al_club.get(2).getClub_name() %></a></h3>
+                    <h5><%=al_club.get(2).getClub_detail() %></h5>
                 </header>
             </article>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_club.get(3).getClub_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">모임이름</a></h3>
+                    <h3><a href="#"><%=al_club.get(3).getClub_name() %></a></h3>
+                    <h5><%=al_club.get(3).getClub_detail() %></h5>
                 </header>
             </article>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_club.get(4).getClub_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">모임이름</a></h3>
+                    <h3><a href="#"><%=al_club.get(4).getClub_name() %></a></h3>
+                    <h5><%=al_club.get(4).getClub_detail() %></h5>
                 </header>
             </article>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg"  alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_club.get(5).getClub_image() %>"  alt="" /></a>
                 <header>
-                    <h3><a href="#">모임이름</a></h3>
+                    <h3><a href="#"><%=al_club.get(5).getClub_name() %></a></h3>
+                    <h5><%=al_club.get(5).getClub_detail() %></h5>
                 </header>
             </article>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg"  alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_club.get(6).getClub_image() %>"  alt="" /></a>
                 <header>
-                    <h3><a href="#">모임이름</a></h3>
+                    <h3><a href="#"><%=al_club.get(6).getClub_name() %></a></h3>
+                    <h5><%=al_club.get(6).getClub_detail() %></h5>
                 </header>
             </article>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_club.get(7).getClub_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">모임이름</a></h3>
+                    <h3><a href="#"><%=al_club.get(7).getClub_name() %></a></h3>
+                    <h5><%=al_club.get(7).getClub_detail() %></h5>
                 </header>
             </article>
         </div>
@@ -176,51 +189,58 @@
         <div class="reel">
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(0).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">책이름</a></h3>
+                    <h3><a href="#"><%=al_book.get(0).getBook_name() %></a></h3>
                 </header>
             </article >
 
              <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(1).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">책이름</a></h3>
+                    <h3><a href="#"><%=al_book.get(1).getBook_name() %></a></h3>
                 </header>
             </article >
 
              <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(2).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">책이름</a></h3>
+                    <h3><a href="#"><%=al_book.get(2).getBook_name() %></a></h3>
                 </header>
             </article >
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(3).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">책이름</a></h3>
+                    <h3><a href="#"><%=al_book.get(3).getBook_name() %></a></h3>
                 </header>
             </article >
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(4).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">책이름</a></h3>
+                    <h3><a href="#"><%=al_book.get(4).getBook_name() %></a></h3>
                 </header>
             </article >
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(5).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">책이름</a></h3>
+                    <h3><a href="#"><%=al_book.get(5).getBook_name() %></a></h3>
                 </header>
             </article >
 			
 			 <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="<%=al_book.get(6).getBook_image() %>" alt="" /></a>
                 <header>
-                    <h3><a href="#">책이름</a></h3>
+                    <h3><a href="#"><%=al_book.get(6).getBook_name() %></a></h3>
+                </header>
+            </article >
+            
+            <article>
+                <a href="#" class="image featured"><img src="<%=al_book.get(7).getBook_image() %>" alt="" /></a>
+                <header>
+                    <h3><a href="#"><%=al_book.get(7).getBook_name() %></a></h3>
                 </header>
             </article >
 
@@ -242,13 +262,14 @@
             
      
 
-       <div class="explain">
-      <span><%=m_dto.getNickname()%>님의 취향은 #소설 #로맨스 #주식투자(이)군요!</span>
-      </div>
-      
-      <div class="afterlogin">
-      	<div id="clubs">
-         <div class="clubtitle">
+
+      <div id="clubs">
+      <h5><%=m_dto.getNickname()%>
+            님의 취향은 #<%=al_book.get(0).getBook_category1() %> #<%=al_book.get(1).getBook_category2() %> #<%=al_book.get(2).getBook_category2() %>(이)군요!
+      </h5><br>
+
+         <div class="clubtopic">
+
             <span>
              	  취향에 맞는 모임
             </span>
