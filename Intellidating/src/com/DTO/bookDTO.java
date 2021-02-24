@@ -16,7 +16,7 @@ public class bookDTO<E> {
 	private ArrayList<E> arr;
 	
 	public bookDTO(int book_num, String book_name, String book_author, String book_publisher, String book_date,
-			String book_image) {
+			String book_image, String book_category1) {
 		super();
 		this.book_num = book_num;
 		this.book_name = book_name;
@@ -24,6 +24,7 @@ public class bookDTO<E> {
 		this.book_publisher = book_publisher;
 		this.book_date = book_date;
 		this.book_image = book_image;
+		this.book_category1 = book_category1;
 	}
 	
 	public bookDTO(String book_category1, String book_category2, String book_author) {
