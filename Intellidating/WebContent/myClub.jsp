@@ -50,6 +50,8 @@
 		</div>
 	</nav>
 	
+
+	
 	<table  class ="table_as">
 	<tr>
 		<td><a href="chatting.jsp">독서모임1</a></td>
