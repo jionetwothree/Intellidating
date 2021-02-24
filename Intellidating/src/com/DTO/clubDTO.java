@@ -35,7 +35,7 @@ public class clubDTO {
 		this.club_image = club_image;
 		this.club_detail = club_detail;
 	}
-
+	
 	public String getClub_name() {
 		return club_name;
 	}
