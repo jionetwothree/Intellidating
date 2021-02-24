@@ -22,6 +22,7 @@
    
    
    
+   
    .carousel {
       overflow-x: auto;
    }
