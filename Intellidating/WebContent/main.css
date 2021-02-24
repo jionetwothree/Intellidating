@@ -12,7 +12,6 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
-	margin: 0;
 	padding: 0;
 	font-size: 100%;
 	font-family: 'Noto Sans KR', sans-serif;
@@ -40,7 +39,7 @@ a{
 	
 #title{
 		float:left;
-		width:70%;
+		width:600px;
 		height:80px;
 		margin-top:20px;
 		
@@ -49,21 +48,24 @@ a{
 #title span{		
 		text-decoration:none;
 		font-size:30px;
-		text-align:left;
+		text-align:right;
 		padding: 10px 8px 5px 8px;
 		margin-left:70px;
 		margin-top:10px;
 	}
 	
+	
 #menu{
 	float:left;
+	width:600px;
 	margin-top:20px;
+	text-align:right;
 }
 
 #menu li{
-		list-style:none;
-		text-align:center;
 		float:left;
+		list-style:none;
+		text-align:right;
 		text-size:18px;
 		padding: 5px 30px 20px 8px;
 	}
@@ -111,10 +113,10 @@ a{
 }
 .clubtitle{
 	float:left;
-	margin-left:80px;
+	margin-left:60px;
 }
 .clubtitle span{
-	font-size:25px;
+	font-size:30px;
 	font-weight:bold;
 }
 
@@ -211,10 +213,26 @@ input, select, textarea {
 		font-weight: 300;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h4, h6 {
 		font-weight: 400;
 		color: #483949;
 		line-height: 1.25em;
+	}
+	
+	h3{	
+		margin-top:10px;
+		margin-bottom:10px;
+		font-weight: 400;
+		color: #483949;
+		line-height:20px;
+		text-align:center;
+	}
+	
+	h5{
+		font-size:400;
+		color: #483949;
+		line-height:20px;
+		text-align:center;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1888,6 +1906,7 @@ input, select, textarea {
 		.image img {
 			display: block;
 			width: 100%;
+			margin-bottom:8px;
 		}
 
 		.image.fit {
@@ -1898,7 +1917,7 @@ input, select, textarea {
 		.image.featured {
 			display: block;
 			width: 100%;
-			margin: 0 0 4em 0;
+			margin: 0 0 1em 0;
 		}
 
 		.image.left {
@@ -2599,7 +2618,8 @@ input, select, textarea {
 				#footer .copyright a:hover {
 					color: rgba(212, 212, 212, 0.85);
 				}
-
+	
+	
 	.carousel {
 		float:left;
 		position: relative;
@@ -2704,8 +2724,10 @@ input, select, textarea {
 		}
 		
 		.carousel .taste{
+			float:left;
 			width: 300px;
 			height:350px;
+			padding: 0 1em 0 1em;
 		
 		}
 		
@@ -2713,6 +2735,7 @@ input, select, textarea {
 			width: 300px;
 			height:330px;
 			border-radius:8px;
+			margin-bottom:8px;
 		}
 
 			.carousel article.loading {
@@ -2726,7 +2749,7 @@ input, select, textarea {
 				width: 300px;
 				height: 330px;
 				margin-right: -2em;
-				margin-bottom: 3em
+				margin-bottom: 8px;
 				
 			}
 			
@@ -2758,7 +2781,7 @@ input, select, textarea {
 
 				.carousel article {
 					width: 18em;
-					margin: 0 1.25em 0 0;
+					margin: 0 1.25em 10px 0;
 				}
 
 	}
@@ -3214,8 +3237,9 @@ input, select, textarea {
 					padding: 0 0.5em 0 0.5em;
 				}
 
-				.carousel article {
-					width: 14em;
+				.carousel div article {
+					width: 300px;
+					height: 350px;
 					padding-bottom: 2em;
 					margin: 0 0.5em 0 0;
 				}
@@ -3223,7 +3247,8 @@ input, select, textarea {
 					.carousel article .image {
 						margin-bottom: 2em;
 					}
-
+					
+						
 
 }
 
