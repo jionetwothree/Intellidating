@@ -51,15 +51,8 @@
 	</nav>
 
 	
-
-	
-
-	
-	
-	
 	<div class="div.btn">
 		<button class ="btn" onclick = "location.href='chatting.jsp'">독서 모임1 입장</button>
-		<br>
 		</div>
 	<div class="div.btn2">
 		<button class ="btn2" onclick = "location.href='chatting.jsp'">독서 모임2 입장</button>

@@ -10,6 +10,9 @@ public class ChatDAO {
 
 	private Connection conn;
 	
+	//이걸 생성자로 만든 이유가 있나요??
+	//유튜브 보고 만든거라서욘..이거 수정좀 해볼게요 넵
+	
 	public ChatDAO() {
 		try {
 			String dbURL = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -22,6 +25,8 @@ public class ChatDAO {
 			e.printStackTrace();
 		}
 	}
+	
+
 	
 	public ArrayList<Chat> getChatList(String nowTime) {
 		ArrayList<Chat> chatList = null;
@@ -67,6 +72,7 @@ public class ChatDAO {
 		ResultSet rs = null;
 		String SQL = "SELECT * FROM CHAT WHERE chatID > (SELECT MAX(chatID) - ? FROM CHAT) ORDER BY chatTime";
 		try {
+			
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setInt(1, number);
 			rs = pstmt.executeQuery();
