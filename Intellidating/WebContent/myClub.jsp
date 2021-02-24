@@ -49,20 +49,17 @@
 			%>
 		</div>
 	</nav>
+
 	
-	<table  class ="table_as">
-	<tr>
-		<td><a href="chatting.jsp">독서모임1</a></td>
-		</tr>
-	<tr>
-		<td><a href="chatting.jsp">독서모임2</a></td>
-		</tr>
-	<tr>
-		<td><a href="chatting.jsp">독서모임3</a></td>
-		</tr>
-		
-	</table>
-	
+	<div class="div.btn">
+		<button class ="btn" onclick = "location.href='chatting.jsp'">독서 모임1 입장</button>
+		</div>
+	<div class="div.btn2">
+		<button class ="btn2" onclick = "location.href='chatting.jsp'">독서 모임2 입장</button>
+		</div>
+	<div class="div.btn3">
+		<button class ="btn3" onclick = "location.href='chatting.jsp'">독서 모임3 입장</button>
+		</div>
 	
 	
 		<footer>
