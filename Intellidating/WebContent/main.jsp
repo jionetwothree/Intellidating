@@ -25,14 +25,14 @@
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="main.css">
 
-   <script src="js/jquery.min.js"></script>
-         <script src="js/jquery.dropotron.min.js"></script>
-         <script src="js/jquery.scrolly.min.js"></script>
-         <script src="js/jquery.scrollex.min.js"></script>
-         <script src="js/browser.min.js"></script>
-         <script src="js/breakpoints.min.js"></script>
-         <script src="js/util.js"></script>
-         <script src="js/main.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.dropotron.min.js"></script>
+<script src="js/jquery.scrolly.min.js"></script>
+<script src="js/jquery.scrollex.min.js"></script>
+<script src="js/browser.min.js"></script>
+<script src="js/breakpoints.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/main.js"></script>
 
 
 </head>
@@ -42,36 +42,30 @@
       memberDTO m_dto = (memberDTO) session.getAttribute("member");
    %>
 		<header>
-			<div id="title">
+			<div id="wrapper">
 
-				<span> <a href="main.jsp">intellidating</a>
-				</span>
-
-			</div>
-		</header>
-
-		<nav>
-			<div id="menu">
-
-				<ul style="display: inline-block;">
-					<%
+				<h1 id="title"><a href="main.jsp">intellidating</a></h1>
+				<nav>
+					<ul class="menu" style="display: inline-block;">
+						<%
 					if (m_dto == null) {
 				%>
-					<li><a href="login.html">로그인/회원가입</a></li>
+						<li><a href="login.html">로그인/회원가입</a></li>
 
-					<%
+						<%
 					} else {
 				%>
-					<li><a href="analysis.jsp">추천받기</a>
-					<li><a href="before_searchBook.jsp">책 검색하기</a></li>
-					<li><a href="mypage.jsp">마이모임</a>
-					<li><a href="logoutService">로그아웃</a></li>
-				</ul>
-				<%
-				}
-			%>
+						<li><a href="analysis.jsp">추천받기</a>
+						<li><a href="before_searchBook.jsp">책 검색하기</a></li>
+						<li><a href="mypage.jsp">마이모임</a>
+						<li><a href="logoutService">로그아웃</a></li>
+					</ul>
+					<%
+					}
+				%>
+				</nav>
 			</div>
-		</nav>
+		</header>
 
 
 		<div id="banner">
@@ -308,124 +302,122 @@
 
 
 		<div class="explain">
-			<span><%=m_dto.getNickname()%> 님의 취향은 #<%=al_book.get(0).getBook_category1() %>
-				#<%=al_book.get(1).getBook_category2() %> #<%=al_book.get(2).getBook_category3() %>(이)군요!
-			</span><br>
+			<span><span
+				style="font-weight: 700; margin-right: 5px 0px 0px 0px"><%=m_dto.getNickname()%></span>
+				님의 취향은 #<%=al_book.get(0).getBook_category1() %> #<%=al_book.get(1).getBook_category2() %>
+				#<%=al_book.get(2).getBook_category3() %>(이)군요! </span><br>
 		</div>
 
-		
-			<div id="clubs">
-				<div class="clubtitle">
-					<span> 취향에 맞는 모임 </span>
-				</div>
+
+		<div id="clubs">
+			<div class="clubtitle">
+				<span> 취향에 맞는 모임 </span>
 			</div>
+		</div>
 
-			<section class="carousel">
-				<div class="tasty">
-					<article class="taste">
-						<a href="#" class="image featured"><img
-							src="<%=al_club.get(0).getClub_image() %>" alt="" /></a>
-						<header height='50' width='175'>
-							<h3>
-								<a href="#"><%=al_club.get(0).getClub_name() %></a>
-							</h3>
-							<h5><%=al_club.get(0).getClub_detail() %></h5>
-						</header>
-					</article>
+		<section class="carousel">
+			<div class="tasty">
+				<article class="taste">
+					<a href="#" class="image featured"><img
+						src="<%=al_club.get(0).getClub_image() %>" alt="" /></a>
+					<header height='50' width='175'>
+						<h3>
+							<a href="#"><%=al_club.get(0).getClub_name() %></a>
+						</h3>
+						<h5><%=al_club.get(0).getClub_detail() %></h5>
+					</header>
+				</article>
 
-					<article class="taste">
-						<a href="#" class="image featured"><img 
-							src="<%=al_club.get(1).getClub_image() %>" alt="" /></a>
-						<header height='50' width='175'>
-							<h3>
-								<a href="#"><%=al_club.get(1).getClub_name() %></a>
-							</h3>
-							<h5><%=al_club.get(1).getClub_detail() %></h5>
-						</header>
-					</article>
+				<article class="taste">
+					<a href="#" class="image featured"><img
+						src="<%=al_club.get(1).getClub_image() %>" alt="" /></a>
+					<header height='50' width='175'>
+						<h3>
+							<a href="#"><%=al_club.get(1).getClub_name() %></a>
+						</h3>
+						<h5><%=al_club.get(1).getClub_detail() %></h5>
+					</header>
+				</article>
 
-					<article class="taste">
-						<a href="#" class="image featured"><img
-							src="<%=al_club.get(2).getClub_image() %>" alt="" /></a>
-						<header height='50' width='175'>
-							<h3>
-								<a href="#"><%=al_club.get(2).getClub_name() %></a>
-							</h3>
-							<h5><%=al_club.get(2).getClub_detail() %></h5>
-						</header>
-					</article>
+				<article class="taste">
+					<a href="#" class="image featured"><img
+						src="<%=al_club.get(2).getClub_image() %>" alt="" /></a>
+					<header height='50' width='175'>
+						<h3>
+							<a href="#"><%=al_club.get(2).getClub_name() %></a>
+						</h3>
+						<h5><%=al_club.get(2).getClub_detail() %></h5>
+					</header>
+				</article>
 
-				</div>
-			</section>
+			</div>
+		</section>
 
 
-			
-				<div id="clubs">
-					<div class="clubtitle">
-						<span> 취향에 맞는 책 </span>
-					</div>
-				</div>
 
-					<section class="carousel">
-						<div class="tasty">
-							<article class="taste">
-								<a href="#" class="image featured"><img
-									src="<%=al_book.get(0).getBook_image() %>" height='330'
-									width='175' alt="" /></a>
-								<header height='50' width='175'>
-									<h4 align="center">
-										<a href="#"><%=al_book.get(0).getBook_name() %></a>
-									</h4>
-								</header>
-							</article>
+		<div id="clubs">
+			<div class="clubtitle">
+				<span> 취향에 맞는 책 </span>
+			</div>
+		</div>
 
-							<article class="taste">
-								<a href="#" class="image featured"><img
-									src="<%=al_book.get(1).getBook_image() %>" height='330'
-									width='175' alt="" /></a>
-								<header height='50' width='175'>
-									<h4 align="center">
-										<a href="#"><%=al_book.get(1).getBook_name() %></a>
-									</h4>
-								</header>
-							</article>
+		<section class="carousel">
+			<div class="tasty">
+				<article class="taste">
+					<a href="#" class="image featured"><img
+						src="<%=al_book.get(0).getBook_image() %>" height='330'
+						width='175' alt="" /></a>
+					<header height='50' width='175'>
+						<h4 align="center">
+							<a href="#"><%=al_book.get(0).getBook_name() %></a>
+						</h4>
+					</header>
+				</article>
 
-							<article class="taste">
-								<a href="#" class="image featured"><img
-									src="<%=al_book.get(2).getBook_image() %>" height='330'
-									width='175' alt="" /></a>
-								<header height='50' width='175'>
-									<h4 align="center">
-										<a href="#"><%=al_book.get(2).getBook_name() %></a>
-									</h4>
-								</header>
-							</article>
-						</div>
-					</section>
-				
+				<article class="taste">
+					<a href="#" class="image featured"><img
+						src="<%=al_book.get(1).getBook_image() %>" height='330'
+						width='175' alt="" /></a>
+					<header height='50' width='175'>
+						<h4 align="center">
+							<a href="#"><%=al_book.get(1).getBook_name() %></a>
+						</h4>
+					</header>
+				</article>
 
-			<%
+				<article class="taste">
+					<a href="#" class="image featured"><img
+						src="<%=al_book.get(2).getBook_image() %>" height='330'
+						width='175' alt="" /></a>
+					<header height='50' width='175'>
+						<h4 align="center">
+							<a href="#"><%=al_book.get(2).getBook_name() %></a>
+						</h4>
+					</header>
+				</article>
+			</div>
+		</section>
+
+
+		<%
             }
       %>
+	</div>
+
+
+	<div id="foot">
+		<div class="all">
+			<span> <a href="question.html">자주 묻는 질문</a>
+			</span> <span> <a href="#">문의하기</a>
+			</span> <span> <a href="#">블로그</a></span> <span class="company"> <br>
+				<br> <br> 주식회사 인텔리데이팅 <br> <br> <br>
+			</span>
 		</div>
-
-
-		<div id="foot">
-			<div class="all">
-				<span> <a href="question.html">자주 묻는 질문</a>
-				</span> <span> <a href="#">문의하기</a>
-				</span> <span> <a href="#">블로그</a></span> <span class="company"> <br>
-				<br>
-				<br> 주식회사 인텔리데이팅 <br>
-				<br>
-				<br>
-				</span>
-			</div>
-		</div>
+	</div>
 
 
 
-		<script>
+	<script>
       
 
    (function($) {

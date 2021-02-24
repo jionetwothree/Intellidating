@@ -3,16 +3,43 @@
 body {
 	    font-family: 'NanumSquare', sans-serif !important;
 	}
+	
 
    .carousel {
       overflow-x: auto;
    }
+   
+ 
+
+h1 {
+		font-weight: 500;
+		color: #483949;
+		line-height: 1.25em;
+	}
 
 
 
 	body.homepage.is-preload #header:after {
 		opacity: 0;
 	}
+	
+	#wrapper{
+		width: 1170px;
+		margin: 50px auto 0px;
+	}
+	
+	h1{
+		color: white;
+		line-height: 75px;
+		float: left;
+	}
+	
+	ul.menu {
+		float: right;
+		margin: 15px 130px 0px 0px;
+	}
+	
+	
 	
 	
 	#main_img{
@@ -24,10 +51,16 @@ body {
 		height:500px;
 	}
 	
-	#title span{		
+	#title a{		
 		font-family: 'Noto Serif TC', serif;
-		font-weight: 500;
+		font-weight: 700;
+		color: gray;
+		font-size: 1.5em;
 	}
+	
+	#title a:hover {
+			color: #6799FF;
+		}
 	
 	#banner .main_title {
 		color: white;
