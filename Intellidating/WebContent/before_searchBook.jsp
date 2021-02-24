@@ -55,6 +55,7 @@
 				name="search_submit" placeholder="책 제목 검색">
 			<% if(m_dto!=null){%>
 			<input type="hidden" name="mem_num" value=<%= m_dto.getNum() %>>
+			<input type="submit" value=" ">
 			<%} %>
 
 		</form>
