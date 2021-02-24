@@ -20,6 +20,7 @@
 </head>
 <body>
 
+
 <%
 	memberDTO m_dto = (memberDTO)session.getAttribute("member");
 
