@@ -9,13 +9,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="icon" sizes="192x192"
-
-	href="https://static.wixstatic.com/media/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png">
+<link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png">
 <meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<SCRIPT LANGUAGE="JavaScript">
+<link rel="stylesheet" type="text/css" href="css/main2.css">
 <link rel="stylesheet" type="text/css" href="style_analysis.css">
+<SCRIPT LANGUAGE="JavaScript">
+
+
 <!--
 function fchk() {
     var chk_obj = document.getElementsByName("choice");
@@ -99,8 +101,8 @@ function check(obj,condition, n) {
 	</nav>
 	
 	<div>
-		<div>
-			<h1><%=m_dto.getNickname()%>좋아하는 책 5권을 골라주세요!</h1>
+		<div class="explain">
+			<p><%=m_dto.getNickname()%>님, 좋아하는 책 5권을 골라주세요!</p><br>
 		</div>
 
 		<form name="form" action="http://localhost:8084/intellidating/predict" method="post" onsubmit="return fchk();">
