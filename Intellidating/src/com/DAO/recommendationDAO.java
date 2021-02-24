@@ -123,41 +123,27 @@ public class recommendationDAO {
 			sql = "select book_num from book where book_category3=?";
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, get_search1);
-<<<<<<< HEAD
-			rs = ps.executeQuery();
 
-			for (int i = 0; i < a[0]; i++) {
-
-=======
 			rs = ps.executeQuery();
 			for (int i = 0; i < a[0]; i++) {
->>>>>>> branch 'master' of https://junghoonshim@github.com/jionetwothree/Intellidating
 				if (rs.next()) {
 					get_booknum1 = rs.getInt(1);
 				}
 			}
 			ps.setString(1, get_search2);
-<<<<<<< HEAD
-			rs = ps.executeQuery();
 
-			for (int i = 0; i < a[1]; i++) {
-
-=======
 			rs = ps.executeQuery();
 			for (int i = 0; i < a[1]; i++) {
->>>>>>> branch 'master' of https://junghoonshim@github.com/jionetwothree/Intellidating
+
 				if (rs.next()) {
 					get_booknum2 = rs.getInt(1);
 				}
 			}
 			ps.setString(1, get_search3);
 			rs = ps.executeQuery();
-<<<<<<< HEAD
+
 			for (int i = 0; i < a[2]; i++) {
 
-=======
-			for (int i = 0; i < a[2]; i++) {
->>>>>>> branch 'master' of https://junghoonshim@github.com/jionetwothree/Intellidating
 				if (rs.next()) {
 					get_booknum3 = rs.getInt(1);
 				}
