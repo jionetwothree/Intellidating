@@ -98,9 +98,9 @@ public class recommendationDAO {
 
 	public int insertrecombook(int mem_num, String search1, String search2, String search_submit) {
 		int cnt = 0;
-		Random rd = new Random();
 		String get_search1 = "", get_search2 = "", get_search3 = "";
 		int get_booknum1 = 0, get_booknum2 = 0, get_booknum3 = 0;
+		int[] a = rand_int();
 		getConnection();
 		String sql = "select book_category3 from book where book_name like ?";
 		try {
@@ -124,21 +124,33 @@ public class recommendationDAO {
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, get_search1);
 			rs = ps.executeQuery();
+<<<<<<< HEAD
 			for (int i = 0; i < rd.nextInt(20); i++) {
+=======
+			for (int i = 0; i < a[0]; i++) {
+>>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 				if (rs.next()) {
 					get_booknum1 = rs.getInt(1);
 				}
 			}
 			ps.setString(1, get_search2);
 			rs = ps.executeQuery();
+<<<<<<< HEAD
 			for (int i = 0; i < rd.nextInt(20); i++) {
+=======
+			for (int i = 0; i < a[1]; i++) {
+>>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 				if (rs.next()) {
 					get_booknum2 = rs.getInt(1);
 				}
 			}
 			ps.setString(1, get_search3);
 			rs = ps.executeQuery();
+<<<<<<< HEAD
 			for (int i = 0; i < rd.nextInt(20); i++) {
+=======
+			for (int i = 0; i < a[2]; i++) {
+>>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 				if (rs.next()) {
 					get_booknum3 = rs.getInt(1);
 				}
@@ -158,32 +170,45 @@ public class recommendationDAO {
 
 		return cnt;
 	}
-
+	
+	public int[] rand_int() {
+		Random rd = new Random();
+		int[] a = new int[3];
+		for (int i = 0; i < 3; i++) {
+			a[i] = rd.nextInt(10) + 1;
+			for (int j = 0; j < i; j++) {
+				if (a[i] == a[j]) {
+					i--;
+				}
+			}
+		}
+		return a;
+	}
 	public int setrecombook(int mem_num, String choice1, String choice2, String choice3) {
 		int cnt = 0;
 		getConnection();
-		Random rd = new Random();
 		int get_booknum1 = 0, get_booknum2 = 0, get_booknum3 = 0;
 		String sql = "select book_num from book where book_category3=?";
+		int[] a = rand_int();
 		try {
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, choice1);
 			rs = ps.executeQuery();
-			for (int i = 0; i < rd.nextInt(20); i++) {
+			for (int i = 0; i < a[0]; i++) {
 				if (rs.next()) {
 					get_booknum1 = rs.getInt(1);
 				}
 			}
 			ps.setString(1, choice2);
 			rs = ps.executeQuery();
-			for (int i = 0; i < rd.nextInt(20); i++) {
+			for (int i = 0; i < a[1]; i++) {
 				if (rs.next()) {
 					get_booknum2 = rs.getInt(1);
 				}
 			}
 			ps.setString(1, choice3);
 			rs = ps.executeQuery();
-			for (int i = 0; i < rd.nextInt(20); i++) {
+			for (int i = 0; i < a[2]; i++) {
 				if (rs.next()) {
 					get_booknum3 = rs.getInt(1);
 				}
@@ -207,7 +232,7 @@ public class recommendationDAO {
 	public int setrecomclub(int mem_num, int recom_club1, int recom_club2, int recom_club3) {
 		int cnt = 0;
 		getConnection();
-		String sql = "UPDATE recommendation set recom_club1=?, recom_club2=?, recom_club3=? where mem_num=?"; 
+		String sql = "UPDATE recommendation set recom_club1=?, recom_club2=?, recom_club3=? where mem_num=?";
 		try {
 			ps = conn.prepareStatement(sql);
 			ps.setInt(1, recom_club1);
