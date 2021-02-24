@@ -25,6 +25,7 @@
 
 
 
+
    <script src="js/jquery.min.js"></script>
          <script src="js/jquery.dropotron.min.js"></script>
          <script src="js/jquery.scrolly.min.js"></script>
@@ -189,7 +190,7 @@
         <div class="reel">
 
             <article>
-                <a href="#" class="image featured"><img src="<%=al_book.get(0).getBook_image() %>" alt="" /></a>
+                <a href="#" class="image featured" height='30'><img src="<%=al_book.get(0).getBook_image() %>" alt="" /></a>
                 <header>
                     <h3><a href="#"><%=al_book.get(0).getBook_name() %></a></h3>
                 </header>
@@ -263,12 +264,15 @@
      
 
 
-      <div id="clubs">
-      <h5><%=m_dto.getNickname()%>
+      <div class="explain">
+      <span><%=m_dto.getNickname()%>
             님의 취향은 #<%=al_book.get(0).getBook_category1() %> #<%=al_book.get(1).getBook_category2() %> #<%=al_book.get(2).getBook_category2() %>(이)군요!
-      </h5><br>
+      </span><br>
+      </div>
 
-         <div class="clubtopic">
+         <div class="afterlogin">
+      	<div id="clubs">
+         <div class="clubtitle">
 
             <span>
              	  취향에 맞는 모임

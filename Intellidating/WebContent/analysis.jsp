@@ -15,6 +15,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <SCRIPT LANGUAGE="JavaScript">
+<link rel="stylesheet" type="text/css" href="style_analysis.css">
 <!--
 function fchk() {
     var chk_obj = document.getElementsByName("choice");
@@ -58,31 +59,35 @@ function check(obj,condition, n) {
 
 </head>
 <body>
+<div id="layout">
 	<%
 		memberDTO m_dto = (memberDTO) session.getAttribute("member");
 		printbookDAO dao = new printbookDAO();
 		ArrayList<printbookDTO> al_book = dao.allBook();
 	%>
-	<header>
-		<div>
-			<p>
-			<h2>
-				<a href="main.jsp">인텔리데이팅</a>
-			</h2>
-			</p>
-		</div>
-	</header>
+	 <header>
+      <div id="title">
+
+         <span>
+            <a href="main.jsp">intellidating</a>
+         </span>
+
+      </div>
+   </header>
+   
 	<nav>
-		<div>
-			<ul>
+		<div id="menu" >
+		
+			<ul style="display:inline-block;">
 				<%
 					if (m_dto == null) {
 				%>
-				<li><a href="login.html">로그인</a></li>
-				<li><a href="join.jsp">회원가입</a></li>
+				<li><a href="login.html">로그인/회원가입</a></li>
+				
 				<%
 					} else {
 				%>
+				<li><a href="analysis.jsp">추천받기</a>
 				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
 				<li><a href="mypage.jsp">마이페이지</a>
 				<li><a href="logoutService">로그아웃</a></li>
@@ -90,9 +95,9 @@ function check(obj,condition, n) {
 			<%
 				}
 			%>
-			<hr />
 		</div>
 	</nav>
+	
 	<div>
 		<div>
 			<h1><%=m_dto.getNickname()%>좋아하는 책 5권을 골라주세요!</h1>
@@ -119,23 +124,27 @@ function check(obj,condition, n) {
 			</div>
 		</form>
 	</div>
+	</div>
 
 
-	<footer>
-		<div>
-			<p>
-				<a href="#">자주 묻는 질문</a>
-			</p>
-			<p>
-				<a href="#">문의하기</a>
-			</p>
-			<p>
-				<a href="#">블로그</a>
-			</p>
-			<br> <br> <br>
-			<p>주식회사 인텔리데이팅</p>
-		</div>
-	</footer>
+	  <div id="foot">
+         <div class="all">
+            <span>
+               <a href="question.html">자주 묻는 질문</a>
+            </span>
+            <span>
+               <a href="#">문의하기</a>
+            </span>
+            <span>
+               <a href="#">블로그</a></span>
+         	<span class="company">
+         	<br><br><br>
+           	주식회사 인텔리데이팅
+           	<br><br><br>
+           	</span>
+         </div>
+      </div>
+      
 
 </body>
 </html>
