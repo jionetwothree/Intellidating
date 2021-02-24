@@ -107,8 +107,10 @@ function check(obj,condition, n) {
 		</nav>
 	
 	<div>
+
 		<div class="explain">
 			<p><%=m_dto.getNickname()%>님 관심이 가는 책 5권을 골라주세요!<p>
+
 		</div>
 		<form name="form" action="http://localhost:8084/intellidating/predict" method="post" onsubmit="return fchk();">
 			<div>
