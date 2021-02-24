@@ -25,6 +25,7 @@
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="main.css">
 
+<<<<<<< HEAD
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.dropotron.min.js"></script>
@@ -34,6 +35,16 @@
 <script src="js/breakpoints.min.js"></script>
 <script src="js/util.js"></script>
 <script src="js/main.js"></script>
+=======
+   <script src="js/jquery.min.js"></script>
+         <script src="js/jquery.dropotron.min.js"></script>
+         <script src="js/jquery.scrolly.min.js"></script>
+         <script src="js/jquery.scrollex.min.js"></script>
+         <script src="js/browser.min.js"></script>
+         <script src="js/breakpoints.min.js"></script>
+         <script src="js/util.js"></script>
+         <script src="js/main.js"></script>
+>>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 
 </head>
 <body>
@@ -334,7 +345,7 @@
 					</article>
 
 					<article class="taste">
-						<a href="#" class="image featured"><img
+						<a href="#" class="image featured"><img 
 							src="<%=al_club.get(1).getClub_image() %>" alt="" /></a>
 						<header height='50' width='175'>
 							<h3>
