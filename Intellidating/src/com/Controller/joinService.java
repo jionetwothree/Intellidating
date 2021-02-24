@@ -19,12 +19,10 @@ public class joinService extends HttpServlet {
 		
 		request.setCharacterEncoding("EUC-KR");
 		response.setCharacterEncoding("EUC-KR");
-		String email1 = request.getParameter("email1");
-		String email2 = request.getParameter("email");
+		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String name = request.getParameter("name");
 		String nickname = request.getParameter("nick");
-		String email = (email1+"@").concat(email2);
 
 		memberDAO dao = new memberDAO();
 		int cnt = dao.joinMember(email, password, name, nickname);

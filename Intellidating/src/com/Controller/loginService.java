@@ -22,7 +22,7 @@ public class loginService extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		String email = request.getParameter("email");
-		String password = request.getParameter("pw");
+		String password = request.getParameter("password");
 		
 		memberDAO dao = new memberDAO();
 		memberDTO dto = dao.loginMember(email, password);

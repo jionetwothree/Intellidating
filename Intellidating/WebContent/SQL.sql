@@ -47,7 +47,7 @@ nomaxvalue
 nominvalue
 nocycle
 nocache;
-
+select * from book;
 CREATE TABLE book(
 book_num number(10) CONSTRAINT book_num_pk primary key, -- 책 번호 시퀀스 seq_book_num.NEXTVAR
 book_name varchar2(200) not null, -- 책 이름
@@ -68,10 +68,6 @@ nominvalue
 nocycle
 nocache;
 
-<<<<<<< HEAD
-select * from recommendation;
-=======
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 
 
 CREATE TABLE member(
@@ -153,7 +149,7 @@ FOREIGN KEY (recom_book1) REFERENCES book(book_num),
 FOREIGN KEY (recom_book2) REFERENCES book(book_num),
 FOREIGN KEY (recom_book3) REFERENCES book(book_num)
 );
-
+select * from member;
 create sequence seq_recom_num -- 추천 번호 시퀀스
 start with 1
 increment by 1
@@ -278,15 +274,10 @@ select * from member;
 --INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');--이건 일단 인서트 하지 말고 놔둬보세여 테스트 용이라
 
 select * from club;
-<<<<<<< HEAD
-select * from recommendation;
-delete from choice where mem_num=5;
-select * from club;
-drop sequence seq_club_num;
-=======
+
 select * from recommendation;
 select * from book;
-
+select * from MEMBER;
 drop sequence seq_club_num;
 
 DELETE FROM COMMENTS WHERE book_num = 6;
@@ -296,4 +287,3 @@ DELETE FROM book;
 
 SELECT CONSTRAINT_NAME, TABLE_NAME, R_CONSTRAINT_NAME FROM USER_CONSTRAINTS
 WHERE CONSTRAINT_NAME = 'SYS_C007460';
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
