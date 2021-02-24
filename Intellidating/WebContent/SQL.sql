@@ -68,6 +68,9 @@ nominvalue
 nocycle
 nocache;
 
+select * from recommendation;
+
+
 CREATE TABLE member(
 mem_num number(10) CONSTRAINT mem_num_pk primary key, -- 번호 시퀀스 seq_mem_num.NEXTVAR
 mem_email varchar2(100) not null, -- 이메일 
@@ -263,6 +266,6 @@ select * from member;
 
 select * from club;
 select * from recommendation;
-delete from choice;
-select * from book;
+delete from choice where mem_num=5;
+select * from club;
 drop sequence seq_club_num;

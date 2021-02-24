@@ -1,3 +1,5 @@
+<%@page import="com.DTO.bookDTO"%>
+<%@page import="com.DAO.bookDAO"%>
 <%@page import="com.DTO.clubDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.DAO.clubDAO"%>
@@ -35,7 +37,7 @@
 		width:100%;
 		height:500px;
 	}
-
+	
 </style>
 
    <script src="js/jquery.min.js"></script>
@@ -49,6 +51,7 @@
 
 </head>
 <body>
+<div id="layout">
    <%
       memberDTO m_dto = (memberDTO) session.getAttribute("member");
    %>
@@ -69,8 +72,8 @@
 				<%
 					if (m_dto == null) {
 				%>
-				<li><a href="login.html">로그인</a></li>
-				<li><a href="join.jsp">회원가입</a></li>
+				<li><a href="login.html">로그인/회원가입</a></li>
+				
 				<%
 					} else {
 				%>
@@ -112,11 +115,11 @@
 				</span>
 			</div>
 			</div>
-			<section class="carousel">
+		<section class="carousel">
         <div class="reel">
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img  src="images/book.jpg" alt="" /></a>
                 <header>
                     <h3><a href="#">모임이름</a></h3>
                 </header>
@@ -152,7 +155,14 @@
             </article>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="images/book.jpg"  alt="" /></a>
+                <header>
+                    <h3><a href="#">모임이름</a></h3>
+                </header>
+            </article>
+
+            <article>
+                <a href="#" class="image featured"><img src="images/book.jpg"  alt="" /></a>
                 <header>
                     <h3><a href="#">모임이름</a></h3>
                 </header>
@@ -164,28 +174,6 @@
                     <h3><a href="#">모임이름</a></h3>
                 </header>
             </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">모임이름</a></h3>
-                </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">모임이름</a></h3>
-                </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">모임이름</a></h3>
-                </header>
-            </article>
-
         </div>
     </section>
          
@@ -194,7 +182,7 @@
       <div id="clubs">
          <div  class="clubtitle">
             <span>
-               인기있는 책
+              	 인기있는 책
             </span>
          </div>
          <section class="carousel">
@@ -205,70 +193,49 @@
                 <header>
                     <h3><a href="#">책이름</a></h3>
                 </header>
-            </article>
+            </article >
+
+             <article>
+                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <header>
+                    <h3><a href="#">책이름</a></h3>
+                </header>
+            </article >
+
+             <article>
+                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <header>
+                    <h3><a href="#">책이름</a></h3>
+                </header>
+            </article >
 
             <article>
                 <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
                 <header>
                     <h3><a href="#">책이름</a></h3>
                 </header>
-            </article>
+            </article >
 
             <article>
                 <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
                 <header>
                     <h3><a href="#">책이름</a></h3>
                 </header>
-            </article>
+            </article >
 
             <article>
                 <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
                 <header>
                     <h3><a href="#">책이름</a></h3>
                 </header>
-            </article>
-
-            <article>
+            </article >
+			
+			 <article>
                 <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
                 <header>
                     <h3><a href="#">책이름</a></h3>
                 </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">책이름</a></h3>
-                </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">모임이름</a></h3>
-                </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">모임이름</a></h3>
-                </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">모임이름</a></h3>
-                </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">책이름</a></h3>
-                </header>
-            </article>
+            </article >
 
         </div>
     </section>
@@ -276,95 +243,97 @@
       </div>
          <%
             } else {
-
                   recommendationDAO recom_dao = new recommendationDAO();
                   recommendationDTO recom_dto = recom_dao.selectrecomclub(m_dto.getNum());
                   clubDAO club_dao = new clubDAO();
-                  ArrayList<clubDTO> al_club = club_dao.selectallclub(recom_dto);
+                  ArrayList<clubDTO> al_club = club_dao.selectallclub(recom_dto);   		
             %>
             
-      <p><%=m_dto.getNickname()%>
-            님의 취향은 #소설 #로맨스 #주식투자(이)군요!
-      </p>
+      <div class="explain">
+      <span><%=m_dto.getNickname()%>님의 취향은 #소설 #로맨스 #주식투자(이)군요!</span>
+      </div>
       
-      <div id="clubs">
+      <div class="afterlogin">
+      	<div id="clubs">
          <div class="clubtopic">
             <span>
-               취향에 맞는 모임
+             	  취향에 맞는 모임
             </span>
          </div>
       </div>
       
       <section class="carousel">
-        <div>
-
-            <article>
-                <a href="#" class="image featured"><img src="<%=al_club.get(0).getClub_image() %>" height='200' width='400' alt="" /></a>
-                <header>
+            <article class="taste">
+                <a href="#" class="image featured"><img src="<%=al_club.get(0).getClub_image() %>" alt="" /></a>
+                <header height='50' width='175'>
                     <h3><a href="#"><%=al_club.get(0).getClub_name() %></a></h3>
                     <h5><%=al_club.get(0).getClub_detail() %></h5>
                 </header>
             </article>
 
-            <article>
-                <a href="#" class="image featured"><img src="<%=al_club.get(1).getClub_image() %>" height='200' width='400' alt="" /></a>
-                <header>
+            <article class="taste">
+                <a href="#" class="image featured"><img src="<%=al_club.get(1).getClub_image() %>"alt="" /></a>
+                <header height='50' width='175'>
                     <h3><a href="#"><%=al_club.get(1).getClub_name() %></a></h3>
                     <h5><%=al_club.get(1).getClub_detail() %></h5>
                 </header>
             </article>
 
-            <article>
-                <a href="#" class="image featured"><img src="<%=al_club.get(2).getClub_image() %>" height='200' width='400' alt="" /></a>
-                <header>
+            <article class="taste">
+                <a href="#" class="image featured"><img src="<%=al_club.get(2).getClub_image() %>" alt="" /></a>
+                <header height='50' width='175'>
                     <h3><a href="#"><%=al_club.get(2).getClub_name() %></a></h3>
                     <h5><%=al_club.get(2).getClub_detail() %></h5>
                 </header>
             </article>
 
         </div>
+       
     </section>
-
+    
+    
+	<div class="afterlogin">
       <div id="clubs">
          <div class="clubtopic">
             <span>
-               취향에 맞는 책
+              	 취향에 맞는 책
             </span>
          </div>
       <section class="carousel">
         <div>
 
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
+            <article class="taste">
+                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
+                <header height='50' width='175'>
                     <h3><a href="#">책 이름</a></h3>
                 </header>
             </article>
 
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
+            <article class="taste">
+                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
+                <header height='50' width='175'>
                     <h3><a href="#">책이름</a></h3>
                 </header>
             </article>
 
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
+            <article class="taste">
+                <a href="#" class="image featured"><img src="images/book.jpg" height='330' width='175' alt="" /></a>
+                <header height='50' width='175'>
                     <h3><a href="#">책이름</a></h3>
                 </header>
             </article>
            </div>
        </section>
 
+   	</div>
    </div>
       <%
             }
       %>
+</div>
 
-
-      <footer>
-         <div id="foot">
+      <div id="foot">
+         <div class="all">
             <span>
                <a href="#">자주 묻는 질문</a>
             </span>
@@ -373,11 +342,13 @@
             </span>
             <span>
                <a href="#">블로그</a></span>
+         	<span class="company">
+         	<br><br><br>
+           	주식회사 인텔리데이팅
+           	<br><br><br>
+           	</span>
          </div>
-         <div id="foot">
-            <span>주식회사 인텔리데이팅</span>
-         </div>
-      </footer>
+      </div>
       
       
       
