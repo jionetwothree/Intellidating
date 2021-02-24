@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/style_login.css">
 <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -11,57 +11,57 @@
 </head>
 <body>
 <div class="pen-title">
-  <a href="main.jsp"><h1>���ڸ�����Ʈ</h1></a>
+  <a href="main.jsp"><h1>인텔리데이트</h1></a>
 </div>
 <div class="container">
   <div class="card"></div>
   <div class="card">
-    <h1 class="title">�α���</h1>
+    <h1 class="title">로그인</h1>
     <form action ="loginService">
       <div class="input-container">
-        <input type="#{type}" name="email" required="required"/>
-        <label for="#{label}">�̸���</label>
+        <input type="email" name="email" required="required"/>
+        <label for="#{label}">이메일</label>
         <div class="bar"></div>
       </div>
-      <!-- �α����� -->
+      <!-- 로그인폼 -->
       <div class="input-container">
-        <input type="#{type}" name="password" required="required"/>
-        <label for="#{label}">��й�ȣ</label>
+        <input type="password" name="password" required="required"/>
+        <label for="#{label}">비밀번호</label>
         <div class="bar"></div>
       </div>
       <div class="button-container">
-        <button><span>�α��� �ϱ�</span></button>
+        <button><span>로그인 하기</span></button>
       </div>
     </form>
   </div>
   <div class="card alt">
     <div class="toggle"></div>
-    <h1 class="title">ȸ������
+    <h1 class="title">회원가입
       <div class="close"></div>
     </h1>
     <form action ="joinService">
       <div class="input-container">
-        <input type="#{type}" name="email" required="required"/>
-        <label for="#{label}">�̸���</label>
+        <input type="email" name="email" required="required"/>
+        <label for="#{label}">이메일</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
-        <input type="#{type}" name="password" required="required"/>
-        <label for="#{label}">��й�ȣ</label>
+        <input type="password" name="password" required="required"/>
+        <label for="#{label}">비밀번호</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
         <input type="#{type}" name="name" required="required"/>
-        <label for="#{label}">�̸�</label>
+        <label for="#{label}">이름</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
         <input type="#{type}" name="nick" required="required"/>
-        <label for="#{label}">�г���</label>
+        <label for="#{label}">닉네임</label>
         <div class="bar"></div>
       </div>
       <div class="button-container">
-        <button><span>�����ϱ�</span></button>
+        <button><span>생성하기</span></button>
       </div>
     </form>
   </div>

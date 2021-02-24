@@ -100,7 +100,7 @@ function check(obj,condition, n) {
 	
 	<div>
 		<div>
-			<h1><%=m_dto.getNickname()%>좋아하는 책 5권을 골라주세요!</h1>
+			<h1><%=m_dto.getNickname()%>님 관심이 가는 책 5권을 골라주세요!</h1>
 		</div>
 
 		<form name="form" action="http://localhost:8084/intellidating/predict" method="post" onsubmit="return fchk();">
@@ -119,7 +119,7 @@ function check(obj,condition, n) {
 					}
 				%>
 				<input type="hidden" name="mem_num" value=<%=m_dto.getNum() %> >
-				<tr align='center'><td colspan="5"><input type="submit" value="제출하기" class="btngray"></td></tr>
+				<tr align='center'><td colspan="5"><input  style="WIDTH: 100pt; HEIGHT: 50pt" type="submit" value="제출하기" class="btngray"></td></tr>
 			</table>
 			</div>
 		</form>

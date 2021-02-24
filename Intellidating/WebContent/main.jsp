@@ -262,7 +262,7 @@
 
       <div class="explain">
       <span><%=m_dto.getNickname()%>
-            님의 취향은 #<%=al_book.get(0).getBook_category1() %> #<%=al_book.get(1).getBook_category2() %> #<%=al_book.get(2).getBook_category2() %>(이)군요!
+            님의 취향은 #<%=al_book.get(0).getBook_category1() %> #<%=al_book.get(1).getBook_category2() %> #<%=al_book.get(2).getBook_category3() %>(이)군요!
       </span><br>
       </div>
 

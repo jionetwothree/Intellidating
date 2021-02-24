@@ -188,7 +188,7 @@ select * from print_book;
 select * from PRINT_BOOK;
 
 insert into member(mem_num, mem_email, mem_password, mem_username, mem_nickname) 
-values(seq_mem_num.NEXTVAL, 'admin','1234','관리자','관리자');
+values(seq_mem_num.NEXTVAL, 'admin@naver.com','1234','관리자','관리자');
 
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (1,8,'우리는 사랑일까','http://image.kyobobook.co.kr/images/book/large/373/l9788956601373.jpg','SF과학소설');
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (2,14,'파피용','http://image.kyobobook.co.kr/images/book/large/741/l9788932907741.jpg','SF과학소설');
@@ -266,6 +266,7 @@ drop sequence seq_club_num;
 
 DELETE FROM COMMENTS WHERE book_num = 6;
 delete from club;
+delete from choice;
 delete from RECOMMENDATION;
 DELETE FROM book;
 
