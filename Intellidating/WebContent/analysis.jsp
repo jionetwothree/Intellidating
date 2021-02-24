@@ -101,7 +101,7 @@ function check(obj,condition, n) {
 	</nav>
 	
 	<div>
-		<div>
+		<div class="explain">
 			<h1><%=m_dto.getNickname()%>님 관심이 가는 책 5권을 골라주세요!</h1>
 		</div>
 
