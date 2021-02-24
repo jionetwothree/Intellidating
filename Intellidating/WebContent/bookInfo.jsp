@@ -134,6 +134,7 @@
 					<span class="divi">|</span> <span class="cmt_wtr"><%=com_mem_dto.getNickname()%></span>
 				</div>
 			</div>
+			
 
 
 			<%
