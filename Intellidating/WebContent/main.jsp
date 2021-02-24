@@ -15,30 +15,12 @@
    href="https://static.wixstatic.com/media/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png">
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<link rel="stylesheet" type="text/css" href="css/main2.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="main.css">
-<style>
-   background-color: white;
-   
-   
-   .carousel {
-      overflow-x: auto;
-   }
 
-
-	body.homepage.is-preload #header:after {
-		opacity: 0;
-	}
-	
-	#main_img{
-		float:left;
-		position : relative;
-		background-color:#D9E5FF;
-		background-size: cover;
-		width:100%;
-		height:500px;
-	}
-
-</style>
 
    <script src="js/jquery.min.js"></script>
          <script src="js/jquery.dropotron.min.js"></script>
@@ -51,6 +33,7 @@
 
 </head>
 <body>
+<div id="layout">
    <%
       memberDTO m_dto = (memberDTO) session.getAttribute("member");
    %>
@@ -58,7 +41,7 @@
       <div id="title">
 
          <span>
-            <a href="main.jsp">인텔리데이팅</a>
+            <a href="main.jsp">intellidating</a>
          </span>
 
       </div>
@@ -70,8 +53,8 @@
 				<%
 					if (m_dto == null) {
 				%>
-				<li><a href="login.html">로그인</a></li>
-				<li><a href="join.jsp">회원가입</a></li>
+				<li><a href="login.html">로그인/회원가입</a></li>
+				
 				<%
 					} else {
 				%>
@@ -106,6 +89,8 @@
 	
 			<%
 				if (m_dto == null) {
+					
+					
 			%>
 		<div id="clubs">
 			<div class="align">
@@ -115,11 +100,11 @@
 				</span>
 			</div>
 			</div>
-			<section class="carousel">
+		<section class="carousel">
         <div class="reel">
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img  src="images/book.jpg" alt="" /></a>
                 <header>
                     <h3><a href="#">모임이름</a></h3>
                 </header>
@@ -155,7 +140,14 @@
             </article>
 
             <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <a href="#" class="image featured"><img src="images/book.jpg"  alt="" /></a>
+                <header>
+                    <h3><a href="#">모임이름</a></h3>
+                </header>
+            </article>
+
+            <article>
+                <a href="#" class="image featured"><img src="images/book.jpg"  alt="" /></a>
                 <header>
                     <h3><a href="#">모임이름</a></h3>
                 </header>
@@ -167,28 +159,6 @@
                     <h3><a href="#">모임이름</a></h3>
                 </header>
             </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">모임이름</a></h3>
-                </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">모임이름</a></h3>
-                </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">모임이름</a></h3>
-                </header>
-            </article>
-
         </div>
     </section>
          
@@ -197,7 +167,7 @@
       <div id="clubs">
          <div  class="clubtitle">
             <span>
-               인기있는 책
+              	 인기있는 책
             </span>
          </div>
          <section class="carousel">
@@ -208,70 +178,49 @@
                 <header>
                     <h3><a href="#">책이름</a></h3>
                 </header>
-            </article>
+            </article >
+
+             <article>
+                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <header>
+                    <h3><a href="#">책이름</a></h3>
+                </header>
+            </article >
+
+             <article>
+                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
+                <header>
+                    <h3><a href="#">책이름</a></h3>
+                </header>
+            </article >
 
             <article>
                 <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
                 <header>
                     <h3><a href="#">책이름</a></h3>
                 </header>
-            </article>
+            </article >
 
             <article>
                 <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
                 <header>
                     <h3><a href="#">책이름</a></h3>
                 </header>
-            </article>
+            </article >
 
             <article>
                 <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
                 <header>
                     <h3><a href="#">책이름</a></h3>
                 </header>
-            </article>
-
-            <article>
+            </article >
+			
+			 <article>
                 <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
                 <header>
                     <h3><a href="#">책이름</a></h3>
                 </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">책이름</a></h3>
-                </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">모임이름</a></h3>
-                </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">모임이름</a></h3>
-                </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">모임이름</a></h3>
-                </header>
-            </article>
-
-            <article>
-                <a href="#" class="image featured"><img src="images/book.jpg" alt="" /></a>
-                <header>
-                    <h3><a href="#">책이름</a></h3>
-                </header>
-            </article>
+            </article >
 
         </div>
     </section>
@@ -279,28 +228,32 @@
       </div>
          <%
             } else {
-
                   recommendationDAO recom_dao = new recommendationDAO();
                   recommendationDTO recom_dto = recom_dao.selectrecomclub(m_dto.getNum());
                   clubDAO club_dao = new clubDAO();
+
                   ArrayList<clubDTO> al_club = club_dao.selectallclub(recom_dto);
                   bookDAO book_dao = new bookDAO();
                   ArrayList<bookDTO> al_book = book_dao.searchBook(recom_dto);
+
             %>
             
-      
+     
+
       <div id="clubs">
       <h5><%=m_dto.getNickname()%>
             님의 취향은 #소설 #로맨스 #주식투자(이)군요!
       </h5><br>
+
          <div class="clubtopic">
             <span>
-               취향에 맞는 모임
+             	  취향에 맞는 모임
             </span>
          </div>
       </div>
       
       <section class="carousel">
+
         <div>
 
             <article>
@@ -311,6 +264,7 @@
                 </header>
             </article>
 
+
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(1).getClub_image() %>" height='200' width='400' alt="" /></a>
                 <header>
@@ -318,6 +272,7 @@
                     <h5><%=al_club.get(1).getClub_detail() %></h5>
                 </header>
             </article>
+
 
             <article>
                 <a href="#" class="image featured"><img src="<%=al_club.get(2).getClub_image() %>" height='200' width='400' alt="" /></a>
@@ -328,23 +283,29 @@
             </article>
 
         </div>
+       
     </section>
-
+    
+    
+	<div class="afterlogin">
       <div id="clubs">
          <div class="clubtopic">
             <span>
-               취향에 맞는 책
+              	 취향에 맞는 책
             </span>
          </div>
       <section class="carousel">
         <div>
 
+
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(0).getBook_image() %>"  alt="" /></a>
                 <header>
                     <h3><a href="#"><%=al_book.get(0).getBook_name() %></a></h3>
+
                 </header>
             </article>
+
 
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(1).getBook_image() %>"  alt="" /></a>
@@ -352,6 +313,7 @@
                     <h3><a href="#"><%=al_book.get(1).getBook_name() %></a></h3>
                 </header>
             </article>
+
 
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(2).getBook_image() %>"  alt="" /></a>
@@ -362,14 +324,15 @@
            </div>
        </section>
 
+   	</div>
    </div>
       <%
             }
       %>
+</div>
 
-
-      <footer>
-         <div id="foot">
+      <div id="foot">
+         <div class="all">
             <span>
                <a href="question.html">자주 묻는 질문</a>
             </span>
@@ -378,11 +341,13 @@
             </span>
             <span>
                <a href="#">블로그</a></span>
+         	<span class="company">
+         	<br><br><br>
+           	주식회사 인텔리데이팅
+           	<br><br><br>
+           	</span>
          </div>
-         <div id="foot">
-            <span>주식회사 인텔리데이팅</span>
-         </div>
-      </footer>
+      </div>
       
       
       
