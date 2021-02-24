@@ -16,8 +16,8 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&display=swap"
 	rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="search.css">
-<link rel="stylesheet" type="text/css" href="css/main2.css">
+<!-- <link rel="stylesheet" type="text/css" href="search.css">
+<link rel="stylesheet" type="text/css" href="css/main2.css"> -->
 
 </head>
 <body>
