@@ -20,6 +20,8 @@
    background-color: white;
    
    
+   
+   
    .carousel {
       overflow-x: auto;
    }
