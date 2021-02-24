@@ -15,30 +15,11 @@
    href="https://static.wixstatic.com/media/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png">
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<link rel="stylesheet" type="text/css" href="css/main2.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="main.css">
-<style>
-   background-color: white;
-   
-   
-   .carousel {
-      overflow-x: auto;
-   }
-
-
-	body.homepage.is-preload #header:after {
-		opacity: 0;
-	}
-	
-	#main_img{
-		float:left;
-		position : relative;
-		background-color:#D9E5FF;
-		background-size: cover;
-		width:100%;
-		height:500px;
-	}
-
-</style>
 
    <script src="js/jquery.min.js"></script>
          <script src="js/jquery.dropotron.min.js"></script>
@@ -58,7 +39,7 @@
       <div id="title">
 
          <span>
-            <a href="main.jsp">인텔리데이팅</a>
+            <a href="main.jsp">intellidating</a>
          </span>
 
       </div>
@@ -106,6 +87,8 @@
 	
 			<%
 				if (m_dto == null) {
+					
+					
 			%>
 		<div id="clubs">
 			<div class="align">
