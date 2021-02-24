@@ -101,13 +101,8 @@ function check(obj,condition, n) {
 	</nav>
 	
 	<div>
-<<<<<<< HEAD
-		<div class="explain">
-			<p><%=m_dto.getNickname()%>님, 좋아하는 책 5권을 골라주세요!</p><br>
-=======
 		<div>
 			<h1><%=m_dto.getNickname()%>님 관심이 가는 책 5권을 골라주세요!</h1>
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 		</div>
 
 		<form name="form" action="http://localhost:8084/intellidating/predict" method="post" onsubmit="return fchk();">
