@@ -11,10 +11,16 @@
 <head>
 <link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png">
 <meta charset="utf-8" />
-<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 <link rel="stylesheet" type="text/css" href="css/main2.css">
 <link rel="stylesheet" type="text/css" href="style_analysis.css">
+<style>
+	a{
+	text-decoration: none;
+		font-color:black;
+}
+</style>
 <SCRIPT LANGUAGE="JavaScript">
 
 
@@ -60,6 +66,7 @@ function check(obj,condition, n) {
 </SCRIPT>
 
 </head>
+
 <body>
 <div id="layout">
 	<%
@@ -68,50 +75,50 @@ function check(obj,condition, n) {
 		ArrayList<printbookDTO> al_book = dao.allBook();
 	%>
 	 <header>
-      <div id="title">
+			<div id="title">
 
-         <span>
-            <a href="main.jsp">intellidating</a>
-         </span>
+				<span> <a href="main.jsp">intellidating</a>
+				</span>
 
-      </div>
-   </header>
-   
-	<nav>
-		<div id="menu" >
-		
-			<ul style="display:inline-block;">
-				<%
+			</div>
+		</header>
+
+		<nav>
+			<div id="menu">
+
+				<ul style="display: inline-block;">
+					<%
 					if (m_dto == null) {
 				%>
-				<li><a href="login.html">로그인/회원가입</a></li>
-				
-				<%
+					<li><a href="login.html">로그인/회원가입</a></li>
+
+					<%
 					} else {
 				%>
-				<li><a href="analysis.jsp">추천받기</a>
-				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
-				<li><a href="mypage.jsp">마이페이지</a>
-				<li><a href="logoutService">로그아웃</a></li>
-			</ul>
-			<%
+					<li><a href="analysis.jsp">추천받기</a>
+					<li><a href="before_searchBook.jsp">책 검색하기</a></li>
+					<li><a href="mypage.jsp">마이모임</a>
+					<li><a href="logoutService">로그아웃</a></li>
+				</ul>
+				<%
 				}
 			%>
-		</div>
-	</nav>
+			</div>
+		</nav>
 	
 	<div>
-		<div class="explain">
-			<h1><%=m_dto.getNickname()%>님 관심이 가는 책 5권을 골라주세요!</h1>
-		</div>
 
+		<div class="explain">
+			<p><%=m_dto.getNickname()%>님 관심이 가는 책 5권을 골라주세요!<p>
+
+		</div>
 		<form name="form" action="http://localhost:8084/intellidating/predict" method="post" onsubmit="return fchk();">
 			<div>
 			<table>
 				<%
 				out.println("<tr>");
 					for(int i=0;i<al_book.size();i++){
-						out.println("<td align='center' height='500px' width='300px'><img src='"+al_book.get(i).getBook_image()+"' height='350px' width='200px'><br>");
+						out.println("<td align='center' height='260px' width='195px'><img src='"+al_book.get(i).getBook_image()+"' height='260px' width='195px'><br>");
 						out.println("<input style='zoom:2.0;' type='checkbox' name='choice'  id='checkbox_agree1' onclick='check(this,check_q1(this),5);' value="+al_book.get(i).getBook_category3()+">");
 						out.println(al_book.get(i).getBook_name()+"</td>");
 						if((i+1)%5==0){
@@ -121,7 +128,7 @@ function check(obj,condition, n) {
 					}
 				%>
 				<input type="hidden" name="mem_num" value=<%=m_dto.getNum() %> >
-				<tr align='center'><td colspan="5"><input  style="WIDTH: 100pt; HEIGHT: 50pt" type="submit" value="제출하기" class="btngray"></td></tr>
+				<tr align='center'><td colspan="5"><input style="WIDTH: 90pt; HEIGHT: 45pt" type="submit" value="제출하기" class="btngray"></td></tr>
 			</table>
 			</div>
 		</form>
