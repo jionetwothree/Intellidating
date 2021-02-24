@@ -301,7 +301,7 @@
             <article>
                 <a href="#" class="image featured"><img src="<%=al_book.get(0).getBook_image() %>"  alt="" /></a>
                 <header>
-                    <h3><a href="#"><%=al_book.get(0).getBook_name() %></a></h3>
+                   <h3><a href="#"><%=al_book.get(0).getBook_name() %></a></h3>
 
                 </header>
             </article>

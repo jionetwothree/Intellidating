@@ -68,10 +68,7 @@ nominvalue
 nocycle
 nocache;
 
-<<<<<<< HEAD
-select * from recommendation;
-=======
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
+
 
 
 CREATE TABLE member(
@@ -255,8 +252,8 @@ INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '나루해오름','https://news.cgtn.com/news/7a596a4e7863444f35417a4d7a49444e7a51444f31457a6333566d54/img/8b2c93bb7ef4452ba80963355b4e7a6c/8b2c93bb7ef4452ba80963355b4e7a6c.jpg', '1번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '도담도담','https://image.freepik.com/free-photo/flowering-of-adonis-vernalis-spring-pheasant-s-eye-yellow-pheasant-s-eye-or-false-hellebore_162695-444.jpg','2번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '로운','https://images.immediate.co.uk/production/volatile/sites/10/2018/09/eae9cbb7-9041-4113-ba62-595f18d49906-aaf58bb.jpg?quality=90&resize=960%2C640','3번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '','https://img.freepik.com/free-photo/amazing-yellow-daffodils-flower-field-in-the-morning-sunlight_24711-255.jpg?size=626&ext=jpg','4번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, '', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyBn7FHJ6KmlH4O7nytXZ9si6ab_3pFe-6vA&usqp=CAU','5번 모임입니다.');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'll','https://img.freepik.com/free-photo/amazing-yellow-daffodils-flower-field-in-the-morning-sunlight_24711-255.jpg?size=626&ext=jpg','4번 모임입니다.');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'kk', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyBn7FHJ6KmlH4O7nytXZ9si6ab_3pFe-6vA&usqp=CAU','5번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Marigold','https://www.gardeningknowhow.com/wp-content/uploads/2020/11/orange-french-marigolds.jpg','6번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Lavendar','https://st.depositphotos.com/1718493/5125/i/600/depositphotos_51251617-stock-photo-lavender-on-a-wooden-desk.jpg','7번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(seq_club_num.NEXTVAL, 'Freesia','https://www.gardendesign.com/pictures/images/900x705Max/dream-team-s-portland-garden_6/yellow-freesia-flower-yellow-flower-shutterstock-com_14849.jpg','8번 모임입니다.');
@@ -277,20 +274,14 @@ select * from member;
 
 --INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');--이건 일단 인서트 하지 말고 놔둬보세여 테스트 용이라
 
-select * from club;
-<<<<<<< HEAD
-select * from recommendation;
-delete from choice where mem_num=5;
-select * from club;
-drop sequence seq_club_num;
-=======
+select * from choice;
 select * from recommendation;
 select * from book;
 
 drop sequence seq_club_num;
 
 DELETE FROM COMMENTS WHERE book_num = 6;
-delete from choice;
+delete from club;
 delete from RECOMMENDATION;
 DELETE FROM book;
 
