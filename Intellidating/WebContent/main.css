@@ -33,6 +33,7 @@ a{
 		text-decoration: none;
 		font-color:black;
 	}
+	
 #layout{
 	margin-left:420px;
 	margin-right:420px;
@@ -40,9 +41,9 @@ a{
 
 	
 #title{
-		float:left;
-		width:400px;
-		height:80px;
+		float: left;
+		width: 400px;
+		height :80px;
 		
 	}
 	
@@ -80,14 +81,7 @@ a{
 	
 }
 
-<<<<<<< HEAD
-=======
 
-
-
-
-
->>>>>>> branch 'master' of https://junghoonshim@github.com/jionetwothree/Intellidating
 #banner .main_title{
 		position:relative;
 		left : 0px;
