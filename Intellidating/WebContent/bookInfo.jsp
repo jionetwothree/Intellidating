@@ -44,7 +44,7 @@
 		</header>
 
 		<nav>
-			<div id="menu">
+			<div class="menu">
 				<ul style="display: inline-block;">
 					<%
 						if (m_dto == null) {

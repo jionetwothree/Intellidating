@@ -47,23 +47,30 @@
 
             <h1 id="title"><a href="main.jsp">intellidating</a></h1>
             <nav>
-               <ul class="menu" style="display: inline-block;">
-                  <%
-               if (m_dto == null) {
-            %>
+            	<%if(m_dto == null){ %>
+            		 <ul class="menu" style="width:400px;margin-left:100px; display: inline-block;">
+             
                   <li><a href="login.html">로그인/회원가입</a></li>
 
-                  <%
-               } else {
-            %>
+     
+               </ul>
+         
+            	
+            	<%}else{ %>
+             <ul class="menu" style="display:inline;">
+               
+            
+            
                   <li><a href="analysis.jsp">추천받기</a>
                   <li><a href="before_searchBook.jsp">책 검색하기</a></li>
                   <li><a href="myClub.jsp">마이모임</a>
                   <li><a href="logoutService">로그아웃</a></li>
                </ul>
-               <%
-               }
-            %>
+           
+            	<%} %>
+            
+            
+              
             </nav>
          </div>
       </header>
