@@ -11,12 +11,11 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <link rel="stylesheet" type="text/css"
-	href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+   href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link
-	href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&display=swap"
-	rel="stylesheet">
-<!-- <link rel="stylesheet" type="text/css" href="css/style_dummy_search.css"> -->
+   href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&display=swap"
+   rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="style_searchBook.css">
 
 
@@ -60,7 +59,7 @@
 
 		<div id="main_img">
 			<div class="absolute">
-				<form action="searchBookService" method="post">
+				<form action="searchBookService" method="post" >
 					<input type="text" name="search_submit" placeholder="책 제목 검색">
 					<%
 											if (m_dto != null) {
@@ -79,7 +78,7 @@
 	<div id="foot">
 		<div class="all">
 			<span> 자주 묻는 질문 </span> <span>문의하기 </span> <span>블로그</span> <span
-				class="company"> <br> <br> <br> 주식회사 인텔리데이팅 <br>
+				class="company"> <br><br><br><br><br> 주식회사 인텔리데이팅 <br>
 				<br> <br>
 			</span>
 		</div>

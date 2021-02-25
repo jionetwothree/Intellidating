@@ -9,7 +9,7 @@ footer, header, hgroup, menu, nav, section {
    
 
 a{
-      text-decoration: none;
+	  text-decoration: none;
       color:black;
    }
    
@@ -18,29 +18,27 @@ a{
    margin-right:420px;
 }   
 
-   
 #title{
       float:left;
-      width:400px;
+      width:500px;
       height:80px;
-      margin-top:20px;
-      
+      margin-top:0px;
+
    }
    
 #title span{      
       text-decoration:none;
-      font-size:30px;
+      font-size: 30px;
       text-align:right;
-      padding: 10px 8px 5px 8px;
+      padding: 0px 8px 5px 8px;
       margin-left:70px;
-      margin-top:10px;
    }
    
    
    
 .menu{
    float:left;
-   width:600px;
+   width:500px;
    margin-top:20px;
    text-align:right;
 }
@@ -49,8 +47,9 @@ a{
       float:left;
       list-style:none;
       text-align:right;
-      text-size:18px;
-      padding: 5px 30px 20px 8px;
+      font-size:18px;
+      padding: 5px 20px 20px 8px;
+      font-color:gray;
    }
    
 
