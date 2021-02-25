@@ -58,7 +58,7 @@
       </div>
    
    
-   <div id="foot">
+   <div id="foot" style="background-color: #F6F6F6;">
       <div class="all">
          <span> <a href="question.html">자주 묻는 질문</a>
          </span> <span> <a href="#">문의하기</a>
