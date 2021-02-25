@@ -166,14 +166,14 @@ public class clubDAO {
 			if (rs.next()) {
 				int get_num = rs.getInt(1);
 				String get_name = rs.getString(2);
-				//여기 가지고 올때 3번 컬럼값 가지고 온다고 되어있는데 테이블에 3번컬럼은 문자열 형인거 같아요! int 가 아니라 아네 감사합니다
+				String get_image = rs.getString(3);
 				int get_mem_cnt = rs.getInt(4);
 				String get_detail = rs.getString(5);
 				String get_type1 = rs.getString(5);
 				String get_type2 = rs.getString(6);
 				String get_type3 = rs.getString(7);
 
-				dto = new clubDTO(get_num, get_name, get_mem_cnt, get_detail, get_type1, get_type2, get_type3);
+				dto = new clubDTO(get_num, get_name, get_image, get_mem_cnt, get_detail, get_type1, get_type2, get_type3);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

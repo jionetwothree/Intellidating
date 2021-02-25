@@ -12,8 +12,10 @@
 </head>
 <body>
 <%
-	
+	String detail = request.getParameter("detail");
+	String name = request.getParameter("name");
 %>
-<input type="submit" value="´Ý±â" onclick="window.close()">
+<h1><%=name %></h1>
+<h3><%=detail %></h3>
 </body>
 </html>

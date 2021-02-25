@@ -84,8 +84,11 @@ public class memberDAO {
 				String get_pw = rs.getString(3);
 				String get_name = rs.getString(4);
 				String get_nickname = rs.getString(5);
+				int get_club1 = rs.getInt(7);
+				int get_club2 = rs.getInt(8);
+				int get_club3 = rs.getInt(9);
 
-				dto = new memberDTO(get_num, get_email, get_pw, get_name, get_nickname);
+				dto = new memberDTO(get_num, get_email, get_pw, get_name, get_nickname, get_club1, get_club2, get_club3);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -108,8 +111,9 @@ public class memberDAO {
 			if (rs.next()) {
 				int get_num = rs.getInt(1);
 				String get_nickname = rs.getString(5);
+				int get_club1 = rs.getInt(7);
 
-				dto = new memberDTO(get_num, get_nickname);
+				dto = new memberDTO(get_num, get_nickname, get_club1);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
