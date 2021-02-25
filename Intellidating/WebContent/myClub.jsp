@@ -13,54 +13,38 @@
 <title>Insert title here</title>
 </head>
 <body>
+   <div id="layout">
+      <%
+      memberDTO m_dto = (memberDTO) session.getAttribute("member");
+         %>
+      <header>
+         <div id="wrapper">
 
-
-
-	<%
-		memberDTO m_dto = (memberDTO) session.getAttribute("member");
-		memberDAO mem_dao = new memberDAO();
-		memberDTO mem_dto = mem_dao.selectMember(m_dto.getNum());
-		clubDAO dao = new clubDAO();
-		clubDTO dto1 = dao.selectclub(mem_dto.getMem_club1());
-		clubDTO dto2 = dao.selectclub(mem_dto.getMem_club2());
-		clubDTO dto3 = dao.selectclub(mem_dto.getMem_club3());
-	%>
-
-
-   <header>
-      <div id="title">
-
-         <span>
-            <a href="main.jsp">intellidating</a>
-         </span>
-
-      </div>
-   </header>
-   
-   
-   
-   <nav>
-      <div id="menu">
-         <ul>
-            <li><a href="before_searchBook.jsp">책 검색하기</a></li>
-            <%
+            <h1 id="title"><a href="main.jsp">intellidating</a></h1>
+            <nav>
+               <ul class="menu" style="display: inline-block;">
+                  <%
                if (m_dto == null) {
             %>
-            <li><a href="login.html">로그인</a></li>
-            <li><a href="join.jsp">회원가입</a></li>
-            <%
+                  <li><a href="login.html">로그인/회원가입</a></li>
+
+                  <%
                } else {
             %>
-            <li><a href="mypage.jsp">마이페이지</a>
-            <li><a href="logoutService">로그아웃</a></li>
-         </ul>
-         <%
-            }
-            
-         %>
-      </div>
-   </nav>
+                  <li><a href="analysis.jsp">추천받기</a>
+                  <li><a href="before_searchBook.jsp">책 검색하기</a></li>
+                  <li><a href="myClub.jsp">마이모임</a>
+                  <li><a href="logoutService">로그아웃</a></li>
+               </ul>
+               <%
+               }
+            %>
+            </nav>
+         </div>
+      </header>
 
+
+   
    
    
    <div class="div.btn">
@@ -74,23 +58,15 @@
       </div>
    
    
-      <div id="foot">
-         <div class="all">
-            <span>
-               <a href="question.html">자주 묻는 질문</a>
-            </span>
-            <span>
-               <a href="#">문의하기</a>
-            </span>
-            <span>
-               <a href="#">블로그</a></span>
-            <span class="company">
-            <br><br><br>
-              주식회사 인텔리데이팅
-              <br><br><br>
-              </span>
-         </div>
+   <div id="foot" style="background-color: #F6F6F6;">
+      <div class="all">
+         <span> <a href="question.html">자주 묻는 질문</a>
+         </span> <span> <a href="#">문의하기</a>
+         </span> <span> <a href="#">블로그</a></span> <span class="company"> <br>
+            <br> <br> 주식회사 인텔리데이팅 <br> <br> <br>
+         </span>
       </div>
+   </div>
    
 
 

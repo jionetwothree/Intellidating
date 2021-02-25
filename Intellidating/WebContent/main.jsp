@@ -449,15 +449,15 @@
 
    <script>
    function openWindowPop1(url, name){
-       var options = 'top=450, left=430, width=300, height=300, status=no, menubar=no, toolbar=no, resizable=no';
+       var options = 'top=450, left=430, width=300, height=200, scrollbars=no, location=no, status=no, menubar=no, toolbars=no, resizable=no';
        window.open(url, name, options);
    }
    function openWindowPop2(url, name){
-       var options = 'top=450, left=760, width=300, height=300, status=no, menubar=no, toolbar=no, resizable=no';
+       var options = 'top=450, left=760, width=300, height=200, scrollbars=no, location=no, status=no, menubar=no, toolbars=no, resizable=no';
        window.open(url, name, options);
    }
    function openWindowPop3(url, name){
-       var options = 'top=450, left=1100, width=300, height=300, status=no, menubar=no, toolbar=no, resizable=no';
+       var options = 'top=450, left=1100, width=300, height=200, scrollbars=no, location=no, status=no, menubar=no, toolbars=no, resizable=no';
        window.open(url, name, options);
    }
      
