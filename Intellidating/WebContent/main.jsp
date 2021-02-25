@@ -40,7 +40,7 @@
 	<div id="layout">
 		<%
       memberDTO m_dto = (memberDTO) session.getAttribute("member");
-   %>
+   		%>
 		<header>
 			<div id="wrapper">
 
@@ -112,7 +112,6 @@
 							<h5><%=al_club.get(0).getClub_detail() %></h5>
 						</header>
 					</article>
-
 
 					<article>
 						<a href="#" class="image featured"><img

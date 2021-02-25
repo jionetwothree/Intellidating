@@ -1,5 +1,102 @@
 @charset "EUC-KR";
 
+@charset "EUC-KR";
+ 
+ html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+   padding: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;}
+   
+
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+   display: block;}
+   
+
+a{
+      text-decoration: none;
+      color:black;
+   }
+   
+#layout{
+   margin-left:420px;
+   margin-right:420px;
+}   
+
+   
+#title{
+      float:left;
+      width:400px;
+      height:80px;
+      margin-top:20px;
+      
+   }
+   
+#title span{      
+      text-decoration:none;
+      font-size:30px;
+      text-align:right;
+      padding: 10px 8px 5px 8px;
+      margin-left:70px;
+      margin-top:10px;
+   }
+   
+   
+   
+#menu{
+   float:left;
+   width:600px;
+   margin-top:20px;
+   text-align:right;
+}
+
+#menu li{
+      float:left;
+      list-style:none;
+      text-align:right;
+      text-size:18px;
+      padding: 5px 30px 20px 8px;
+   }
+   
+   
+   
+   
+#foot{
+   clear:both;
+   float:left;
+   background-color:#F6F6F6;
+   bottom: 0;
+   width: 100%;
+   height:300px;
+}
+
+#foot .all{
+   margin-top:50px;
+   margin-left:450px;
+}
+
+#foot .all span{
+   font-size:18px;
+   padding: 0px 50px 0px 0px;
+}
+
+.company{
+   font-size:15px;
+   font-weight:bold;
+}
+
 input.icon_search_submit{
 	background: url(images/icon_search.png);
 	width:40px; 
