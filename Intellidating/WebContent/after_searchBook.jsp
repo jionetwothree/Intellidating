@@ -20,8 +20,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&display=swap"
 	rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="search.css">
-<link rel="stylesheet" type="text/css" href="css/main2.css">
+<link href="style_afterSearchBook.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -31,47 +30,93 @@
 		//bookDTO b_dto = (bookDTO)session.getAttribute("book");
 
 	%>
+<div id="layout">
+			<div id="wrapper">
 
-	<header>
-		<div id="title">
-			<span> <a href="main.jsp">인텔리데이팅</a>
-			</span>
-		</div>
-	</header>
-	<nav>
-		<div id="menu">
-			<ul>
-				<li><a href="after_searchBook.jsp">책 검색하기</a></li>
-				<li><a href="mypage.html">마이페이지</a>
-					<ul class="menu">
-						<li><a href="myClub.jsp">마이모임</a></li>
-					</ul></li>
-				<li><a href="nologinmain.html">로그아웃</a></li>
-			</ul>
-		</div>
-	</nav>
-	<table>
+				<h1 id="title"><a href="main.jsp">intellidating</a></h1>
+				<nav>
+					<ul class="menu" style="display: inline-block;">
+						<%
+					if (m_dto == null) {
+				%>
+						<li><a href="login.html">로그인/회원가입</a></li>
+
+						<%
+					} else {
+				%>
+						<li><a href="analysis.jsp">추천받기</a>
+						<li><a href="before_searchBook.jsp">책 검색하기</a></li>
+						<li><a href="mypage.jsp">마이모임</a>
+						<li><a href="logoutService">로그아웃</a></li>
+					</ul>
+					<%
+					}
+				%>
+				</nav>
+			</div>
+		</header>
+		<form action="searchBookService" method="post">
+			<input type="text" name="search_submit" placeholder="책 제목 검색">
+			<% if(m_dto!=null){%>
+			<input type="hidden" name="mem_num" value=<%= m_dto.getNum() %>>
+			<%} %>
+			<input type="submit" class="icon_search_submit" value="  ">
+
+		</form>
+		
+		<div class="book_list">
 		<%
 				/* String attr = request.getParameter("bookDTO"); */
-				
 				ArrayList<bookDTO> dto = (ArrayList<bookDTO>) request.getAttribute("bookDTO"); 
-				System.out.print(dto.size());
+				System.out.print(dto.size());%>
 				
-				for(int i = 0; i < dto.size(); i++) {
-					out.print("<tr>");%>
-		<td><a href='bookInfo.jsp?book=<%= dto.get(i).getBook_num()%>'><%=dto.get(i).getBook_name()%></a></td>
-		<%out.print("<td>"+dto.get(i).getBook_author()+"</td>");
-					out.print("<td>"+dto.get(i).getBook_publisher()+"</td>");
-					out.print("<td>"+dto.get(i).getBook_date()+"</td>");%>
-		<td><a href='bookInfo.jsp?book=<%= dto.get(i).getBook_num()%>'>
-				<img src="<%=dto.get(i).getBook_image()%>">
-		</a></td>
-		<tr>
+				<%for(int i = 0; i < dto.size(); i++) {
+				
+					if(i%2==1){%>
+					<div class="book" >
+					<div class="b_image"><a href='bookInfo.jsp?book=<%= dto.get(i).getBook_num()%>'>
+							<img src="<%=dto.get(i).getBook_image()%>" 
+							img {
+								  style="width: 200px;
+								  height: 300px;
+								  object-fit: cover;"
+														}>
+						</a>
+					</div>
+					<div class="b_text">
+						<div class="b_name"><a href='bookInfo.jsp?book=<%= dto.get(i).getBook_num()%>'><%=dto.get(i).getBook_name()%></a></div>
+						<div class="b_author"><%=dto.get(i).getBook_author()%></div>
+						<div class="b_pub_date"><%=dto.get(i).getBook_publisher()%>
+						<br><%=dto.get(i).getBook_date()%></div>
+					</div>
+				</div>
+					
+					<%}else{ %>
+					<div class="book" style="float:left">
+					<div class="b_image"><a href='bookInfo.jsp?book=<%= dto.get(i).getBook_num()%>'>
+							<img src="<%=dto.get(i).getBook_image()%>"
+							img {
+								  style="width: 200px;
+								  height: 300px;
+								  object-fit: cover;"
+														}>
+						</a>
+					</div>
+					<div class="b_text">
+						<div class="b_name"><a href='bookInfo.jsp?book=<%= dto.get(i).getBook_num()%>'><%=dto.get(i).getBook_name()%></a></div>
+						<div class="b_author"><%=dto.get(i).getBook_author()%></div>
+						<div class="b_pub_date"><%=dto.get(i).getBook_publisher()%>
+						<br><%=dto.get(i).getBook_date()%></div>
+					</div>
+				</div>
+					
+					<%} %>
+				
 			<%}%>
 		
-	</table>
-
-	<div id="foot">
+	</div>
+	
+	<div id="foot" style="display:block">
 		<div class="all">
 			<span><a href="question.html">자주 묻는 질문</a></span> <span><a
 				href="#">문의하기</a></span> <span><a href="#">블로그</a></span> <span

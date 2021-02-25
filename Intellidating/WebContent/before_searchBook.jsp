@@ -50,35 +50,7 @@
 				</nav>
 			</div>
 		</header>
-	
-<<<<<<< HEAD
-		<div class="search_bar">
-=======
-	memberDTO m_dto = (memberDTO)session.getAttribute("member");
 
-	%>
-	<header>
-		<div id="title">
-			<span>
-				<a href="main.jsp">인텔리데이팅</a>
-			</span>
-		</div>
-	</header>
-	<nav>
-	<div id="menu">
-		<ul>
-			<li><a href="after_searchBook.jsp">책 검색하기</a></li>
-			<li><a href="mypage.html">마이페이지</a>
-				<ul class="menu">
-					<li><a href="myClub.jsp">마이모임</a></li>
-				</ul></li>
-			<li><a href="nologinmain.html">로그아웃</a></li>
-		</ul>
-	</div>
-	</nav>
-	<div id="main_img">
-		<div class="absolute">
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
 		<form action="searchBookService" method="post">
 			<input type="text" name="search_submit" placeholder="책 제목 검색">
 			<% if(m_dto!=null){%>
