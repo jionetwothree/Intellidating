@@ -19,82 +19,68 @@
 <!-- <link rel="stylesheet" type="text/css" href="css/style_dummy_search.css"> -->
 <link rel="stylesheet" type="text/css" href="style_searchBook.css">
 
+
+<style>
+</style>
 </head>
 <body>
-	<div id="layout">
+		
+		<div id="layout">
+
 		<%
-      memberDTO m_dto = (memberDTO) session.getAttribute("member");
-   %>
+			memberDTO m_dto = (memberDTO) session.getAttribute("member");
+		%>
 		<header>
 			<div id="wrapper">
 
-				<h1 id="title"><a href="main.jsp">intellidating</a></h1>
+				<h1 id="title">
+					<a href="main.jsp">intellidating</a>
+				</h1>
 				<nav>
 					<ul class="menu" style="display: inline-block;">
 						<%
-					if (m_dto == null) {
-				%>
+							if (m_dto == null) {
+						%>
 						<li><a href="login.html">로그인/회원가입</a></li>
 
 						<%
-					} else {
-				%>
-						<li><a href="analysis.jsp">추천받기</a>
+							} else {
+						%>
+						<li><a href="analysis.jsp">추천받기</a></li>
 						<li><a href="before_searchBook.jsp">책 검색하기</a></li>
-						<li><a href="mypage.jsp">마이모임</a>
+						<li><a href="myClub.jsp">마이모임</a></li>
 						<li><a href="logoutService">로그아웃</a></li>
 					</ul>
 					<%
-					}
-				%>
+               	}
+               %>
 				</nav>
 			</div>
 		</header>
-	
-<<<<<<< HEAD
-		<div class="search_bar">
-=======
-	memberDTO m_dto = (memberDTO)session.getAttribute("member");
 
-	%>
-	<header>
-		<div id="title">
-			<span>
-				<a href="main.jsp">인텔리데이팅</a>
-			</span>
+		<div id="main_img">
+			<div class="absolute">
+				<form action="searchBookService" method="post">
+					<input type="text" name="search_submit" placeholder="책 제목 검색">
+					<%
+											if (m_dto != null) {
+										%>
+					<input type="hidden" name="mem_num" value=<%=m_dto.getNum()%>>
+					<%
+											}
+										%>
+					<input type="submit" class="icon_search_submit" value="  ">
+
+				</form>
+			</div>
 		</div>
-	</header>
-	<nav>
-	<div id="menu">
-		<ul>
-			<li><a href="after_searchBook.jsp">책 검색하기</a></li>
-			<li><a href="mypage.html">마이페이지</a>
-				<ul class="menu">
-					<li><a href="myClub.jsp">마이모임</a></li>
-				</ul></li>
-			<li><a href="nologinmain.html">로그아웃</a></li>
-		</ul>
-	</div>
-	</nav>
-	<div id="main_img">
-		<div class="absolute">
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
-		<form action="searchBookService" method="post">
-			<input type="text" name="search_submit" placeholder="책 제목 검색">
-			<% if(m_dto!=null){%>
-			<input type="hidden" name="mem_num" value=<%= m_dto.getNum() %>>
-			<%} %>
-			<input type="submit" class="icon_search_submit" value="  ">
 
-		</form>
-		
 	</div>
-<div id="foot">
+	<div id="foot">
 		<div class="all">
-			<span> 자주 묻는 질문
-			</span> <span>문의하기
-			</span> <span>블로그</span> <span class="company"> <br>
-				<br> <br> 주식회사 인텔리데이팅 <br> <br> <br>
+			<span> 자주 묻는 질문 </span> <span>문의하기 </span> <span>블로그</span> <span
+				class="company"> <br> <br> <br> 주식회사 인텔리데이팅 <br>
+				<br> <br>
 			</span>
 		</div>
 	</div>

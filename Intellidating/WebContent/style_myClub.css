@@ -12,68 +12,66 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	font-size: 100%;
-	font-family: 'Noto Sans KR', sans-serif;
-	font: inherit;
-	vertical-align: baseline;}
-	
+   padding: 0;
+   font-size: 100%;
+   font-family: 'Noto Sans KR', sans-serif;
+   font: inherit;
+   vertical-align: baseline;}
+   
 
-
+/* nav {
+      margin-top: 500px;
+   } */
 
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
-	
+   display: block;}
+   
 
 a{
-		text-decoration: none;
-		font-color:black;
-	}
-#layout{
-	margin-left:420px;
-	margin-right:420px;
-}	
+      text-decoration: none;
+      font-color:black;
+   }
+   
 
-	
+   
 #title{
-		float:left;
-		width:70%;
-		height:80px;
-		margin-top:20px;
-		
-	}
-	
-#title span{		
-		text-decoration:none;
-		font-size:30px;
-		text-align:left;
-		padding: 10px 8px 5px 8px;
-		margin-left:70px;
-		margin-top:10px;
-	}
-	
+      float: left;
+      width: 400px;
+      height :80px;
+      
+   }
+   
+#title span{      
+      text-decoration:none;
+      font-size:30px;
+      text-align:right;
+      padding: 10px 8px 5px 8px;
+      margin-left:70px;
+      margin-top:10px;
+   }
+   
+   
+   
 #menu{
-	float:left;
-	margin-top:20px;
+   float:left;
+   width:600px;
+   margin-top:20px;
+   text-align:right;
 }
 
 #menu li{
-		list-style:none;
-		text-align:center;
-		float:left;
-		text-size:18px;
-		padding: 5px 30px 20px 8px;
-	}
-
-	
-
-이쪽 위로 
+      float:left;
+      list-style:none;
+      text-align:right;
+      text-size:18px;
+      padding: 5px 30px 20px 8px;
+   }
+   
 
 
-	
+   
 .btn{
   display: inline-block;
   padding: 15px 25px;
@@ -85,9 +83,9 @@ a{
   color: #ffffff;
   background-color: #EAEAEA;
   border: none;
-  border-radius: 25px;
+  border-radius: 15px;
   width : 80%;
-  margin: 30px;
+  margin: 20px;
   color: #000000;
   
 }
@@ -113,9 +111,9 @@ a{
   color: #ffffff;
   background-color: #EAEAEA;
   border: none;
-  border-radius: 25px;
+  border-radius: 15px;
   width : 80%;
-  margin: 30px;
+  margin: 20px;
   color: #000000;
 }
 .button:hover
@@ -141,9 +139,10 @@ a{
   color: #ffffff;
   background-color: #EAEAEA;
   border: none;
-  border-radius: 25px;
+  border-radius: 15px;
   width : 80%;
-  margin: 30px;
+  margin-top: 20px;
+  margin-bottom: 90px;
   color: #000000;
 }
 .button:hover
@@ -161,37 +160,37 @@ a{
 
 
 
-아래로
 
 
 }
 
 #foot{
-	clear:both;
-	background-color:#F6F6F6;
-	float:left;
-	bottom: 0;
-	width: 100%;
-	height:300px;
+   clear:both;
+   float:left;
+   background-color:#F6F6F6;
+   bottom: 0;
+   width: 100%;
+   height:300px;
 }
 
 #foot .all{
-	margin-top:50px;
-	margin-left:450px;
+   margin-top:50px;
+   margin-left:450px;
 }
 
 #foot .all span{
-	font-size:18px;
-	padding: 0px 50px 0px 0px;
+   font-size:18px;
+   padding: 0px 50px 0px 0px;
 }
 
 .company{
-	font-size:15px;
-	font-weight:bold;
+   font-size:15px;
+   font-weight:bold;
 }
-	
-	
-	
-	
-	
-	
+
+   
+    
+   
+   
+   
+   
