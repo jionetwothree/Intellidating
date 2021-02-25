@@ -66,16 +66,10 @@ increment by 1
 nomaxvalue
 nominvalue
 nocycle
+
 nocache;
-<<<<<<< HEAD
-select * from book;
-=======
-<<<<<<< HEAD
 
-=======
 
->>>>>>> branch 'master' of https://github.com/jionetwothree/Intellidating.git
->>>>>>> branch 'master' of https://junghoonshim@github.com/jionetwothree/Intellidating
 
 
 CREATE TABLE member(
@@ -239,6 +233,8 @@ INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGO
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (39,1385,'가장 예쁜 생각을 너에게 주고 싶다','http://image.kyobobook.co.kr/images/book/large/820/l9788925561820.jpg','현대시');
 INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGORY3) VALUES (40,1427,'흔들리지 않고 피는 꽃이 어디 있으랴','http://image.kyobobook.co.kr/images/book/large/774/l9788925552774.jpg','현대시');
 
+
+
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(1, '해오름','https://images.unsplash.com/photo-1572727984721-9e8bbd728f0d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80', '1번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(2, '도담도담','https://images.unsplash.com/photo-1597045145058-222946a8412c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80','2번 모임입니다.');
 INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(3, '로운','https://images.unsplash.com/photo-1598618589908-36922bcbb433?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80','3번 모임입니다.');
@@ -255,7 +251,9 @@ DELETE FROM club WHERE club_num = 8;
 DELETE FROM club WHERE club_num = 9;
 DELETE FROM club WHERE club_num = 10;
 DELETE FROM RECOMMENDATION WHERE recom_num = 6;
+
 DELETE FROM RECOMMENDATION WHERE recom_num = 5;
+
 
 select * from club;
 select * from comments;
@@ -263,6 +261,8 @@ select * from PRINT_BOOK;
 select * from member;
 
 --INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');--이건 일단 인서트 하지 말고 놔둬보세여 테스트 용이라
+
+
 
 select * from recommendation;
 select * from book;
@@ -276,5 +276,8 @@ delete from RECOMMENDATION;
 delete from member;
 DELETE FROM book;
 
+
 SELECT CONSTRAINT_NAME, TABLE_NAME, R_CONSTRAINT_NAME FROM USER_CONSTRAINTS
+
 WHERE CONSTRAINT_NAME = 'SYS_C007460';
+

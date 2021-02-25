@@ -25,12 +25,13 @@
 
 </head>
 <body>
-	<%
+	<%  
 	
 		memberDTO m_dto = (memberDTO)session.getAttribute("member");
 		//bookDTO b_dto = (bookDTO)session.getAttribute("book");
 
 	%>
+
 
 	<header>
 		<div id="title">
@@ -51,10 +52,7 @@
 		</div>
 	</nav>
 	<table>
-		<%
-				/* String attr = request.getParameter("bookDTO"); */
-				
-				ArrayList<bookDTO> dto = (ArrayList<bookDTO>) request.getAttribute("bookDTO"); 
+		<%		ArrayList<bookDTO> dto = (ArrayList<bookDTO>) request.getAttribute("bookDTO"); 
 				System.out.print(dto.size());
 				
 				for(int i = 0; i < dto.size(); i++) {
@@ -68,6 +66,7 @@
 		</a></td>
 		<tr>
 			<%}%>
+
 		
 	</table>
 

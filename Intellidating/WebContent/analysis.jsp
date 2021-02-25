@@ -11,7 +11,6 @@
 <head>
 <link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png">
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 <link rel="stylesheet" type="text/css" href="style_analysis.css">
 <link rel="stylesheet" type="text/css" href="css/main2.css">
@@ -140,7 +139,7 @@ function check(obj,condition, n) {
             <span>
                <a href="#">블로그</a></span>
          	<span class="company">
-         	<br><br><br>
+         	<br><br><br><br><br>
            	주식회사 인텔리데이팅
            	<br><br><br>
            	</span>
