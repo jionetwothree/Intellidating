@@ -1,27 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
-@import url("fontawesome-all.min.css");
+@charset "EUC-KR";
 
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
-   padding: 0;
-   font-size: 100%;
-   font-family: 'Noto Sans KR', sans-serif;
-   font: inherit;
-   vertical-align: baseline;}
-   
-
-/* nav {
-      margin-top: 500px;
-   } */
+@charset "EUC-KR";
 
 
 article, aside, details, figcaption, figure,
@@ -31,7 +10,7 @@ footer, header, hgroup, menu, nav, section {
 
 a{
       text-decoration: none;
-      font-color:black;
+      color:black;
    }
    
 #layout{
@@ -41,9 +20,10 @@ a{
 
    
 #title{
-      float: left;
-      width: 400px;
-      height :80px;
+      float:left;
+      width:400px;
+      height:80px;
+      margin-top:20px;
       
    }
    
@@ -58,20 +38,21 @@ a{
    
    
    
-#menu{
+.menu{
    float:left;
    width:600px;
    margin-top:20px;
    text-align:right;
 }
 
-#menu li{
+.menu li{
       float:left;
       list-style:none;
       text-align:right;
       text-size:18px;
       padding: 5px 30px 20px 8px;
    }
+   
 
 #banner{
    top: 100;
