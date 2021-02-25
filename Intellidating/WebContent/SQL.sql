@@ -263,8 +263,8 @@ select * from member;
 --INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');--이건 일단 인서트 하지 말고 놔둬보세여 테스트 용이라
 
 select * from recommendation;
-select * from book;
-select * from MEMBER;
+select * from print_book;
+select * from choice;
 drop sequence seq_club_num;
 
 DELETE FROM COMMENTS WHERE book_num = 6;

@@ -35,7 +35,7 @@
 
 				<h1 id="title"><a href="main.jsp">intellidating</a></h1>
 				<nav>
-					<ul class="menu" style="display: inline-block;">
+					<ul class="menu" style="display: inline-block; margin-top: 25px;">
 						<%
 					if (m_dto == null) {
 				%>
@@ -46,7 +46,7 @@
 				%>
 						<li><a href="analysis.jsp">추천받기</a>
 						<li><a href="before_searchBook.jsp">책 검색하기</a></li>
-						<li><a href="mypage.jsp">마이모임</a>
+						<li><a href="myClub.jsp">마이모임</a>
 						<li><a href="logoutService">로그아웃</a></li>
 					</ul>
 					<%
@@ -60,7 +60,7 @@
 			<% if(m_dto!=null){%>
 			<input type="hidden" name="mem_num" value=<%= m_dto.getNum() %>>
 			<%} %>
-			<input type="submit" class="icon_search_submit" value="  ">
+			<input style="right: 50px; margin-right: 0px; left: 415px; top: 63px;" type="submit" class="icon_search_submit" value="  " >
 
 		</form>
 		

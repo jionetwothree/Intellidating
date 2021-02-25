@@ -45,19 +45,19 @@
       <header>
          <div id="wrapper">
 
+            <nav id="navi">
             <h1 id="title"><a href="main.jsp">intellidating</a></h1>
-            <nav>
             	<%if(m_dto == null){ %>
-            		 <ul class="menu" style="width:400px;margin-left:100px; display: inline-block;">
+            		 <div class="menu" style="width:400px;margin-left:145px; display: inline-block;">
              
-                  <li><a href="login.html">로그인/회원가입</a></li>
+                  <div><a href="login.html">로그인/회원가입</a></div>
 
      
-               </ul>
+               </div>
          
             	
             	<%}else{ %>
-             <ul class="menu" style="display:inline;">
+             <ul class="menu" style="display:inline; margin-top:30px;">
                
             
             

@@ -1,13 +1,17 @@
 @charset "EUC-KR";
 
-@charset "UTF-8";
+
+body {
+       font-family: 'NanumSquare', sans-serif !important;
+   }
+   
 body {
   background: #e9e9e9;
   color: #666666;
-  font-family: "RobotoDraft", "Roboto", sans-serif;
-  font-size: 14px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 10px;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  text-decoration: none;
 }
 
 /* Pen Title */
@@ -17,11 +21,12 @@ body {
   letter-spacing: 2px;
 }
 .pen-title h1 {
-color: #33bdcc;
-  margin: 0 0 20px;
-  font-size: 48px;
-  font-weight: 300;
+	color: #33bdcc;
+	margin: 0 0 20px;
+	font-size: 48px;
+	font-weight: 500;
 }
+
 .pen-title span {
   font-size: 12px;
 }
@@ -340,9 +345,8 @@ color: #33bdcc;
   cursor: pointer;
 }
 .card.alt .toggle:before {
-  content: "가입";
+ content: "가입";
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -368,7 +372,7 @@ color: #33bdcc;
   right: 60px;
   display: inline;
   color: #ffffff;
-  font-size: 58px;
+  -size: 58px;
   font-weight: 400;
 }
 .card.alt .title .close:before {
