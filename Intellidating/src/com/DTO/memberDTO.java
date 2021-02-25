@@ -7,6 +7,9 @@ public class memberDTO {
 	private String password;
 	private String name;
 	private String nickname;
+	private int mem_club1;
+	private int mem_club2;
+	private int mem_club3;
 	
 	public memberDTO(String email, String password, String name, String nickname) {
 		super();
@@ -16,13 +19,16 @@ public class memberDTO {
 		this.nickname = nickname;
 	}
 
-	public memberDTO(int num, String email, String password, String name, String nickname) {
+	public memberDTO(int num, String email, String password, String name, String nickname, int mem_club1, int mem_club2, int mem_club3) {
 		super();
 		this.num = num;
 		this.email = email;
 		this.password = password;
 		this.name = name;
 		this.nickname = nickname;
+		this.mem_club1 = mem_club1;
+		this.mem_club2 = mem_club2;
+		this.mem_club3 = mem_club3;
 	}
 	
 	public memberDTO(String password, String name, String nickname) {
@@ -33,10 +39,11 @@ public class memberDTO {
 	}
 	
 
-	public memberDTO(int num, String nickname) {
+	public memberDTO(int num, String nickname, int mem_club1) {
 		super();
 		this.num = num;
 		this.nickname = nickname;
+		this.mem_club1 = mem_club1;
 	}
 	
 	
@@ -80,5 +87,30 @@ public class memberDTO {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
+
+	public int getMem_club1() {
+		return mem_club1;
+	}
+
+	public void setMem_club1(int mem_club1) {
+		this.mem_club1 = mem_club1;
+	}
+
+	public int getMem_club2() {
+		return mem_club2;
+	}
+
+	public void setMem_club2(int mem_club2) {
+		this.mem_club2 = mem_club2;
+	}
+
+	public int getMem_club3() {
+		return mem_club3;
+	}
+
+	public void setMem_club3(int mem_club3) {
+		this.mem_club3 = mem_club3;
+	}
+	
 	
 }

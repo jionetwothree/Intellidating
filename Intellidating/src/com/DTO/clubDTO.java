@@ -11,10 +11,11 @@ public class clubDTO {
 	private String club_type3;
 	private String club_image;
 	
-	public clubDTO(int club_num, String club_name, int club_mem_int, String club_detail, String club_type1, String club_type2,
+	public clubDTO(int club_num, String club_name, String club_image, int club_mem_int, String club_detail, String club_type1, String club_type2,
 			String club_type3) {
 		this.club_num = club_num;
 		this.club_name = club_name;
+		this.club_image = club_image;
 		this.club_mem_int = club_mem_int;
 		this.club_detail = club_detail;
 		this.club_type1 = club_type1;

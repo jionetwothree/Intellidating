@@ -1,3 +1,4 @@
+<%@page import="com.DAO.memberDAO"%>
 <%@page import="com.DTO.bookDTO"%>
 <%@page import="com.DAO.bookDAO"%>
 <%@page import="com.DTO.clubDTO"%>
@@ -6,17 +7,17 @@
 <%@page import="com.DTO.recommendationDTO"%>
 <%@page import="com.DAO.recommendationDAO"%>
 <%@page import="com.DTO.memberDTO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="icon" sizes="192x192"
 	href="https://static.wixstatic.com/media/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/398446_4bdc0328ac584d5f8a739f7a7012d6ed%7Emv2.png">
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="css/main2.css">
-<!-- ³ª´®ÆùÆ® Àû¿ë -->
+<!-- ë‚˜ëˆ”í°íŠ¸ ì ìš© -->
 <link rel="stylesheet" type="text/css"
 	href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,14 +26,14 @@
 	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="main.css">
 
-   <script src="js/jquery.min.js"></script>
-         <script src="js/jquery.dropotron.min.js"></script>
-         <script src="js/jquery.scrolly.min.js"></script>
-         <script src="js/jquery.scrollex.min.js"></script>
-         <script src="js/browser.min.js"></script>
-         <script src="js/breakpoints.min.js"></script>
-         <script src="js/util.js"></script>
-         <script src="js/main.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.dropotron.min.js"></script>
+<script src="js/jquery.scrolly.min.js"></script>
+<script src="js/jquery.scrollex.min.js"></script>
+<script src="js/browser.min.js"></script>
+<script src="js/breakpoints.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/main.js"></script>
 
 
 </head>
@@ -40,38 +41,34 @@
 	<div id="layout">
 		<%
       memberDTO m_dto = (memberDTO) session.getAttribute("member");
-   %>
+   		%>
 		<header>
-			<div id="title">
+			<div id="wrapper">
 
-				<span> <a href="main.jsp">intellidating</a>
-				</span>
+				<h1 id="title"><a href="main.jsp">intellidating</a></h1>
+				<nav>
+					<ul class="menu" style="display: inline-block;">
+						<%
+					if (m_dto == null) {
+				%>
+						<li><a href="login.html">ë¡œê·¸ì¸/íšŒì›ê°€ì…</a></li>
+
+						<%
+					} else {
+				%>
+
+						<li><a href="analysis.jsp">ì¶”ì²œë°›ê¸°</a>
+						<li><a href="before_searchBook.jsp">ì±… ê²€ìƒ‰í•˜ê¸°</a></li>
+						<li><a href="myClub.jsp">ë§ˆì´ëª¨ì„</a>
+						<li><a href="logoutService">ë¡œê·¸ì•„ì›ƒ</a></li>
+					</ul>
+					<%
+					}
+				%>
+				</nav>
 
 			</div>
 		</header>
-
-		<nav>
-			<div id="menu">
-
-				<ul style="display: inline-block;">
-					<%
-					if (m_dto == null) {
-				%>
-					<li><a href="login.html">·Î±×ÀÎ/È¸¿ø°¡ÀÔ</a></li>
-
-					<%
-					} else {
-				%>
-					<li><a href="analysis.jsp">ÃßÃµ¹Ş±â</a>
-					<li><a href="before_searchBook.jsp">Ã¥ °Ë»öÇÏ±â</a></li>
-					<li><a href="myClub.jsp">¸¶ÀÌ¸ğÀÓ</a>
-					<li><a href="logoutService">·Î±×¾Æ¿ô</a></li>
-				</ul>
-				<%
-				} 
-			%>
-			</div>
-		</nav>
 
 
 		<div id="banner">
@@ -80,11 +77,11 @@
 				<%
 					if (m_dto == null) {
 				%>
-				<a class="main_title" href="login.html">ÀÎÅÚ¸®µ¥ÀÌÆÃ ½ÃÀÛÇÏ±â</a>
+				<a class="main_title" href="login.html">ì¸í…”ë¦¬ë°ì´íŒ… ì‹œì‘í•˜ê¸°</a>
 				<%
 					} else {
 				%>
-				<a class="main_title" href="rule.html">ÀÎÅÚ¸®µ¥ÀÌÆÃ ÀÌ¿ë±ÔÄ¢</a>
+				<a class="main_title" href="rule.html">ì¸í…”ë¦¬ë°ì´íŒ… ì´ìš©ê·œì¹™</a>
 				<%
 					}
 				%>
@@ -99,10 +96,11 @@
 					bookDAO book_dao = new bookDAO();
 					ArrayList<bookDTO> al_book = book_dao.selectmainbook();
 			%>
+			
 		<div id="clubs">
 			<div class="align">
 				<div class="clubtitle">
-					<span> ÀÎ±âÀÖ´Â ¸ğÀÓ </span>
+					<span> ì¸ê¸°ìˆëŠ” ëª¨ì„ </span>
 				</div>
 			</div>
 			<section class="carousel">
@@ -118,7 +116,6 @@
 							<h5><%=al_club.get(0).getClub_detail() %></h5>
 						</header>
 					</article>
-
 
 					<article>
 						<a href="#" class="image featured"><img
@@ -203,7 +200,7 @@
 
 		<div id="clubs">
 			<div class="clubtitle">
-				<span> ÀÎ±âÀÖ´Â Ã¥ </span>
+				<span> ì¸ê¸°ìˆëŠ” ì±… </span>
 			</div>
 			<section class="carousel">
 				<div class="reel">
@@ -301,6 +298,8 @@
                   ArrayList<clubDTO> al_club = club_dao.selectallclub(recom_dto);
                   bookDAO book_dao = new bookDAO();
                   ArrayList<bookDTO> al_book = book_dao.searchBook(recom_dto);
+                  memberDAO mem_dao = new memberDAO();
+                  memberDTO mem_dto = mem_dao.selectMember(m_dto.getNum());
 
             %>
 
@@ -308,126 +307,154 @@
 
 
 		<div class="explain">
-			<span><%=m_dto.getNickname()%> ´ÔÀÇ ÃëÇâÀº #<%=al_book.get(0).getBook_category1() %>
-				#<%=al_book.get(1).getBook_category2() %> #<%=al_book.get(2).getBook_category3() %>(ÀÌ)±º¿ä!
-			</span><br>
+			<span><span
+				style="font-weight: 700; margin-right: 5px 0px 0px 0px"><%=m_dto.getNickname()%></span>
+				ë‹˜ì˜ ì·¨í–¥ì€ #<%=al_book.get(0).getBook_category1() %> #<%=al_book.get(1).getBook_category2() %>
+				#<%=al_book.get(2).getBook_category3() %>(ì´)êµ°ìš”! </span><br>
 		</div>
 
-		
-			<div id="clubs">
-				<div class="clubtitle">
-					<span> ÃëÇâ¿¡ ¸Â´Â ¸ğÀÓ </span>
-				</div>
+
+		<div id="clubs">
+			<div class="clubtitle">
+				<span> ì·¨í–¥ì— ë§ëŠ” ëª¨ì„ </span>
 			</div>
+		</div>
 
-			<section class="carousel">
-				<div class="tasty">
-					<article class="taste">
-						<a href="#" class="image featured"><img
-							src="<%=al_club.get(0).getClub_image() %>" alt="" /></a>
-						<header height='50' width='175'>
-							<h3>
-								<a href="#"><%=al_club.get(0).getClub_name() %></a>
-							</h3>
-							<h5><%=al_club.get(0).getClub_detail() %></h5>
-						</header>
-					</article>
+		<section class="carousel">
+			<div class="tasty">
+				<article class="taste">
+					<a href="javascript:openWindowPop1('bookpop.jsp?name=<%=al_club.get(0).getClub_name() %>&detail=<%=al_club.get(0).getClub_detail() %>', 'popup');" class="image featured"><img
+						src="<%=al_club.get(0).getClub_image() %>" alt="" /></a>
+					<header height='50' width='175'>
+						<h3>
+							<a href="javascript:openWindowPop1('bookpop.jsp?name=<%=al_club.get(0).getClub_name() %>&detail=<%=al_club.get(0).getClub_detail() %>', 'popup');"><%=al_club.get(0).getClub_name() %></a>
+						</h3>
+						<% if(mem_dto.getMem_club1()!=al_club.get(0).getClub_num()){ %>
+						<form action="joinClub">
+							<input type="hidden" name="clubnum" value="<%=al_club.get(0).getClub_num() %>">
+							<input type="submit" value="ê°€ì…í•˜ê¸°">
+						</form>
+						<%}else{%>
+						<input type="button" value="ê°€ì…ì™„ë£Œ">
+						<% } %>
+					</header>
+				</article>
 
-					<article class="taste">
-						<a href="#" class="image featured"><img 
-							src="<%=al_club.get(1).getClub_image() %>" alt="" /></a>
-						<header height='50' width='175'>
-							<h3>
-								<a href="#"><%=al_club.get(1).getClub_name() %></a>
-							</h3>
-							<h5><%=al_club.get(1).getClub_detail() %></h5>
-						</header>
-					</article>
+				<article class="taste">
+					<a href="javascript:openWindowPop2('bookpop.jsp?name=<%=al_club.get(1).getClub_name() %>&detail=<%=al_club.get(1).getClub_detail() %>', 'popup');" class="image featured"><img
+						src="<%=al_club.get(1).getClub_image() %>" alt="" /></a>
+					<header height='50' width='175'>
+						<h3>
+							<a href="javascript:openWindowPop2('bookpop.jsp?name=<%=al_club.get(1).getClub_name() %>&detail=<%=al_club.get(1).getClub_detail() %>', 'popup');"><%=al_club.get(1).getClub_name() %></a>
+						</h3>
+						<% if(mem_dto.getMem_club1()!=al_club.get(1).getClub_num()){ %>
+						<form action="joinClub">
+							<input type="hidden" name="clubnum" value="<%=al_club.get(1).getClub_num() %>">
+							<input type="submit" value="ê°€ì…í•˜ê¸°">
+						</form>
+						<%}else{%>
+						<input type="button" value="ê°€ì…ì™„ë£Œ">
+						<% } %>
+					</header>
+				</article>
 
-					<article class="taste">
-						<a href="#" class="image featured"><img
-							src="<%=al_club.get(2).getClub_image() %>" alt="" /></a>
-						<header height='50' width='175'>
-							<h3>
-								<a href="#"><%=al_club.get(2).getClub_name() %></a>
-							</h3>
-							<h5><%=al_club.get(2).getClub_detail() %></h5>
-						</header>
-					</article>
+				<article class="taste">
+					<a href="javascript:openWindowPop3('bookpop.jsp?name=<%=al_club.get(2).getClub_name() %>&detail=<%=al_club.get(2).getClub_detail() %>', 'popup');" class="image featured"><img
+						src="<%=al_club.get(2).getClub_image() %>" alt="" /></a>
+					<header height='50' width='175'>
+						<h3>
+							<a href="javascript:openWindowPop3('bookpop.jsp?name=<%=al_club.get(2).getClub_name() %>&detail=<%=al_club.get(2).getClub_detail() %>', 'popup');"><%=al_club.get(2).getClub_name() %></a>
+						</h3>
+						<% if(mem_dto.getMem_club1()!=al_club.get(2).getClub_num()){ %>
+						<form action="joinClub">
+							<input type="hidden" name="clubnum" value="<%=al_club.get(2).getClub_num() %>">
+							<input type="submit" value="ê°€ì…í•˜ê¸°">
+						</form>
+						<%}else{%>
+						<input type="button" value="ê°€ì…ì™„ë£Œ">
+						<% } %>
+					</header>
+				</article>
 
-				</div>
-			</section>
+			</div>
+		</section>
+
+		<div id="clubs">
+			<div class="clubtitle">
+				<span> ì·¨í–¥ì— ë§ëŠ” ì±… </span>
+			</div>
+		</div>
+
+		<section class="carousel">
+			<div class="tasty">
+				<article class="taste">
+					<a href="bookInfo.jsp?book=<%= al_book.get(0).getBook_num()%>" class="image featured"><img
+						src="<%=al_book.get(0).getBook_image() %>" height='330'
+						width='175' alt="" /></a>
+					<header height='50' width='175'>
+						<h4 align="center">
+							<a href="bookInfo.jsp?book=<%= al_book.get(0).getBook_num()%>"><%=al_book.get(0).getBook_name() %></a>
+						</h4>
+					</header>
+				</article>
+
+				<article class="taste">
+					<a href="bookInfo.jsp?book=<%= al_book.get(1).getBook_num()%>" class="image featured"><img
+						src="<%=al_book.get(1).getBook_image() %>" height='330'
+						width='175' alt="" /></a>
+					<header height='50' width='175'>
+						<h4 align="center">
+							<a href="bookInfo.jsp?book=<%= al_book.get(1).getBook_num()%>"><%=al_book.get(1).getBook_name() %></a>
+						</h4>
+					</header>
+				</article>
+
+				<article class="taste">
+					<a href="bookInfo.jsp?book=<%=al_book.get(2).getBook_num()%>" class="image featured"><img
+						src="<%=al_book.get(2).getBook_image() %>" height='330'
+						width='175' alt="" /></a>
+					<header height='50' width='175'>
+						<h4 align="center">
+							<a href="bookInfo.jsp?book=<%= al_book.get(2).getBook_num()%>"><%=al_book.get(2).getBook_name() %></a>
+						</h4>
+					</header>
+				</article>
+			</div>
+		</section>
 
 
-			
-				<div id="clubs">
-					<div class="clubtitle">
-						<span> ÃëÇâ¿¡ ¸Â´Â Ã¥ </span>
-					</div>
-				</div>
-
-					<section class="carousel">
-						<div class="tasty">
-							<article class="taste">
-								<a href="#" class="image featured"><img
-									src="<%=al_book.get(0).getBook_image() %>" height='330'
-									width='175' alt="" /></a>
-								<header height='50' width='175'>
-									<h4 align="center">
-										<a href="#"><%=al_book.get(0).getBook_name() %></a>
-									</h4>
-								</header>
-							</article>
-
-							<article class="taste">
-								<a href="#" class="image featured"><img
-									src="<%=al_book.get(1).getBook_image() %>" height='330'
-									width='175' alt="" /></a>
-								<header height='50' width='175'>
-									<h4 align="center">
-										<a href="#"><%=al_book.get(1).getBook_name() %></a>
-									</h4>
-								</header>
-							</article>
-
-							<article class="taste">
-								<a href="#" class="image featured"><img
-									src="<%=al_book.get(2).getBook_image() %>" height='330'
-									width='175' alt="" /></a>
-								<header height='50' width='175'>
-									<h4 align="center">
-										<a href="#"><%=al_book.get(2).getBook_name() %></a>
-									</h4>
-								</header>
-							</article>
-						</div>
-					</section>
-				
-
-			<%
+		<%
             }
       %>
+	</div>
+
+
+	<div id="foot">
+		<div class="all">
+			<span> <a href="question.html">ìì£¼ ë¬»ëŠ” ì§ˆë¬¸</a>
+			</span> <span> <a href="#">ë¬¸ì˜í•˜ê¸°</a>
+			</span> <span> <a href="#">ë¸”ë¡œê·¸</a></span> <span class="company"> <br>
+				<br> <br> ì£¼ì‹íšŒì‚¬ ì¸í…”ë¦¬ë°ì´íŒ… <br> <br> <br>
+			</span>
 		</div>
-
-
-		<div id="foot">
-			<div class="all">
-				<span> <a href="question.html">ÀÚÁÖ ¹¯´Â Áú¹®</a>
-				</span> <span> <a href="#">¹®ÀÇÇÏ±â</a>
-				</span> <span> <a href="#">ºí·Î±×</a></span> <span class="company"> <br>
-				<br>
-				<br> ÁÖ½ÄÈ¸»ç ÀÎÅÚ¸®µ¥ÀÌÆÃ <br>
-				<br>
-				<br>
-				</span>
-			</div>
-		</div>
+	</div>
 
 
 
-		<script>
-      
-
+	<script>
+	function openWindowPop1(url, name){
+	    var options = 'top=450, left=430, width=300, height=300, status=no, menubar=no, toolbar=no, resizable=no';
+	    window.open(url, name, options);
+	}
+	function openWindowPop2(url, name){
+	    var options = 'top=450, left=760, width=300, height=300, status=no, menubar=no, toolbar=no, resizable=no';
+	    window.open(url, name, options);
+	}
+	function openWindowPop3(url, name){
+	    var options = 'top=450, left=1100, width=300, height=300, status=no, menubar=no, toolbar=no, resizable=no';
+	    window.open(url, name, options);
+	}
+	  
    (function($) {
 
       var   $window = $(window),
