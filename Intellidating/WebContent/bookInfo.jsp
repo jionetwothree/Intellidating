@@ -169,7 +169,7 @@
 			<br><br><br><br><br><br> 주식회사 인텔리데이팅 <br> <br> <br>
 		</span>
 	</div>
-</div>
+</div> 
 
 </body>
 </html>

@@ -68,7 +68,7 @@
 					<li><a href="logoutService">·Î±×¾Æ¿ô</a></li>
 				</ul>
 				<%
-				}
+				} 
 			%>
 			</div>
 		</nav>
