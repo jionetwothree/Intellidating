@@ -42,7 +42,7 @@
 	<nav>
 		<div id="menu">
 			<ul>
-				<li><a href="after_searchBook.jsp">책 검색하기</a></li>
+				<li><a href="before_searchBook.jsp">책 검색하기</a></li>
 				<li><a href="mypage.html">마이페이지</a>
 					<ul class="menu">
 						<li><a href="myClub.jsp">마이모임</a></li>

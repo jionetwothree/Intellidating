@@ -235,16 +235,16 @@ INSERT INTO PRINT_BOOK (SELECT_NUM, BOOK_NUM, BOOK_NAME, BOOK_IMAGE, BOOK_CATEGO
 
 
 
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(1, '해오름','https://images.unsplash.com/photo-1572727984721-9e8bbd728f0d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80', '1번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(2, '도담도담','https://images.unsplash.com/photo-1597045145058-222946a8412c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80','2번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(3, '로운','https://images.unsplash.com/photo-1598618589908-36922bcbb433?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80','3번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(4, '솔빛길','https://images.unsplash.com/photo-1579206630372-ea5c6176866e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=671&q=80','4번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(5, '잎새', 'https://images.unsplash.com/photo-1603831905218-bc9cc8f51422?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=681&q=80','5번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(6, '모드니','https://images.unsplash.com/photo-1495640388908-05fa85288e61?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80','6번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(7, '보나','https://images.unsplash.com/photo-1592965826498-1fc50855f376?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80','7번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(8, '무슬','https://images.unsplash.com/photo-1590176661052-7d04e53d16a2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80','8번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(9, '눈꽃','https://images.unsplash.com/photo-1588144300695-f414e09350f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80','9번 모임입니다.');
-INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(10, '리라','https://images.unsplash.com/photo-1584561775356-09cebd63d47a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=562&q=80','10번 모임입니다.');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(1, '해오름','https://images.unsplash.com/photo-1572727984721-9e8bbd728f0d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80', '세상을 더 깊고, 넓게 바라보는 시간을 가져요');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(2, '도담도담','https://images.unsplash.com/photo-1597045145058-222946a8412c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80','모임 선택하기 어렵다면 여기로 오세요');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(3, '로운','https://images.unsplash.com/photo-1598618589908-36922bcbb433?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80','아주 지적인 토론을 원하신다면');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(4, '솔빛길','https://images.unsplash.com/photo-1579206630372-ea5c6176866e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=671&q=80','매일 한 권의 책을 읽고 토론을 합니다');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(5, '잎새', 'https://images.unsplash.com/photo-1603831905218-bc9cc8f51422?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=681&q=80','다정함과 유연함이 공존하는 따뜻한 모임 함께 해요');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(6, '모드니','https://images.unsplash.com/photo-1495640388908-05fa85288e61?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80','찐한 독서 인생을 시작해 봐요');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(7, '보나','https://images.unsplash.com/photo-1592965826498-1fc50855f376?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80','일상에 두근거릴 수 있는 순간들을 더해요');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(8, '무슬','https://images.unsplash.com/photo-1590176661052-7d04e53d16a2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80','서로의 생각을 포용하고 배려해요');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(9, '눈꽃','https://images.unsplash.com/photo-1588144300695-f414e09350f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80','삶의 더 나은 선택지를 함께 만들어가요!');
+INSERT INTO club(club_num, club_name, club_image, club_detail) VALUES(10, '리라','https://images.unsplash.com/photo-1584561775356-09cebd63d47a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=562&q=80','지금이 아니라면 밀린 책들을 언제 읽을까요?');
 
 DELETE FROM club;
 DELETE FROM club WHERE club_num = 8;
@@ -262,18 +262,17 @@ select * from member;
 
 --INSERT INTO CLUB(club_num, club_name, club_detail,club_type1,club_type2,club_type3) VALUES(seq_club_num.NEXTVAL,'test','test','a','b','c');--이건 일단 인서트 하지 말고 놔둬보세여 테스트 용이라
 
-
-
 select * from recommendation;
 select * from book;
 select * from MEMBER;
 drop sequence seq_club_num;
 
 DELETE FROM COMMENTS WHERE book_num = 6;
-delete from club;
 delete from choice;
 delete from RECOMMENDATION;
 delete from member;
+drop sequence seq_club_num;
+delete from club;
 DELETE FROM book;
 
 
