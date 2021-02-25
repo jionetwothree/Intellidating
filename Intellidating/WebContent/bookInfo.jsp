@@ -120,6 +120,7 @@
 			%>
 			
 			<div class="cmtInfoBox">
+			
 				<!-- 책에 대한 코멘트 -->
 				<div class="cmt_cont">
 					<span class="txt"><%=al.get(i).getContent()%></span>
@@ -160,7 +161,7 @@
 	</div>
 
 
-		<div id="foot">
+		<div id="foot" style="background-color:#E7E7E7;">
 			<div class="all">
 		<span> <a href="question.html">자주 묻는 질문</a>
 		</span> <span> <a href="#">문의하기</a>
