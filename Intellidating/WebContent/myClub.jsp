@@ -2,12 +2,12 @@
 <%@page import="com.DAO.clubDAO"%>
 <%@page import="com.DAO.memberDAO"%>
 <%@page import="com.DTO.memberDTO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="style_myClub.css">
 
 <title>Insert title here</title>
@@ -42,17 +42,17 @@
    <nav>
       <div id="menu">
          <ul>
-            <li><a href="before_searchBook.jsp">ц╔ ╟к╩Жго╠Б</a></li>
+            <li><a href="before_searchBook.jsp">Л╠┘ Й╡─Л┐┴М∙≤Й╦╟</a></li>
             <%
                if (m_dto == null) {
             %>
-            <li><a href="login.html">╥н╠вюн</a></li>
-            <li><a href="join.jsp">х╦©Ь╟║ют</a></li>
+            <li><a href="login.html">К║°Й╥╦Л²╦</a></li>
+            <li><a href="join.jsp">М ▄Л⌡░Й╟─Л·┘</a></li>
             <%
                } else {
             %>
-            <li><a href="mypage.jsp">╦╤юлфДюлаЖ</a>
-            <li><a href="logoutService">╥н╠в╬ф©Т</a></li>
+            <li><a href="mypage.jsp">К╖┬Л²╢М▌≤Л²╢Л╖─</a>
+            <li><a href="logoutService">К║°Й╥╦Л∙└Л⌡┐</a></li>
          </ul>
          <%
             }
@@ -62,31 +62,34 @@
    </nav>
 
    
-   
-   <div class="div.btn">
-      <button class ="btn" onclick = "location.href='chatting.jsp'">╣╤╪╜ ╦Пюс1 ютюЕ</button>
-      </div>
+   <%if(!"".equals(dto1)){ %>
    <div class="div.btn2">
-      <button class ="btn2" onclick = "location.href='chatting.jsp'">╣╤╪╜ ╦Пюс2 ютюЕ</button>
+      <button class ="btn2" onclick = "location.href='chat.jsp?club_name=<%=dto1.getClub_name() %>'"><%=dto1.getClub_name() %> Л·┘Л·╔</button>
       </div>
-   <div class="div.btn3">
-      <button class ="btn3" onclick = "location.href='chatting.jsp'">╣╤╪╜ ╦Пюс3 ютюЕ</button>
+   <% } else if(!"".equals(dto2)){%>
+   <div class="div.btn2">
+      <button class ="btn2" onclick = "location.href='chat.jsp?club_name=<%=dto2.getClub_name() %>'"><%=dto2.getClub_name() %> Л·┘Л·╔</button>
       </div>
+   <% } else if(!"".equals(dto3)){%>
+   <div class="div.btn2">
+      <button class ="btn2" onclick = "location.href='chat.jsp?club_name=<%=dto3.getClub_name() %>'"><%=dto3.getClub_name() %> Л·┘Л·╔</button>
+      </div>
+    <%} %>
    
    
       <div id="foot">
          <div class="all">
             <span>
-               <a href="question.html">юзаж ╧╞╢б аЗ╧╝</a>
+               <a href="question.html">Л·░Лё╪ К╛╩К┼■ Л╖┬К╛╦</a>
             </span>
             <span>
-               <a href="#">╧╝югго╠Б</a>
+               <a href="#">К╛╦Л²≤М∙≤Й╦╟</a>
             </span>
             <span>
-               <a href="#">╨М╥н╠в</a></span>
+               <a href="#">К╦■К║°Й╥╦</a></span>
             <span class="company">
             <br><br><br>
-              аж╫дх╦╩Г юнез╦╝╣╔юлфц
+              Лё╪Л▀²М ▄Л┌╛ Л²╦М┘■К╕╛К█╟Л²╢М▄┘
               <br><br><br>
               </span>
          </div>

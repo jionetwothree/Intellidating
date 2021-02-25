@@ -23,7 +23,7 @@ h1,h3{
    vertical-align: baseline;}
 </style>
 </head>
-<body style="background-color: #FDDADA">
+<body style="background-color: #FBF4D6">
 <%
 	String detail = request.getParameter("detail");
 	String name = request.getParameter("name");
