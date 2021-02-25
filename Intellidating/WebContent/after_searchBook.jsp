@@ -25,7 +25,7 @@
 
 </head>
 <body>
-	<%
+	<% 
 	
 		memberDTO m_dto = (memberDTO)session.getAttribute("member");
 		//bookDTO b_dto = (bookDTO)session.getAttribute("book");
