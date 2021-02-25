@@ -1,3 +1,4 @@
+<%@page import="com.DAO.memberDAO"%>
 <%@page import="com.DTO.clubDTO"%>
 <%@page import="com.DAO.clubDAO"%>
 <%@page import="com.DTO.memberDTO"%>
@@ -16,10 +17,12 @@
 
 	<%
 		memberDTO m_dto = (memberDTO) session.getAttribute("member");
+		memberDAO mem_dao = new memberDAO();
+		memberDTO mem_dto = mem_dao.selectMember(m_dto.getNum());
 		clubDAO dao = new clubDAO();
-		clubDTO dto1 = dao.selectclub(m_dto.getMem_club1());
-		clubDTO dto2 = dao.selectclub(m_dto.getMem_club2());
-		clubDTO dto3 = dao.selectclub(m_dto.getMem_club3());
+		clubDTO dto1 = dao.selectclub(mem_dto.getMem_club1());
+		clubDTO dto2 = dao.selectclub(mem_dto.getMem_club2());
+		clubDTO dto3 = dao.selectclub(mem_dto.getMem_club3());
 	%>
 
 	<header>
