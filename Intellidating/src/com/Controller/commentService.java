@@ -1,6 +1,7 @@
 package com.Controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.DAO.commentsDAO;
+import com.DAO.printbookDAO;
 import com.DTO.commentsDTO;
 
 
@@ -30,12 +32,14 @@ public class commentService extends HttpServlet {
 		
 		if(cnt>0) {
 			System.out.println("댓글 작성 성공");
-			RequestDispatcher rd = request.getRequestDispatcher("bookInfo.jsp");
-			rd.forward(request, response);
+
+			response.sendRedirect("bookInfo.jsp?book="+sendBook);
+
 		}else {
 			System.out.println("댓글 작성 실패");
-			response.sendRedirect("bookInfo.jsp");
-			
+
+			response.sendRedirect("bookInfo.jsp?book="+sendBook);
+
 		}
 		//commentsDTO(책 번호, 작성자 번호, 댓글 내용)
 //		commentsDTO dto = new commentsDTO();
