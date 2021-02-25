@@ -42,7 +42,7 @@
 						%>
 						<li><a href="login.html">로그인/회원가입</a></li>
 
-						<%
+						<% 
 							} else {
 						%>
 						<li><a href="analysis.jsp">추천받기</a></li>
