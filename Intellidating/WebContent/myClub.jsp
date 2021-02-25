@@ -13,8 +13,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-
    <div id="layout">
       <%
       memberDTO m_dto = (memberDTO) session.getAttribute("member");
@@ -22,7 +20,7 @@
       <header>
          <div id="wrapper">
 
-            <h1 id="title"><a href="main.jsp" >intellidating</a></h1>
+            <h1 id="title"><a href="main.jsp">intellidating</a></h1>
             <nav>
                <ul class="menu" style="display: inline-block;">
                   <%
