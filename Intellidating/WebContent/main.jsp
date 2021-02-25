@@ -160,6 +160,7 @@
 							<h5><%=al_club.get(4).getClub_detail() %></h5>
 						</header>
 					</article>
+					
 
 					<article>
 						<a href="#" class="image featured"><img
