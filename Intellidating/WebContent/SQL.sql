@@ -14,6 +14,7 @@ drop sequence seq_choice_num; --드랍
 drop sequence seq_co_num; --드랍 
 drop sequence seq_recom_num; --드랍
 
+
 DROP TABLE print_book;
 DROP TABLE choice;
 DROP TABLE recommendation;
@@ -28,6 +29,9 @@ DROP sequence seq_choice_num;
 DROP sequence seq_co_num;
 DROP sequence seq_recom_num;
 
+delete from member;
+delete from print_book;
+
 CREATE TABLE club(
 club_num number(10) CONSTRAINT club_num_pk primary key, -- 번호 시퀀스 seq_club_num.NEXTVAR
 club_name varchar2(50) not null, -- 모임 이름
@@ -40,6 +44,8 @@ club_type3 varchar2(500),
 CONSTRAINT UQ_club_name unique (club_name)
 );
 
+select * from club;
+
 create sequence seq_club_num -- 모임 번호 시퀀스
 start with 1
 increment by 1
@@ -47,7 +53,7 @@ nomaxvalue
 nominvalue
 nocycle
 nocache;
-select * from book;
+
 CREATE TABLE book(
 book_num number(10) CONSTRAINT book_num_pk primary key, -- 책 번호 시퀀스 seq_book_num.NEXTVAR
 book_name varchar2(200) not null, -- 책 이름
@@ -66,7 +72,6 @@ increment by 1
 nomaxvalue
 nominvalue
 nocycle
-
 nocache;
 
 
@@ -89,6 +94,8 @@ CONSTRAINT UQ_mem_email unique (mem_email),
 CONSTRAINT UQ_mem_nick unique (mem_nickname)
 );
 
+
+
 create sequence seq_mem_num -- 멤버 번호 시퀀스
 start with 101
 increment by 1
@@ -96,6 +103,7 @@ nomaxvalue
 nominvalue
 nocycle
 nocache;
+
 
 CREATE TABLE choice(
 choice_num number(10) CONSTRAINT choice_num_pk primary key, -- 시퀀스
@@ -115,6 +123,7 @@ nomaxvalue
 nominvalue
 nocycle
 nocache;
+
 
 CREATE TABLE comments(
 comment_num number(10) CONSTRAINT comment_num_pk primary key, -- 댓글 번호
@@ -151,7 +160,7 @@ FOREIGN KEY (recom_book1) REFERENCES book(book_num),
 FOREIGN KEY (recom_book2) REFERENCES book(book_num),
 FOREIGN KEY (recom_book3) REFERENCES book(book_num)
 );
-select * from club;
+
 create sequence seq_recom_num -- 추천 번호 시퀀스
 start with 1
 increment by 1
@@ -159,6 +168,8 @@ nomaxvalue
 nominvalue
 nocycle
 nocache;
+
+
 
 CREATE TABLE print_book(
 select_num number(10) CONSTRAINT select_num_pk primary key,
@@ -177,6 +188,7 @@ create table CHAT (
 );
 
 select * from CHAT;
+delete from chat;
 
 INSERT INTO CHAT VALUES (chatid.nextval, 'a', 'b', sysdate)
 
@@ -270,13 +282,14 @@ drop sequence seq_club_num;
 DELETE FROM COMMENTS WHERE book_num = 6;
 delete from choice;
 delete from RECOMMENDATION;
-delete from member;
+delete from member where mem_num = 102;
 drop sequence seq_club_num;
 delete from club;
 DELETE FROM book;
 
 
+
 SELECT CONSTRAINT_NAME, TABLE_NAME, R_CONSTRAINT_NAME FROM USER_CONSTRAINTS
 
-WHERE CONSTRAINT_NAME = 'SYS_C007460';
+WHERE CONSTRAINT_NAME = 'SYS_C007455';
 
